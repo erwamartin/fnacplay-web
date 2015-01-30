@@ -1,0 +1,189 @@
+$primary-color: #F5B027;
+$adult-color: #DE0477;
+$film-color: #2F9D48;
+$young-color: #F46317;
+$serie-color: #714299;
+$spectacle-color: #15B4A8;
+$white-color: #fff;
+$nav_dark-gray: #2a2a2a;
+$nav_light-gray: #EEF0F2;
+$border-notification: #d9d9d9;
+$link_gray-color: #d8d8d8;
+$black_title-color: #171717;
+$header_black-color: #18191a;
+$selection_black-color: #212324;
+$name_gray-color: #202123;
+$account_gray-color: #383A3C;
+
+$montserrat: 'Montserrat', sans-serif;
+$montserrat-light: 'Montserrat-Light', sans-serif;
+$montserrat-bold: 'Montserrat-Bold', sans-serif;
+$roboto: 'Roboto', sans-serif;
+$roboto-medium: 'Roboto-Medium', sans-serif;
+$roboto-bold: 'Roboto-Bold', sans-serif;
+$nav_font-size: 14px;
+
+@mixin box-shadow($params){
+	-webkit-box-shadow: $params;
+	   -moz-box-shadow: $params;
+	        box-shadow: $params;
+}
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+.clear{clear: both}
+
+header{
+	width: 100%;
+	height: 70px;
+	background-color: $header_black-color;
+	border-bottom: solid 3px $primary-color;
+
+	.logo{
+		float: left;
+		text-align: center;
+		margin-top: 21px;
+		margin-left: 28px;
+		width:120px;
+
+		img{
+			width: 100%;
+		}
+	}
+}
+
+nav{
+	float: left;
+
+	ul{
+		padding: 0;
+		margin: 0 0 0 26px;
+	}
+
+	ul li{
+		line-height:70px;
+		float: left;
+		padding: 0 20px 0 20px;
+	}
+
+	ul li a{
+		color: rgba($white-color, 0.7);
+		font-family: $montserrat;
+		text-transform: uppercase;
+		font-size: $nav_font-size;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		line-height: 70px;
+		
+		img{
+			margin-right: 6px;
+			width: 21px;
+			height: 21px;
+		}
+	}
+}
+
+.search{
+	height: 70px;
+	margin-left: 20px;
+	float: left;
+	a{
+		display: block;
+		margin: 16px auto;
+		height: 38px;
+		line-height:38px;
+		width: 170px;
+		color: rgba($white-color, 0.6);
+		text-decoration:none;
+		font-family: $roboto-medium;
+		font-size:15px;
+		background-color: $nav_dark-gray;
+		@include border-radius(3px);
+	}
+
+	a img{
+		margin-left:29px; 
+		width: 16px;
+		height: 16px;
+		margin-right: 13px;
+	}
+}
+
+.my_fnacplay{
+	width: 281px;
+	float: right;
+	height: 70px;
+	background-color: $nav_light-gray;
+}
+
+.notification{
+	width: 60px;
+	height: 70px;
+	border-right: solid 1px $border-notification;
+	float: left;
+	img{
+		width: 24px;
+		height: 26px;
+		margin: 24px 0 0 18px;
+	}
+}
+
+.my_account{
+	width: 220px;
+	height: 70px;
+	float: right;
+	img{
+		float:left;
+		width: 34px;
+		height: 34px;
+		margin: 18px 13px 0 20px;
+	}
+	p{
+		font-family: $montserrat-light;
+		text-transform: uppercase;
+		color: $name_gray-color;
+		font-size: 13px;
+		margin: 18px 0 0 0;
+	}
+
+	a{
+		text-decoration:none;
+		font-family: $montserrat-bold;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight:700;
+		color: $account_gray-color;
+	}
+}
+
+.slider{
+	width: 100%;
+	height: 530px;
+	background-size: cover;
+	background: url("../img/movie1.jpg") no-repeat center center;
+}
+
+.little-title{
+		width: 124px;
+		height: 31px;
+		color: $white-color;
+		text-transform: uppercase;
+		font-family: $montserrat-bold;
+		font-size: 15px;
+		text-align:center;
+		line-height: 31px;
+		border: solid 2px $white-color;
+		@include border-radius(1px);
+		margin: 0px 0 0 95px;
+
+		h3{
+			margin:0;
+			padding:0;
+		}
+	}
