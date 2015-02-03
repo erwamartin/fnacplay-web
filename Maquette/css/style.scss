@@ -12,12 +12,13 @@ $border-notification: #d9d9d9;
 $link_gray-color: #d8d8d8;
 $black_title-color: #171717;
 $header_black-color: #18191a;
+$color-limit-age: #151515;
 $selection_black-color: #212324;
 $name_gray-color: #202123;
 $account_gray-color: #383a3c;
 $border-menu: #eeeeee;
 $title-menu-film: #040404;
-$new-price: #E70000;
+$new-price: #e70000;
 $old-price: #222222;
 
 
@@ -40,6 +41,17 @@ $nav_font-size: 14px;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
 }
 
 .clear {
@@ -129,23 +141,29 @@ nav {
 
     ul{
         margin-left: 113px;
+        height: 300px;
     }
 
     ul li{
-        float: none;
-        width: 210px;
-        height: 49px;
-        line-height: 49px;
-        border-top: solid 1px $border-menu;
-        font-family: $roboto;
-        font-size: 15px;
+        .link-genre{
+            margin: 0;
+            float: none;
+            width: 210px;
+            height: 49px;
+            line-height: 49px;
+            border-top: solid 1px $border-menu;
+            font-family: $roboto;
+            font-size: 15px;
+            display: block;  
+            color: $black-color !important;      
+            }
     }
 
     ul li:last-child{
         border-bottom: solid 1px $border-menu;
     }
 
-    ul li:after{
+    ul li .link-genre:after{
         content: url('../img/rectangle.png');
         position: absolute;
         left: 356px;
@@ -156,7 +174,7 @@ nav {
     }
 
     a{
-        margin: 34px 0 0 113px;
+        margin: 37px 0 0 113px;
     }
 }
 
@@ -190,6 +208,12 @@ nav {
             color: rgba($black-color, 0.8);
             line-height: normal;
             width: 307px;
+
+            .link-description{
+                margin: 0;
+                padding: 0;
+                color: $black-color !important;
+            }
 
             b{
                 font-size: 18px;
@@ -270,6 +294,10 @@ nav {
     a{
         margin: 30px 0 0 49px;
     }
+
+    .link-affiche{
+    margin: 0;
+}
 }
 
 .movie:hover .sub-menu a, .serie:hover .sub-menu a, .young:hover .sub-menu a, .spectacle:hover .sub-menu a, .adult:hover .sub-menu a{
@@ -323,6 +351,16 @@ nav {
 }
 
 .adult {
+    .limit-age{
+        margin-right: 6px;
+        background-color: rgba($white-color, 0.4);
+        padding: 2px 2px 0 0;
+        color: $color-limit-age;
+        font-family: $roboto-bold;
+        border-radius: 50%;
+        font-size: 13px;
+    }
+
     .sub-menu {
         border-top: solid 3px $adult-color;
         .border-bottom {
@@ -398,7 +436,7 @@ nav {
 .adult:hover {
     background-color: $adult-color;
 
-    a{
+    .limit-age, a{
     	color: $white-color;
     }
 
@@ -448,11 +486,133 @@ nav {
     height: 70px;
     border-right: solid 1px $border-notification;
     float: left;
+    cursor: pointer;
+    
+    .indice-notification{
+        position: absolute;
+        text-align: center;
+        font-size: 13px;
+        top: 13px;
+        margin-left: 31px;
+        font-family: $roboto-bold;
+        width: 20px;
+        border-radius: 6px;
+        border: solid 2px $nav_light-gray;
+        line-height: 20px;
+        color: $white-color;
+        background-color: $header_black-color;
+    }
+
     img {
         width: 24px;
         height: 26px;
         margin: 24px 0 0 18px;
     }
+
+    .description-notification::before{
+        content: '';
+        position: absolute;
+        border-color: $white-color;
+        background-color: $white-color;
+        border-style: solid;
+        height: 10px;
+        top: -7px;
+        left: 185px;
+        @include rotate(45);
+        width: 10px;
+    }
+
+    .description-notification{
+        display: none;
+        cursor: default;
+        width: 380px;
+        height: 470px;
+        background-color: $white-color;
+        position: relative;
+        top: 20px;
+        left: -169px;
+        padding-top: 30px;
+        @include box-shadow(0px 1px 5px rgba($black-color, 0.3));
+
+        .header-notification{
+            margin-bottom: 18px;
+            b{
+                font-family: $montserrat-bold;
+                text-transform: uppercase;
+                font-size: 13px;
+                margin-left: 30px;
+            }
+
+            a{
+                font-family: $roboto-medium;
+                font-size: 13px;
+                color: rgba($black-color, 0.5);
+                text-decoration: none;
+                float: right;
+                margin-right: 30px;
+            }
+        }
+
+        .content-notification{
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul li{
+                width: 380px;
+                height: 100px;
+                border-top: solid 1px $border-menu;
+                list-style-type: none;
+
+                img{
+                    width: 38px;
+                    height: 38px;
+                    @include border-radius(50%);
+                    margin: 18px 0 0 29px;
+                    float: left;
+                }
+
+                .detail-notification{
+                    margin: 19px 0 0 17px;
+                    width: 257px;
+                    font-family: $roboto;
+                    font-size: 15px;
+                    line-height: 20px;
+                    color: rgba($black-color, 0.8);
+                    float: left;
+
+                    span{
+                        font-family: $roboto-medium;
+                    }
+                }
+
+                .heure-notification{
+                    float: left;
+                    font-family: $roboto;
+                    font-size: 11px;
+                    margin-top: 5px;
+                    margin-left: 84px;
+                    color: rgba($black-color, 0.5);
+                }
+            }
+
+            ul li:after{
+                content: url('../img/rectangle.png');
+                position: absolute;
+                left: 356px;
+                margin-top: -50px
+            }
+
+            ul li:last-child{
+                border-bottom: solid 1px $border-menu;
+            }
+        }
+    }
+}
+
+.notification:hover .description-notification{
+    display: block;
 }
 
 .my_account {
