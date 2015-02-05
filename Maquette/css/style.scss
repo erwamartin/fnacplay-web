@@ -21,6 +21,7 @@ $title-menu-film: #040404;
 $new-price: #e70000;
 $old-price: #222222;
 $gray-tabs: #f8f8f8;
+$aff-tabs: #534940;
 
 
 $montserrat: "Montserrat", sans-serif;
@@ -727,17 +728,16 @@ nav {
     }
 
     #tabs ul li{
-        height:70px;
+        height:120px;
         float:left;
-        padding-top: 50px;
         list-style-type:none;
     }
 
-    #tabs ul .active{
+    #tabs ul .ui-tabs-active{
         background-color: $gray-tabs;
     }
 
-    #tabs ul .active a{
+    #tabs ul .ui-tabs-active .link-tabs{
         color: $nav_dark-gray;
     }
 
@@ -755,16 +755,40 @@ nav {
         width: 443px;
     }
 
-    #tabs ul li a{
+    #tabs ul li .link-tabs{
         text-decoration: none;
         font-family: $roboto-thin;
         font-size: 32px;
-        margin-left: 28px;
+        display: block;
+        padding-left: 28px;
+        padding-top: 50px;
+        height: 70px;
         color: rgba($white-color, 0.7);
     }
 
-    #tabs ul li:first-child a{
-        margin-left: 96px;
+    #tabs ul li:first-child .link-tabs{
+        padding-left: 96px;
+    }
+
+    .drop-tabs{
+        width: 32px;
+        height: 32px;
+        top: -67px;
+        float: right;
+        position: relative;
+        margin-right: 35px;
+    }
+
+    .aff-tabs{
+        display: none;
+        text-decoration: none;
+        font-family: $roboto;
+        font-size: 13px;
+        color: rgba($aff-tabs, 0.6);
+    }
+
+    #tabs ul .ui-tabs-active .aff-tabs{
+        display: block;
     }
 
     #tabs_container{

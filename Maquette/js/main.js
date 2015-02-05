@@ -1,28 +1,5 @@
 $(document).ready(function($) {
-    
-
-    $('#tabs').tabulous({
-    	effect: 'scale'
+    $('#tabs').tabs({
+    	show: {effect: "fade", duration: 200}
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });

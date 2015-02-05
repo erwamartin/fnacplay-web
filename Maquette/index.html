@@ -17,8 +17,8 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900' rel='stylesheet' type='text/css'>
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script type="text/javascript" src="js/tabulous.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <!--<script src="js/vendor/waypoint.js"></script>-->
     </head>
     <body>
@@ -363,9 +363,21 @@
             <div class="news">
                 <div id="tabs">
                      <ul>
-                        <li class="tabs-news active"><a href="#tabs-1">Nouveautés</a></li>
-                        <li class="tabs-best"><a href="#tabs-2">Meilleures ventes</a></li>
-                        <li class="tabs-good"><a href="#tabs-3">Bons Plans</a></li>
+                        <li class="tabs-news">
+                            <a class="link-tabs" href="#tabs-1">Nouveautés</a>
+                            <a href="#"><img class="drop-tabs" src="img/drop-tabs.png" alt=""/></a>
+                            <a class="aff-tabs" href="#">Tout afficher ›</a>
+                        </li>
+                        <li class="tabs-best">
+                            <a class="link-tabs" href="#tabs-2">Meilleures ventes</a>
+                            <a href="#"><img class="drop-tabs" src="img/drop-tabs.png" alt=""/></a>
+                            <a class="aff-tabs" href="#">Tout afficher ›</a>
+                        </li>
+                        <li class="tabs-good">
+                            <a class="link-tabs" href="#tabs-3">Bons Plans</a>
+                            <a href="#"><img class="drop-tabs" src="img/drop-tabs.png" alt=""/></a>
+                            <a class="aff-tabs" href="#">Tout afficher ›</a>
+                        </li>
                     </ul>
 
                     <div id="tabs_container">
