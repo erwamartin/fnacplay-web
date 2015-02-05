@@ -506,18 +506,18 @@ nav {
   -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
 
-.news #tabs ul {
+.news #tabs .ul-link-tabs {
   padding: 0;
   margin: 0;
   height: 120px;
   background-color: #18191a; }
-.news #tabs ul li {
+.news #tabs .ul-link-tabs li {
   height: 120px;
   float: left;
   list-style-type: none; }
-.news #tabs ul .ui-tabs-active {
+.news #tabs .ul-link-tabs .ui-tabs-active {
   background-color: #f8f8f8; }
-.news #tabs ul .ui-tabs-active .link-tabs {
+.news #tabs .ul-link-tabs .ui-tabs-active .link-tabs {
   color: #2a2a2a; }
 .news #tabs .tabs-news {
   width: 443px;
@@ -527,7 +527,7 @@ nav {
   border-right: solid 1px #2a2a2a; }
 .news #tabs .tabs-good {
   width: 443px; }
-.news #tabs ul li .link-tabs {
+.news #tabs .ul-link-tabs li .link-tabs {
   text-decoration: none;
   font-family: "Roboto-Thin", sans-serif;
   font-size: 32px;
@@ -536,7 +536,7 @@ nav {
   padding-top: 50px;
   height: 70px;
   color: rgba(255, 255, 255, 0.7); }
-.news #tabs ul li:first-child .link-tabs {
+.news #tabs .ul-link-tabs li:first-child .link-tabs {
   padding-left: 96px; }
 .news .drop-tabs {
   width: 32px;
@@ -545,17 +545,139 @@ nav {
   float: right;
   position: relative;
   margin-right: 35px; }
+.news #tabs .ul-link-tabs li:last-child .drop-tabs {
+  margin-right: 96px; }
 .news .aff-tabs {
   display: none;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 13px;
-  color: rgba(83, 73, 64, 0.6); }
-.news #tabs ul .ui-tabs-active .aff-tabs {
+  color: rgba(83, 73, 64, 0.6);
+  width: 83px;
+  margin-left: 28px;
+  margin-top: -30px; }
+.news #tabs .ul-link-tabs li:first-child .aff-tabs {
+  margin-left: 96px; }
+.news #tabs .ul-link-tabs .ui-tabs-active .aff-tabs {
   display: block; }
 .news #tabs_container {
   min-height: 790px;
   width: 100%;
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  padding-top: 61px; }
+  .news #tabs_container #tabs-1 ul, .news #tabs_container #tabs-2 ul {
+    margin-left: 28px; }
+    .news #tabs_container #tabs-1 ul li, .news #tabs_container #tabs-2 ul li {
+      width: 195px;
+      height: 260px;
+      float: left;
+      list-style-type: none;
+      margin: 0 0 80px 28px;
+      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
+      .news #tabs_container #tabs-1 ul li img, .news #tabs_container #tabs-2 ul li img {
+        width: 100%;
+        height: 100%; }
+      .news #tabs_container #tabs-1 ul li p, .news #tabs_container #tabs-2 ul li p {
+        text-align: center;
+        text-overflow: ellipsis;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.8);
+        width: 195px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-top: 18px; }
+      .news #tabs_container #tabs-1 ul li a .overflow-img, .news #tabs_container #tabs-2 ul li a .overflow-img {
+        display: none;
+        position: absolute;
+        width: 195px;
+        height: 260px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));
+        /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
+        /* Chrome 10+, Saf5.1+, iOS 5+ */
+        background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
+        /* FF3.6 */
+        background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
+        /* IE10 */
+        background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
+        /* Opera 11.10+ */
+        background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.5)); }
+        .news #tabs_container #tabs-1 ul li a .overflow-img button, .news #tabs_container #tabs-2 ul li a .overflow-img button {
+          width: 38px;
+          height: 30px;
+          text-align: center;
+          font-size: 15px;
+          border: none;
+          color: #18191a;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          -ms-border-radius: 3px;
+          border-radius: 3px;
+          background-color: #f8f8f8;
+          -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+          margin: 12px 0 0 146px; }
+        .news #tabs_container #tabs-1 ul li a .overflow-img button:hover, .news #tabs_container #tabs-2 ul li a .overflow-img button:hover {
+          background-color: #2f9d48;
+          color: #fff; }
+      .news #tabs_container #tabs-1 ul li a:hover .overflow-img, .news #tabs_container #tabs-2 ul li a:hover .overflow-img {
+        display: block; }
+  .news #tabs_container #tabs-3 ul {
+    margin-left: 28px; }
+    .news #tabs_container #tabs-3 ul li {
+      width: 195px;
+      height: 260px;
+      float: left;
+      list-style-type: none;
+      margin: 0 0 80px 28px;
+      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
+    .news #tabs_container #tabs-3 ul li:first-child {
+      width: 340px;
+      height: 578px;
+      padding: 20px 20px 0 20px;
+      background-color: #fff;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      margin-right: 42px; }
+      .news #tabs_container #tabs-3 ul li:first-child img {
+        width: 340px;
+        height: 455px; }
+      .news #tabs_container #tabs-3 ul li:first-child p {
+        width: 340px;
+        font-size: 22px;
+        color: rgba(0, 0, 0, 0.9);
+        margin: 30px 0 0 0; }
+      .news #tabs_container #tabs-3 ul li:first-child .note {
+        font-size: 15px;
+        margin-top: 6px;
+        font-family: "Roboto-Bold", sans-serif;
+        color: rgba(33, 35, 36, 0.8); }
+      .news #tabs_container #tabs-3 ul li:first-child .note_3 {
+        background: url("../img/star.png");
+        background-size: 100% 100%;
+        display: inline-block;
+        width: 99px;
+        height: 18px; }
+    .news #tabs_container #tabs-3 ul img {
+      width: 100%;
+      height: 100%; }
+    .news #tabs_container #tabs-3 ul p {
+      text-align: center;
+      text-overflow: ellipsis;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.8);
+      width: 195px;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-top: 18px; }
 
 /*# sourceMappingURL=style.css.map */

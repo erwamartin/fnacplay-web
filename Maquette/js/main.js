@@ -1,5 +1,5 @@
 $(document).ready(function($) {
     $('#tabs').tabs({
-    	show: {effect: "fade", duration: 200}
+    	show: {effect: "fade", duration: 800}
     });
 });

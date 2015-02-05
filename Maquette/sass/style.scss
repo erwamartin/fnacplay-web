@@ -23,6 +23,9 @@ $old-price: #222222;
 $gray-tabs: #f8f8f8;
 $aff-tabs: #534940;
 
+$shadow-image: 0px 1px 4px rgba($black-color, 0.3);
+$from-gradient: rgba($black-color, 0.0);
+$to-gradient: rgba($black-color, 0.5);
 
 $montserrat: "Montserrat", sans-serif;
 $montserrat-light: "Montserrat-Light", sans-serif;
@@ -56,6 +59,15 @@ $nav_font-size: 14px;
 
 @mixin rotate($deg) {
   @include transform(rotate(#{$deg}deg));
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
 }
 
 .clear {
@@ -202,7 +214,7 @@ nav {
             height: 64px;
             float:left;
             @include border-radius(1px);
-            @include box-shadow(0px 1px 4px rgba($black-color, 0.3));
+            @include box-shadow($shadow-image);
         }
 
         .selection-descritption{
@@ -720,24 +732,24 @@ nav {
 
 .news{
 
-    #tabs ul{
+    #tabs .ul-link-tabs{
         padding: 0;
         margin: 0;
         height: 120px;
         background-color: $header_black-color;
     }
 
-    #tabs ul li{
+    #tabs .ul-link-tabs li{
         height:120px;
         float:left;
         list-style-type:none;
     }
 
-    #tabs ul .ui-tabs-active{
+    #tabs .ul-link-tabs .ui-tabs-active{
         background-color: $gray-tabs;
     }
 
-    #tabs ul .ui-tabs-active .link-tabs{
+    #tabs .ul-link-tabs .ui-tabs-active .link-tabs{
         color: $nav_dark-gray;
     }
 
@@ -755,7 +767,7 @@ nav {
         width: 443px;
     }
 
-    #tabs ul li .link-tabs{
+    #tabs .ul-link-tabs li .link-tabs{
         text-decoration: none;
         font-family: $roboto-thin;
         font-size: 32px;
@@ -766,7 +778,7 @@ nav {
         color: rgba($white-color, 0.7);
     }
 
-    #tabs ul li:first-child .link-tabs{
+    #tabs .ul-link-tabs li:first-child .link-tabs{
         padding-left: 96px;
     }
 
@@ -779,15 +791,26 @@ nav {
         margin-right: 35px;
     }
 
+    #tabs .ul-link-tabs li:last-child .drop-tabs{
+        margin-right: 96px;
+    }
+
     .aff-tabs{
         display: none;
         text-decoration: none;
         font-family: $roboto;
         font-size: 13px;
         color: rgba($aff-tabs, 0.6);
+        width: 83px;
+        margin-left: 28px;
+        margin-top: -30px;
     }
 
-    #tabs ul .ui-tabs-active .aff-tabs{
+    #tabs .ul-link-tabs li:first-child .aff-tabs{
+        margin-left: 96px;
+    }
+
+    #tabs .ul-link-tabs .ui-tabs-active .aff-tabs{
         display: block;
     }
 
@@ -795,5 +818,141 @@ nav {
         min-height: 790px;
         width: 100%;
         background-color: $gray-tabs;
+        padding-top: 61px;
+
+        #tabs-1, #tabs-2{
+
+            ul{
+                margin-left: 28px;
+
+                li{
+                    width: 195px;
+                    height: 260px;
+                    float: left;
+                    list-style-type: none;
+                    margin: 0 0 80px 28px;
+                    @include box-shadow($shadow-image);
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    p{
+                        text-align:center;
+                        text-overflow: ellipsis;
+                        font-family: $roboto;
+                        font-size: 15px;
+                        color: rgba( $black-color, 0.8);
+                        width: 195px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        margin-top: 18px;
+                    }
+
+                    a{
+                        .overflow-img{
+                            display: none;
+                            position: absolute;
+                            width: 195px;
+                            height: 260px;
+                            @include linear-gradient($from-gradient, $to-gradient);
+
+                            button{
+                                width: 38px;
+                                height: 30px;
+                                text-align:center; 
+                                font-size: 15px;
+                                border: none;
+                                color: $header_black-color;
+                                @include border-radius(3px);
+                                background-color: $gray-tabs;
+                                @include box-shadow($shadow-image);
+                                margin: 12px 0 0 146px;
+                            }
+
+                            button:hover{
+                                background-color: $film-color;
+                                color: $white-color;
+                            }
+                        }
+                    }
+
+                    a:hover{
+                        .overflow-img{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        #tabs-3{
+            ul{
+                margin-left: 28px;
+                
+                li{
+                    width: 195px;
+                    height: 260px;
+                    float: left;
+                    list-style-type: none;
+                    margin: 0 0 80px 28px;
+                    @include box-shadow($shadow-image);
+                }
+
+                li:first-child{
+                    width: 340px;
+                    height: 578px;
+                    padding: 20px 20px 0 20px;
+                    background-color: $white-color;
+                    @include border-radius(3px);
+                    margin-right: 42px;
+
+                    img{
+                        width: 340px;
+                        height: 455px;
+                    }
+
+                    p{
+                        width: 340px;
+                        font-size: 22px;
+                        color: rgba($black-color, 0.9);
+                        margin: 30px 0 0 0;
+                    }
+
+                    .note{
+                        font-size: 15px;
+                        margin-top: 6px;
+                        font-family: $roboto-bold;
+                        color: rgba($selection_black-color, 0.8);
+                    }
+
+                    .note_3{
+                        background: url('../img/star.png');
+                        background-size: 100% 100%;
+                        display: inline-block;
+                        width: 99px;
+                        height: 18px;
+                    }
+                }
+                
+                img{
+                        width: 100%;
+                        height: 100%;
+                }
+
+                p{
+                        text-align:center;
+                        text-overflow: ellipsis;
+                        font-family: $roboto;
+                        font-size: 15px;
+                        color: rgba( $black-color, 0.8);
+                        width: 195px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        margin-top: 18px;
+                    }
+            }
+        }
     }
 }
