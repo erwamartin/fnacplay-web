@@ -1,6 +1,8 @@
+/***** Variables *****/
+
 $primary-color: #f5b027;
 $adult-color: #de0477;
-$film-color: #2f9d48;
+$film-color: #15B4A8;
 $young-color: #f46317;
 $serie-color: #714299;
 $spectacle-color: #15b4a8;
@@ -22,6 +24,8 @@ $new-price: #e70000;
 $old-price: #222222;
 $gray-tabs: #f8f8f8;
 $aff-tabs: #534940;
+$white-button: #E9E6E0;
+$color-white-button: #56544D;
 
 $shadow-image: 0px 1px 4px rgba($black-color, 0.3);
 $from-gradient: rgba($black-color, 0.0);
@@ -35,7 +39,18 @@ $roboto-thin: "Roboto-Thin", sans-serif;
 $roboto-light: "Roboto-Light", sans-serif;
 $roboto-medium: "Roboto-Medium", sans-serif;
 $roboto-bold: "Roboto-Bold", sans-serif;
-$nav_font-size: 14px;
+$roboto-bolditalic: "Roboto-BoldItalic", sans-serif;
+
+$font-size-11: 11px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-15: 15px;
+$font-size-18: 18px;
+$font-size-22: 22px;
+$font-size-32: 32px;
+$font-size-48: 48px;
+
+/***** Mixins *****/
 
 @mixin box-shadow($params) {
     -webkit-box-shadow: $params;
@@ -70,9 +85,13 @@ $nav_font-size: 14px;
   background-image:         linear-gradient(top, $fromColor, $toColor);
 }
 
+/***** Debut CSS *****/
+
 .clear {
     clear: both;
 }
+
+/***** Header - Navigation *****/
 
 header {
     width: 100%;
@@ -105,7 +124,7 @@ nav {
         color: rgba($white-color, 0.7);
         font-family: $montserrat;
         text-transform: uppercase;
-        font-size: $nav_font-size;
+        font-size: $font-size-14;
         text-decoration: none;
         display: block;
         text-align: center;
@@ -137,7 +156,7 @@ nav {
         font-family: $roboto-medium;
         line-height: normal;
         padding: 0;
-        font-size: 15px;
+        font-size: $font-size-15;
         text-transform: none;
         text-align: left;
         color: rgba($black-color, 0.5);
@@ -145,7 +164,7 @@ nav {
 
 .genre h4, .selection h4, .bons-plans h4{
         font-family: $montserrat-bold;
-        font-size: 13px;
+        font-size: $font-size-13;
         text-transform: uppercase;
         line-height: normal;
 }
@@ -169,7 +188,7 @@ nav {
             line-height: 49px;
             border-top: solid 1px $border-menu;
             font-family: $roboto;
-            font-size: 15px;
+            font-size: $font-size-15;
             display: block;  
             color: $black-color !important;      
             }
@@ -220,7 +239,7 @@ nav {
         .selection-descritption{
             float: left;
             margin-top: 17px;
-            font-size: 18px;
+            font-size: $font-size-18;
             color: rgba($black-color, 0.8);
             line-height: normal;
             width: 307px;
@@ -232,13 +251,13 @@ nav {
             }
 
             b{
-                font-size: 18px;
+                font-size: $font-size-18;
                 font-family: $roboto;
             }
             
             p{
                 margin: 2px 0 0 0;
-                font-size: 13px;
+                font-size: $font-size-13;
                 font-family: $roboto;
             }
         }
@@ -285,12 +304,12 @@ nav {
             background-color: $new-price;
             font-family: $montserrat-bold;
             color: $white-color;
-            font-size: 13px;
+            font-size: $font-size-13;
         }
 
         .old-price{
             font-family: $montserrat-light;
-            font-size: 13px;
+            font-size: $font-size-13;
             color: rgba($white-color, 0.7);
             text-decoration: line-through;
             background-color: rgba($old-price, 0.8);
@@ -299,7 +318,7 @@ nav {
 
     p{
         clear: both;
-        font-size: 13px;
+        font-size: $font-size-13;
         font-family: $roboto;
         color: rgba($title-menu-film, 0.5);
         margin: 19px 0 0 0;
@@ -374,7 +393,7 @@ nav {
         color: $color-limit-age;
         font-family: $roboto-bold;
         border-radius: 50%;
-        font-size: 13px;
+        font-size: $font-size-13;
     }
 
     .sub-menu {
@@ -478,7 +497,7 @@ nav {
         color: rgba($white-color, 0.6);
         text-decoration: none;
         font-family: $roboto-medium;
-        font-size: 15px;
+        font-size: $font-size-15;
         background-color: $nav_dark-gray;
         @include border-radius(3px);
     }
@@ -507,7 +526,7 @@ nav {
     .indice-notification{
         position: absolute;
         text-align: center;
-        font-size: 13px;
+        font-size: $font-size-13;
         top: 13px;
         margin-left: 31px;
         font-family: $roboto-bold;
@@ -555,13 +574,13 @@ nav {
             b{
                 font-family: $montserrat-bold;
                 text-transform: uppercase;
-                font-size: 13px;
+                font-size: $font-size-13;
                 margin-left: 30px;
             }
 
             a{
                 font-family: $roboto-medium;
-                font-size: 13px;
+                font-size: $font-size-13;
                 color: rgba($black-color, 0.5);
                 text-decoration: none;
                 float: right;
@@ -593,7 +612,7 @@ nav {
                     margin: 19px 0 0 17px;
                     width: 257px;
                     font-family: $roboto;
-                    font-size: 15px;
+                    font-size: $font-size-15;
                     line-height: 20px;
                     color: rgba($black-color, 0.8);
                     float: left;
@@ -606,7 +625,7 @@ nav {
                 .heure-notification{
                     float: left;
                     font-family: $roboto;
-                    font-size: 11px;
+                    font-size: $font-size-11;
                     margin-top: 5px;
                     margin-left: 84px;
                     color: rgba($black-color, 0.5);
@@ -645,18 +664,22 @@ nav {
         font-family: $montserrat-light;
         text-transform: uppercase;
         color: $name_gray-color;
-        font-size: 13px;
+        font-size: $font-size-13;
         margin: 18px 0 0 0;
     }
     a {
         text-decoration: none;
         font-family: $montserrat-bold;
         text-transform: uppercase;
-        font-size: 15px;
+        font-size: $font-size-15;
         font-weight: 700;
         color: $account_gray-color;
     }
 }
+
+/***** Fin Header-Navogation *****/
+
+/***** Partie Caroussel *****/
 
 .slider {
     width: 100%;
@@ -667,7 +690,7 @@ nav {
         padding-top: 53px;
         h1 {
             color: $white-color;
-            font-size: 48px;
+            font-size: $font-size-48;
             font-family: $montserrat-bold;
             width: 550px;
             line-height: 57px;
@@ -686,7 +709,7 @@ nav {
     color: $white-color;
     text-transform: uppercase;
     font-family: $montserrat-bold;
-    font-size: 15px;
+    font-size: $font-size-15;
     text-align: center;
     line-height: 31px;
     border: solid 2px $white-color;
@@ -706,7 +729,7 @@ nav {
         font-family: $roboto-bold;
         padding: 0;
         text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
-        font-size: 18px;
+        font-size: $font-size-18;
         width: 392px;
     }
 }
@@ -718,7 +741,7 @@ nav {
         height: 56px;
         font-family: $montserrat-bold;
         margin: 23px 0 0 91px;
-        font-size: 18px;
+        font-size: $font-size-18;
         text-decoration: none;
         @include border-radius(3px);
         background-color: $film-color;
@@ -729,6 +752,11 @@ nav {
         @include box-shadow(0px 2px 4px rgba($black-color, 0.5));
     }
 }
+
+/***** Fin Caroussel *****/
+
+
+/***** Tabs *****/
 
 .news{
 
@@ -770,10 +798,10 @@ nav {
     #tabs .ul-link-tabs li .link-tabs{
         text-decoration: none;
         font-family: $roboto-thin;
-        font-size: 32px;
+        font-size: $font-size-32;
         display: block;
         padding-left: 28px;
-        padding-top: 50px;
+        padding-top: 45px;
         height: 70px;
         color: rgba($white-color, 0.7);
     }
@@ -785,7 +813,7 @@ nav {
     .drop-tabs{
         width: 32px;
         height: 32px;
-        top: -67px;
+        top: -62px;
         float: right;
         position: relative;
         margin-right: 35px;
@@ -799,11 +827,11 @@ nav {
         display: none;
         text-decoration: none;
         font-family: $roboto;
-        font-size: 13px;
+        font-size: $font-size-13;
         color: rgba($aff-tabs, 0.6);
         width: 83px;
         margin-left: 28px;
-        margin-top: -30px;
+        margin-top: -25px;
     }
 
     #tabs .ul-link-tabs li:first-child .aff-tabs{
@@ -830,7 +858,7 @@ nav {
                     height: 260px;
                     float: left;
                     list-style-type: none;
-                    margin: 0 0 80px 28px;
+                    margin: 0 0 90px 28px;
                     @include box-shadow($shadow-image);
 
                     img{
@@ -842,12 +870,21 @@ nav {
                         text-align:center;
                         text-overflow: ellipsis;
                         font-family: $roboto;
-                        font-size: 15px;
+                        font-size: $font-size-15;
                         color: rgba( $black-color, 0.8);
                         width: 195px;
                         white-space: nowrap;
                         overflow: hidden;
-                        margin-top: 18px;
+                        margin: 18px 0 0 0;
+                    }
+
+                    .film-note_3{
+                        background: url('../img/star.png');
+                        background-size: 100% 100%;
+                        display: inline-block;
+                        width: 87px;
+                        height: 15px;
+                        margin: 4px 0 0 53px;
                     }
 
                     a{
@@ -862,7 +899,7 @@ nav {
                                 width: 38px;
                                 height: 30px;
                                 text-align:center; 
-                                font-size: 15px;
+                                font-size: $font-size-15;
                                 border: none;
                                 color: $header_black-color;
                                 @include border-radius(3px);
@@ -874,6 +911,57 @@ nav {
                             button:hover{
                                 background-color: $film-color;
                                 color: $white-color;
+                            }
+
+                            .see-ba:before, .add-list:before{
+                                content: "";
+                                position: absolute;
+                                z-index: 9999999999;
+                                border-color: $selection_black-color;
+                                background-color: $selection_black-color;
+                                border-style:solid;
+                                height:5px;
+                                width: 5px;
+                                @include rotate(45);
+                            }
+
+                            .add-list:before{
+                                left: 86px;
+                                top: 25px; 
+                            }
+
+                            .see-ba:before{
+                                left: 86px;
+                                top: -5px;
+                            }
+
+                            .see-ba, .add-list{
+                                display: none;
+                                white-space: nowrap;
+                                text-align: center;
+                                width: 177px;
+                                left: 74px;
+                                position: absolute;
+                                z-index: 9999999999;
+                                line-height: 32px;
+                                font-family: $roboto-medium;
+                                font-size: $font-size-13;
+                                @include border-radius(2px);
+                                @include box-shadow($shadow-image);
+                            }
+
+                            .add-list{
+                                margin-top: -73px;
+                            }
+
+                            .see-ba{
+                                margin-top: 15px;
+                            }
+
+                            button:hover .see-ba, button:hover .add-list{
+                                display: block;
+                                background-color: $selection_black-color;
+                                
                             }
                         }
                     }
@@ -915,13 +1003,13 @@ nav {
 
                     p{
                         width: 340px;
-                        font-size: 22px;
+                        font-size: $font-size-22;
                         color: rgba($black-color, 0.9);
                         margin: 30px 0 0 0;
                     }
 
                     .note{
-                        font-size: 15px;
+                        font-size: $font-size-15;
                         margin-top: 6px;
                         font-family: $roboto-bold;
                         color: rgba($selection_black-color, 0.8);
@@ -945,14 +1033,192 @@ nav {
                         text-align:center;
                         text-overflow: ellipsis;
                         font-family: $roboto;
-                        font-size: 15px;
+                        font-size: $font-size-15;
                         color: rgba( $black-color, 0.8);
                         width: 195px;
                         white-space: nowrap;
                         overflow: hidden;
                         margin-top: 18px;
-                    }
+                }
             }
         }
     }
 }
+
+.more-movie{
+    text-align:center;
+    margin-top: 10px;
+    a{
+        color: $aff-tabs;
+        font-size: $font-size-18;
+        font-family: $roboto;
+        text-decoration: none;
+    }
+}
+
+/***** Fin Tabs *****/
+
+/***** Just for You *****/
+
+.just-for-you{
+    width: 100%;
+    height: 490px;
+    background-color: $film-color;
+    padding-top: 50px;
+
+    .title-just{
+    float: left;
+
+        h3{
+            color: $white-color;
+            font-family: $roboto-light;
+            font-size: $font-size-32 !important;
+            margin: 0 0 0 96px;
+            font-weight: 300;
+        }
+
+        a{
+            color: $white-color;
+            font-family: $roboto;
+            text-decoration: none;
+            margin-left: 96px;
+            font-size: $font-size-13;
+        }
+    }
+
+    .discover-just{
+        float: right;
+        margin-right: 96px;
+        margin-top: 2px;
+
+        a{
+            color: $white-color;
+            display: block;
+            background-color: darken($film-color, 8);
+            @include border-radius(50px);
+            font-family: $roboto;
+            text-decoration:none;
+            font-size: $font-size-18;
+            padding: 10px 18px 10px 18px;
+        }
+    }
+}
+
+/***** Fin Jus for You *****/
+
+/****** Style custom tooltip *****/
+
+.tooltipster-content{
+    background-color: $white-color;
+    color: $black-color;
+    width: 326px;
+    height: 352px;
+    border: none !important;
+    @include box-shadow($shadow-image);
+
+    h4{
+        color: $header_black-color;
+        font-family: $roboto-medium;
+        font-size: $font-size-22;
+        width: 230px;
+        margin: 26px 0 0 30px;
+        line-height: 26px;
+    }
+
+    .genre-aff{
+        font-family: $roboto-medium;
+        font-size: $font-size-13;
+        color: $header_black-color;
+        margin: 10px 0 0 30px;
+
+        .vost-aff{
+            width: 36px;
+            height: 16px;
+            margin-top: -3px;
+        }
+
+        .picto-age{
+            width: 21px;
+            height: 21px;
+            margin-top: -7px;
+        }
+    }
+
+    .acteur-aff{
+        color: rgba($header_black-color, 0.8);
+        font-family: $roboto-medium;
+        font-size: $font-size-13;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 270px;
+        margin: 0 0 0 30px;
+    }
+
+    .origine-aff{
+        color: rgba($header_black-color, 0.8);
+        font-family: $roboto-medium;
+        font-size: $font-size-13;
+        width: 270px;
+        margin: 3px 0 0 30px;
+    }
+
+    .catchphrase{
+        color: rgba($header_black-color, 0.5);
+        font-family: $roboto-bolditalic;
+        display: block;
+        padding-left: 10px;
+        border-left: solid 3px rgba($header_black-color, 0.1);
+        font-size: $font-size-13;
+        width: 230px;
+        margin: 24px 0 0 30px;
+    }
+
+    button{
+        width: 270px;
+        height: 40px;
+        font-family: $montserrat-bold;
+        text-transform: uppercase;
+        text-align:left;
+        font-size: $font-size-13;
+        @include border-radius(3px);
+        border: none; 
+        padding: 0 13px 0 16px;
+    }
+
+    .achat-aff{
+        background-color: $film-color;
+        margin: 12px 0 0 30px;
+        color: $white-color;
+    }
+
+    .cross-bar{
+        text-decoration: line-through;
+    }
+
+    .price{
+        font-size: $font-size-18;
+    }
+
+    .right{
+            float:right;
+    }
+
+    .louer-aff{
+        background-color: $white-button;
+        margin: 10px 0 20px 30px;
+        color: $color-white-button;
+    }
+
+    a{
+        color: rgba($header_black-color, 0.5);
+        font-size: $font-size-13;
+        text-align:center;
+        $font-family: $roboto-medium;
+        width: 100%;
+        text-decoration: none;
+        margin-left: 118px;
+    }
+}
+
+/***** Fin Style custom tooltip *****/
