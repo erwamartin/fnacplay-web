@@ -1,11 +1,20 @@
 /***** Variables *****/
 
+/***** Univers color *****/
 $primary-color: #f5b027;
 $adult-color: #de0477;
 $film-color: #15B4A8;
 $young-color: #f46317;
 $serie-color: #714299;
 $spectacle-color: #15b4a8;
+/***** Fin Univers color *****/
+
+/***** Color Spec Aff film *****/
+
+$gradient: #1F2020;
+
+/***** Fin Color Aff film *****/
+
 $white-color: #fff;
 $black-color: #000;
 $nav_dark-gray: #2a2a2a;
@@ -13,7 +22,7 @@ $nav_light-gray: #eef0f2;
 $border-notification: #d9d9d9;
 $link_gray-color: #d8d8d8;
 $black_title-color: #171717;
-$header_black-color: #18191a;
+$header_black-color: #18191a; /*Change name*/
 $color-limit-age: #151515;
 $selection_black-color: #212324;
 $name_gray-color: #202123;
@@ -31,6 +40,8 @@ $button-inscrire: #212324;
 $shadow-image: 0px 1px 4px rgba($black-color, 0.3);
 $from-gradient: rgba($black-color, 0.0);
 $to-gradient: rgba($black-color, 0.5);
+
+$shadow-titre: 0px 1px rgba($black-color ,0.6);
 
 $montserrat: "Montserrat", sans-serif;
 $montserrat-light: "Montserrat-Light", sans-serif;
@@ -459,6 +470,18 @@ nav {
     }
 }
 
+.movie.active{
+    background-color: $film-color;
+
+    a{
+        color: $white-color;
+    }
+
+    .border-color {
+        display: block;
+    }
+}
+
 .serie:hover {
     background-color: $serie-color;
 
@@ -739,8 +762,10 @@ nav {
 .slider {
     width: 100%;
     height: 530px;
+    background: url("../img/bg-affiche-film.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background: url("../img/movie1.jpg") no-repeat center center;
     section {
         padding-top: 53px;
         h1 {
@@ -1125,6 +1150,35 @@ nav {
 
 /***** Just for You *****/
 
+
+/* Just for you affiche-film */
+.just-for-you.like{
+    background-color: $gray-tabs;
+
+    .title-just{
+        h3{
+            color: $black_title-color;
+        }
+        a{
+            color: rgba($black_title-color, 0.6);
+        }
+    }
+
+    .carousel{
+    ul{
+        li{
+            h2{
+                color: rgba($black_title-color, 0.8);
+            }
+        }
+    }
+}
+}
+
+/* Fin Just for you affiche-film */
+
+
+
 .just-for-you{
     width: 100%;
     height: 440px;
@@ -1185,12 +1239,13 @@ nav {
                         height: 100%;
                     }
 
-                    p{
+                    h2{
                         text-align:center;
                         text-overflow: ellipsis;
                         font-family: $roboto;
                         font-size: $font-size-15;
                         color: $white-color;
+                        font-weight: normal;
                         width: 195px;
                         white-space: nowrap;
                         overflow: hidden;
@@ -1377,20 +1432,22 @@ nav {
                     background: linear-gradient(to right, rgba($black-color, 0.5), rgba($black-color, 0.0)); /* Standard syntax */
                     position:absolute;
 
-                    h4{
+                    h2{
                         font-family: $montserrat-bold;
                         font-size: $font-size-28;
+                        font-weight: normal;
                         color: $white-color;
                         text-transform: uppercase;
-                        width: 350px;
+                        width: 355px;
                         margin: 42px 0 0 59px;
                     }
 
-                    p{
+                    h3{
                         font-family: $roboto-medium;
                         font-size: $font-size-15;
                         color: $white-color;
                         width: 285px;
+                        font-weight: normal;
                         margin: 10px 0 0 59px;
                     }
                 }
@@ -1453,13 +1510,17 @@ nav {
                 a{
                     display: block;
                     width: 530px;
-                    font-family: $montserrat-bold;
-                    font-size: 24px;
-                    text-transform: uppercase;
                     height: 140px;
                     line-height: 140px;
                     text-decoration: none;
                     color: rgba($selection_black-color, 0.6);
+                    h2{
+                    font-family: $montserrat-bold;
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    margin: 0;
+                    }
                 }
             }
 
@@ -1468,6 +1529,17 @@ nav {
                 a{
                     color: $white-color;
                 }
+            }
+
+            .ui-state-active:after{
+                position: absolute;
+                content: "";
+                width: 60px;
+                margin-top: -49px;
+                height: 60px;
+                margin-left: -37px;
+                background-color: $film-color;
+                @include rotate(45);
             }
         }
 
@@ -1495,8 +1567,9 @@ nav {
                         height: 100%;
                     }
 
-                    p{
+                    h2{
                         text-align:center;
+                        font-weight: normal;
                         text-overflow: ellipsis;
                         font-family: $roboto;
                         font-size: $font-size-15;
@@ -1750,6 +1823,100 @@ footer{
 
 /***** Fin Footer *****/
 
+/***** Affiche film *****/
+
+/*** Description film ***/
+
+.affiche-film{
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(to bottom, rgba($header_black-color, 0.5), rgba($header_black-color, 1.0)), url("../img/bg-affiche-film.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .breadcrumbs{
+        width: 100%;
+        line-height: 27px;
+        background-color: rgba(0, 0, 0, 0.15);
+        padding-left: 96px;
+
+        a{
+            text-decoration: none;
+            color: $white-color;
+            font: $roboto;
+            font-size: 13px;
+        }
+        a.titlebread{
+            color: rgba($white-color, 0.6);
+        }
+    }
+
+    .description-film{
+        float: left;
+        padding: 0 0 0 96px;
+
+        h1{
+            color: $white-color;
+            font-family: $montserrat-bold;
+            font-size: 48px;
+            margin: 64px 0 6px 0;
+            text-transform: uppercase;
+            text-shadow: $shadow-titre;
+        }
+
+        h3{
+            padding: 0;
+            margin: 0;
+            font-weight: normal;
+            font-size: 15px;
+            text-shadow: $shadow-titre;
+            color: $white-color;
+            font-family: $roboto;
+            line-height: 0;
+
+            .white-vost{
+                width: 44px;
+                height: 19px;
+                margin-left: 5px;
+            }
+
+            .white-limit{
+                width: 21px;
+                height: 21px;
+            }
+        }
+
+        p{
+            text-shadow: $shadow-titre;
+            width: 510px;
+            color: $white-color;
+            font-size: 18px;
+            max-height: 75px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-family: $roboto-medium;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+
+/*** Fin description film ***/
+
+/*** Information Film ***/
+
+.information-film{
+    width: 100%;
+    height: 538px;
+    background-color: $header_black-color;
+}
+
+/*** Fin Information Film ***/
+
+/***** Fin affiche film *****/
+
 /****** Style custom tooltip *****/
 
 .tooltipster-content{
@@ -1866,3 +2033,16 @@ footer{
 }
 
 /***** Fin Style custom tooltip *****/
+
+/***** Note *****/
+
+.note_4{
+    display: block;
+    float: left;
+    width: 90px;
+    margin-right: 5px;
+    height: 16px;
+    background: url("../img/note_4.png");
+} 
+
+/***** Fin Note *****/

@@ -1,4 +1,9 @@
 /***** Variables *****/
+/***** Univers color *****/
+/***** Fin Univers color *****/
+/***** Color Spec Aff film *****/
+/***** Fin Color Aff film *****/
+/*Change name*/
 /***** Mixins *****/
 *:focus, *:active, *:hover {
   outline: 0; }
@@ -264,6 +269,13 @@ nav {
     .movie:hover .sub-menu h2 {
       color: #15B4A8; }
 
+.movie.active {
+  background-color: #15B4A8; }
+  .movie.active a {
+    color: #fff; }
+  .movie.active .border-color {
+    display: block; }
+
 .serie:hover {
   background-color: #714299; }
   .serie:hover a {
@@ -476,8 +488,10 @@ nav {
 .slider {
   width: 100%;
   height: 530px;
-  background-size: cover;
-  background: url("../img/movie1.jpg") no-repeat center center; }
+  background: url("../img/bg-affiche-film.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
   .slider section {
     padding-top: 53px; }
     .slider section h1 {
@@ -788,6 +802,17 @@ nav {
 
 /***** Fin Tabs *****/
 /***** Just for You *****/
+/* Just for you affiche-film */
+.just-for-you.like {
+  background-color: #f8f8f8; }
+  .just-for-you.like .title-just h3 {
+    color: #171717; }
+  .just-for-you.like .title-just a {
+    color: rgba(23, 23, 23, 0.6); }
+  .just-for-you.like .carousel ul li h2 {
+    color: rgba(23, 23, 23, 0.8); }
+
+/* Fin Just for you affiche-film */
 .just-for-you {
   width: 100%;
   height: 440px;
@@ -835,12 +860,13 @@ nav {
   .carousel ul li img {
     width: 100%;
     height: 100%; }
-  .carousel ul li p {
+  .carousel ul li h2 {
     text-align: center;
     text-overflow: ellipsis;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     color: #fff;
+    font-weight: normal;
     width: 195px;
     white-space: nowrap;
     overflow: hidden;
@@ -995,18 +1021,20 @@ nav {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
       /* Standard syntax */
       position: absolute; }
-      .our-selection .bloc-selection .img-selection a .text-selection h4 {
+      .our-selection .bloc-selection .img-selection a .text-selection h2 {
         font-family: "Montserrat-Bold", sans-serif;
         font-size: 28px;
+        font-weight: normal;
         color: #fff;
         text-transform: uppercase;
-        width: 350px;
+        width: 355px;
         margin: 42px 0 0 59px; }
-      .our-selection .bloc-selection .img-selection a .text-selection p {
+      .our-selection .bloc-selection .img-selection a .text-selection h3 {
         font-family: "Roboto-Medium", sans-serif;
         font-size: 15px;
         color: #fff;
         width: 285px;
+        font-weight: normal;
         margin: 10px 0 0 59px; }
     .our-selection .bloc-selection .img-selection a img {
       width: 825px;
@@ -1059,17 +1087,32 @@ nav {
       .bloc-reduction #reduction .ul-link-reduction li a {
         display: block;
         width: 530px;
-        font-family: "Montserrat-Bold", sans-serif;
-        font-size: 24px;
-        text-transform: uppercase;
         height: 140px;
         line-height: 140px;
         text-decoration: none;
         color: rgba(33, 35, 36, 0.6); }
+        .bloc-reduction #reduction .ul-link-reduction li a h2 {
+          font-family: "Montserrat-Bold", sans-serif;
+          font-size: 24px;
+          text-transform: uppercase;
+          font-weight: normal;
+          margin: 0; }
     .bloc-reduction #reduction .ul-link-reduction .ui-state-active {
       background-color: #15B4A8; }
       .bloc-reduction #reduction .ul-link-reduction .ui-state-active a {
         color: #fff; }
+    .bloc-reduction #reduction .ul-link-reduction .ui-state-active:after {
+      position: absolute;
+      content: "";
+      width: 60px;
+      margin-top: -49px;
+      height: 60px;
+      margin-left: -37px;
+      background-color: #15B4A8;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
   .bloc-reduction #reduction #reduction_container {
     min-height: 420px;
     width: 100%;
@@ -1089,8 +1132,9 @@ nav {
         .bloc-reduction #reduction #reduction_container #reduction-1 ul li img, .bloc-reduction #reduction #reduction_container #reduction-2 ul li img {
           width: 100%;
           height: 100%; }
-        .bloc-reduction #reduction #reduction_container #reduction-1 ul li p, .bloc-reduction #reduction #reduction_container #reduction-2 ul li p {
+        .bloc-reduction #reduction #reduction_container #reduction-1 ul li h2, .bloc-reduction #reduction #reduction_container #reduction-2 ul li h2 {
           text-align: center;
+          font-weight: normal;
           text-overflow: ellipsis;
           font-family: "Roboto", sans-serif;
           font-size: 15px;
@@ -1287,6 +1331,75 @@ footer {
             font-size: 22px; }
 
 /***** Fin Footer *****/
+/***** Affiche film *****/
+/*** Description film ***/
+.affiche-film {
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("../img/bg-affiche-film.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .affiche-film .breadcrumbs {
+    width: 100%;
+    line-height: 27px;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding-left: 96px; }
+    .affiche-film .breadcrumbs a {
+      text-decoration: none;
+      color: #fff;
+      font: "Roboto", sans-serif;
+      font-size: 13px; }
+    .affiche-film .breadcrumbs a.titlebread {
+      color: rgba(255, 255, 255, 0.6); }
+  .affiche-film .description-film {
+    float: left;
+    padding: 0 0 0 96px; }
+    .affiche-film .description-film h1 {
+      color: #fff;
+      font-family: "Montserrat-Bold", sans-serif;
+      font-size: 48px;
+      margin: 64px 0 6px 0;
+      text-transform: uppercase;
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.6); }
+    .affiche-film .description-film h3 {
+      padding: 0;
+      margin: 0;
+      font-weight: normal;
+      font-size: 15px;
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      line-height: 0; }
+      .affiche-film .description-film h3 .white-vost {
+        width: 44px;
+        height: 19px;
+        margin-left: 5px; }
+      .affiche-film .description-film h3 .white-limit {
+        width: 21px;
+        height: 21px; }
+    .affiche-film .description-film p {
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.6);
+      width: 510px;
+      color: #fff;
+      font-size: 18px;
+      max-height: 75px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: "Roboto-Medium", sans-serif;
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical; }
+
+/*** Fin description film ***/
+/*** Information Film ***/
+.information-film {
+  width: 100%;
+  height: 538px;
+  background-color: #18191a; }
+
+/*** Fin Information Film ***/
+/***** Fin affiche film *****/
 /****** Style custom tooltip *****/
 .tooltipster-content {
   background-color: #fff;
@@ -1377,5 +1490,15 @@ footer {
     margin-left: 118px; }
 
 /***** Fin Style custom tooltip *****/
+/***** Note *****/
+.note_4 {
+  display: block;
+  float: left;
+  width: 90px;
+  margin-right: 5px;
+  height: 16px;
+  background: url("../img/note_4.png"); }
+
+/***** Fin Note *****/
 
 /*# sourceMappingURL=style.css.map */
