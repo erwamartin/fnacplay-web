@@ -106,7 +106,7 @@ nav {
   .genre ul li:last-child {
     border-bottom: solid 1px #eeeeee; }
   .genre ul li .link-genre h3:after {
-    content: url("../img/rectangle.png");
+    content: url("/img/rectangle.png");
     position: absolute;
     left: 296px; }
   .genre h2 {
@@ -450,7 +450,7 @@ nav {
         margin-left: 84px;
         color: rgba(0, 0, 0, 0.5); }
     .notification .description-notification .content-notification ul li:after {
-      content: url("../img/rectangle.png");
+      content: url("/img/rectangle.png");
       position: absolute;
       left: 356px;
       margin-top: -50px; }
@@ -488,7 +488,7 @@ nav {
 .slider {
   width: 100%;
   height: 530px;
-  background: url("../img/bg-affiche-film.jpg");
+  background: url("/img/bg-affiche-film.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -647,7 +647,7 @@ nav {
         overflow: hidden;
         margin: 18px 0 0 0; }
       .news #tabs_container #tabs-1 ul li .film-note_3, .news #tabs_container #tabs-2 ul li .film-note_3 {
-        background: url("../img/star.png");
+        background: url("/img/star.png");
         background-size: 100% 100%;
         display: inline-block;
         width: 87px;
@@ -771,7 +771,7 @@ nav {
         font-family: "Roboto-Bold", sans-serif;
         color: rgba(33, 35, 36, 0.8); }
       .news #tabs_container #tabs-3 ul li:first-child .note_3 {
-        background: url("../img/star.png");
+        background: url("/img/star.png");
         background-size: 100% 100%;
         display: inline-block;
         width: 99px;
@@ -872,7 +872,7 @@ nav {
     overflow: hidden;
     margin: 18px 0 0 0; }
   .carousel ul li .film-note_3 {
-    background: url("../img/star.png");
+    background: url("/img/star.png");
     background-size: 100% 100%;
     display: inline-block;
     width: 87px;
@@ -1229,6 +1229,7 @@ nav {
 /***** Newsletter *****/
 .newsletter {
   width: 100%;
+  display: none;
   height: 72px;
   padding-top: 27px;
   border-top: solid 1px #d8d8d8;
@@ -1336,38 +1337,41 @@ footer {
 .affiche-film {
   width: 100%;
   height: 700px;
-  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("../img/bg-affiche-film.jpg");
+  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-film.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
   .affiche-film .breadcrumbs {
     width: 100%;
     line-height: 27px;
-    background-color: rgba(0, 0, 0, 0.15);
-    padding-left: 96px; }
+    background-color: rgba(0, 0, 0, 0.15); }
     .affiche-film .breadcrumbs a {
       text-decoration: none;
       color: #fff;
       font: "Roboto", sans-serif;
-      font-size: 13px; }
+      font-size: 13px;
+      margin-left: 96px; }
+    .affiche-film .breadcrumbs a:last-child {
+      margin-left: 0; }
     .affiche-film .breadcrumbs a.titlebread {
       color: rgba(255, 255, 255, 0.6); }
   .affiche-film .description-film {
     float: left;
-    padding: 0 0 0 96px; }
+    padding: 0 0 0 96px;
+    width: 857px; }
     .affiche-film .description-film h1 {
       color: #fff;
       font-family: "Montserrat-Bold", sans-serif;
       font-size: 48px;
       margin: 64px 0 6px 0;
       text-transform: uppercase;
-      text-shadow: 0px 1px rgba(0, 0, 0, 0.6); }
+      text-shadow: 0px 2px rgba(0, 0, 0, 0.6); }
     .affiche-film .description-film h3 {
       padding: 0;
       margin: 0;
       font-weight: normal;
       font-size: 15px;
-      text-shadow: 0px 1px rgba(0, 0, 0, 0.6);
+      text-shadow: 0px 2px rgba(0, 0, 0, 0.6);
       color: #fff;
       font-family: "Roboto", sans-serif;
       line-height: 0; }
@@ -1379,24 +1383,426 @@ footer {
         width: 21px;
         height: 21px; }
     .affiche-film .description-film p {
-      text-shadow: 0px 1px rgba(0, 0, 0, 0.6);
+      text-shadow: 0px 2px rgba(0, 0, 0, 0.6);
       width: 510px;
       color: #fff;
       font-size: 18px;
       max-height: 75px;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-family: "Roboto-Medium", sans-serif;
+      font-family: "Roboto", sans-serif;
       display: -webkit-box;
-      -webkit-line-clamp: 7;
-      -webkit-box-orient: vertical; }
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 30px 0 6px 0; }
+    .affiche-film .description-film a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px; }
+    .affiche-film .description-film .bloc-facebook ul {
+      padding: 30px 0 0 0;
+      margin: 0; }
+      .affiche-film .description-film .bloc-facebook ul li {
+        float: left;
+        list-style-type: none;
+        display: block;
+        margin-left: 7px; }
+        .affiche-film .description-film .bloc-facebook ul li img {
+          width: 44px;
+          height: 44px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+          -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
+      .affiche-film .description-film .bloc-facebook ul li:first-child {
+        margin-left: 0; }
+    .affiche-film .description-film .bloc-facebook p {
+      width: auto;
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      font-size: 13px;
+      color: #fff;
+      line-height: 44px; }
+      .affiche-film .description-film .bloc-facebook p img {
+        width: 16px;
+        height: 16px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        margin: -7px 7px 0 13px;
+        -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
+    .affiche-film .description-film .bloc-video {
+      margin: 36px 0 0 0; }
+      .affiche-film .description-film .bloc-video a {
+        display: block;
+        font-family: "Montserrat-Bold", sans-serif;
+        font-size: 13px;
+        color: #fff;
+        text-transform: uppercase; }
+        .affiche-film .description-film .bloc-video a img {
+          width: 44px;
+          height: 44px;
+          margin: 0 11px 0 0;
+          float: left; }
+        .affiche-film .description-film .bloc-video a .ba {
+          margin: 3px 17px 0 0;
+          width: 175px;
+          float: left; }
+          .affiche-film .description-film .bloc-video a .ba span {
+            font-size: 18px; }
+      .affiche-film .description-film .bloc-video .more-video {
+        float: left; }
+        .affiche-film .description-film .bloc-video .more-video a {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.7);
+          text-transform: uppercase;
+          font-size: 18px;
+          margin-top: 20px;
+          font-family: "Montserrat-Bold", sans-serif;
+          display: block; }
+    .affiche-film .description-film .button-affiche {
+      padding-top: 35px; }
+      .affiche-film .description-film .button-affiche a {
+        width: 250px;
+        display: block;
+        height: 60px;
+        float: left;
+        margin-right: 20px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        border-radius: 3px;
+        font-size: 13px;
+        font-family: "Montserrat-Bold", sans-serif;
+        text-transform: uppercase;
+        padding: 16px 0 0 26px; }
+      .affiche-film .description-film .button-affiche .affiche-price {
+        font-family: "Montserrat", sans-serif;
+        font-size: 24px; }
+      .affiche-film .description-film .button-affiche .location {
+        background-color: #f8f8f8;
+        color: #6A6760; }
+        .affiche-film .description-film .button-affiche .location .affiche-old-price {
+          font-size: 18px;
+          text-decoration: line-through;
+          margin-left: 7px;
+          color: rgba(106, 103, 96, 0.6); }
+      .affiche-film .description-film .button-affiche .location:after {
+        content: url(/img/little-play.png);
+        width: 24px;
+        height: 24px;
+        margin-left: 68px;
+        position: absolute;
+        margin-top: -7px; }
+      .affiche-film .description-film .button-affiche .buy {
+        background-color: #15B4A8;
+        color: #fff; }
+      .affiche-film .description-film .button-affiche .buy:after {
+        content: url(/img/little-cart.png);
+        width: 22px;
+        height: 21px;
+        margin-left: 131px;
+        position: absolute;
+        margin-top: -6px; }
+    .affiche-film .description-film .buy-disk {
+      padding-top: 20px; }
+      .affiche-film .description-film .buy-disk a {
+        color: #fff;
+        font-size: 15px;
+        font-family: "Roboto-Medium", sans-serif; }
+        .affiche-film .description-film .buy-disk a img {
+          margin-right: 10px; }
+  .affiche-film .notation-film {
+    float: left;
+    margin-left: 22px; }
+    .affiche-film .notation-film img {
+      margin-top: 68px;
+      width: 210px;
+      height: 280px; }
+    .affiche-film .notation-film .attr-note {
+      width: 210px;
+      height: 59px;
+      padding-top: 17px;
+      background-color: rgba(255, 255, 255, 0.17); }
+      .affiche-film .notation-film .attr-note h3 {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat-Bold", sans-serif;
+        font-weight: normal;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase; }
+    .affiche-film .notation-film .attr-list {
+      width: 210px;
+      height: 59px;
+      padding: 17px 0 0 0;
+      margin-top: 58px;
+      background-color: rgba(255, 255, 255, 0.17);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px; }
+      .affiche-film .notation-film .attr-list h3 {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat-Bold", sans-serif;
+        font-weight: normal;
+        font-size: 13px;
+        text-transform: uppercase; }
+        .affiche-film .notation-film .attr-list h3 span {
+          font-size: 18px; }
+  .affiche-film .follow {
+    padding-top: 17px;
+    margin: 0 0 0 96px; }
+    .affiche-film .follow hr {
+      width: 857px;
+      display: block;
+      height: 1px;
+      border: 0;
+      float: left;
+      margin: 12px 0 0 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0; }
+    .affiche-film .follow h3 {
+      float: left;
+      margin: 0 0 0 22px;
+      font-size: 13px;
+      line-height: 23px;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: normal; }
+    .affiche-film .follow i {
+      color: #fff;
+      margin: 0 10px 0 10px;
+      font-size: 24px; }
 
 /*** Fin description film ***/
 /*** Information Film ***/
 .information-film {
   width: 100%;
-  height: 538px;
+  min-height: 538px;
+  margin: 0;
   background-color: #18191a; }
+  .information-film .casting {
+    float: left; }
+    .information-film .casting h2 {
+      margin: 0 0 23px 96px;
+      color: #fff;
+      font-size: 32px;
+      font-family: "Roboto-Light", sans-serif;
+      font-weight: normal; }
+    .information-film .casting h3 {
+      padding: 0;
+      margin: 0 0 0 96px;
+      font-weight: normal;
+      font-size: 15px;
+      font-family: "Roboto", sans-serif;
+      color: #fff; }
+      .information-film .casting h3 span {
+        font-family: "Roboto-Medium", sans-serif; }
+    .information-film .casting ul {
+      margin: 35px 0 0 96px;
+      padding: 0; }
+      .information-film .casting ul li {
+        float: left;
+        margin: 0 0 0 20px;
+        list-style-type: none; }
+        .information-film .casting ul li img {
+          width: 96px;
+          height: 120px; }
+      .information-film .casting ul li:first-child {
+        margin: 0; }
+  .information-film .users-note {
+    float: left;
+    margin: 0 0 70px 155px; }
+    .information-film .users-note h2 {
+      color: #fff;
+      font-size: 32px;
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto-Light", sans-serif;
+      font-weight: normal; }
+    .information-film .users-note .note-attr {
+      float: left; }
+      .information-film .users-note .note-attr h4 {
+        color: #f5b027;
+        font-family: "Montserrat-Light", sans-serif;
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+        font-size: 66px; }
+      .information-film .users-note .note-attr h5 {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        margin: 0;
+        font-weight: normal;
+        padding: 0;
+        color: rgba(255, 255, 255, 0.5); }
+    .information-film .users-note .note-details {
+      float: left;
+      margin: 17px 0 0 28px; }
+      .information-film .users-note .note-details .note-top {
+        padding: 2px 0 0 0 !important; }
+      .information-film .users-note .note-details ul {
+        margin: 0 0 0 0;
+        padding: 0; }
+        .information-film .users-note .note-details ul li {
+          list-style-type: none;
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 13px;
+          font-family: "Roboto", sans-serif; }
+          .information-film .users-note .note-details ul li .n5 {
+            float: left;
+            width: 70px;
+            height: 12px;
+            display: block;
+            background: url("/img/stars-aff.png");
+            background-size: cover;
+            background-position: 0 95px; }
+          .information-film .users-note .note-details ul li .b5 {
+            margin: 5px 18px 0 18px;
+            float: left;
+            width: 120px;
+            height: 3px;
+            display: block;
+            background: url("/img/bars-aff.png");
+            background-size: cover;
+            background-position: 0 83px; }
+          .information-film .users-note .note-details ul li .n4 {
+            float: left;
+            width: 70px;
+            height: 12px;
+            display: block;
+            background: url("/img/stars-aff.png");
+            background-size: cover;
+            background-position: 0 74px; }
+          .information-film .users-note .note-details ul li .b4 {
+            margin: 5px 18px 0 18px;
+            float: left;
+            width: 120px;
+            height: 3px;
+            display: block;
+            background: url("/img/bars-aff.png");
+            background-size: cover;
+            background-position: 0 63px; }
+          .information-film .users-note .note-details ul li .n3 {
+            float: left;
+            width: 70px;
+            height: 12px;
+            display: block;
+            background: url("/img/stars-aff.png");
+            background-size: cover;
+            background-position: 0 54px; }
+          .information-film .users-note .note-details ul li .b3 {
+            margin: 5px 18px 0 18px;
+            float: left;
+            width: 120px;
+            height: 3px;
+            display: block;
+            background: url("/img/bars-aff.png");
+            background-size: cover;
+            background-position: 0 43px; }
+          .information-film .users-note .note-details ul li .n2 {
+            float: left;
+            width: 70px;
+            height: 12px;
+            display: block;
+            background: url("/img/stars-aff.png");
+            background-size: cover;
+            background-position: 0 33px; }
+          .information-film .users-note .note-details ul li .b2 {
+            margin: 5px 18px 0 18px;
+            float: left;
+            width: 120px;
+            height: 3px;
+            display: block;
+            background: url("/img/bars-aff.png");
+            background-size: cover;
+            background-position: 0 23px; }
+          .information-film .users-note .note-details ul li .n1 {
+            float: left;
+            width: 70px;
+            height: 12px;
+            display: block;
+            background: url("/img/stars-aff.png");
+            background-size: cover;
+            background-position: 0 12px; }
+          .information-film .users-note .note-details ul li .b1 {
+            margin: 5px 18px 0 18px;
+            float: left;
+            width: 120px;
+            height: 3px;
+            display: block;
+            background: url("/img/bars-aff.png");
+            background-size: cover;
+            background-position: 0 3px; }
+          .information-film .users-note .note-details ul li .nbr {
+            margin: 0;
+            float: left; }
+  .information-film .presse h4 {
+    color: #fff;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    padding: 32px 0 0 0;
+    margin: 0;
+    width: 255px; }
+  .information-film .presse p {
+    margin: 4px 0 0 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 13px; }
+  .information-film .avis-expert {
+    margin: 70px 0 0 96px;
+    width: 1049px;
+    height: 108px;
+    background-color: #2A2C2E;
+    padding: 32px 0 0 41px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px; }
+    .information-film .avis-expert img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      float: left;
+      width: 70px;
+      height: 70px;
+      border: solid 3px #15B4A8; }
+    .information-film .avis-expert h4 {
+      float: left;
+      color: #fff;
+      font-size: 13px;
+      font-weight: normal;
+      font-family: "Montserrat-Bold", sans-serif;
+      margin: 16px 0 0 20px;
+      padding: 0;
+      text-transform: uppercase; }
+      .information-film .avis-expert h4 span {
+        font-size: 18px;
+        color: #15B4A8; }
+    .information-film .avis-expert p {
+      width: 555px;
+      float: left;
+      color: #fff;
+      font-size: 18px;
+      margin: 13px 0 0 70px;
+      padding: 0;
+      font-family: "Roboto", sans-serif; }
 
 /*** Fin Information Film ***/
 /***** Fin affiche film *****/
@@ -1497,7 +1903,7 @@ footer {
   width: 90px;
   margin-right: 5px;
   height: 16px;
-  background: url("../img/note_4.png"); }
+  background: url("/img/note_4.png"); }
 
 /***** Fin Note *****/
 

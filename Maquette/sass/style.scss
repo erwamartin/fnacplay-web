@@ -12,6 +12,8 @@ $spectacle-color: #15b4a8;
 /***** Color Spec Aff film *****/
 
 $gradient: #1F2020;
+$location: #6A6760;
+$avis: #2A2C2E;
 
 /***** Fin Color Aff film *****/
 
@@ -41,7 +43,7 @@ $shadow-image: 0px 1px 4px rgba($black-color, 0.3);
 $from-gradient: rgba($black-color, 0.0);
 $to-gradient: rgba($black-color, 0.5);
 
-$shadow-titre: 0px 1px rgba($black-color ,0.6);
+$shadow-titre: 0px 2px rgba($black-color ,0.6);
 
 $montserrat: "Montserrat", sans-serif;
 $montserrat-light: "Montserrat-Light", sans-serif;
@@ -225,7 +227,7 @@ nav {
     }
 
     ul li .link-genre h3:after{
-        content: url('../img/rectangle.png');
+        content: url('/img/rectangle.png');
         position: absolute;
         left: 296px;
     }
@@ -711,7 +713,7 @@ nav {
             }
 
             ul li:after{
-                content: url('../img/rectangle.png');
+                content: url('/img/rectangle.png');
                 position: absolute;
                 left: 356px;
                 margin-top: -50px
@@ -762,7 +764,7 @@ nav {
 .slider {
     width: 100%;
     height: 530px;
-    background: url("../img/bg-affiche-film.jpg");
+    background: url("/img/bg-affiche-film.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -966,7 +968,7 @@ nav {
                     }
 
                     .film-note_3{
-                        background: url('../img/star.png');
+                        background: url('/img/star.png');
                         background-size: 100% 100%;
                         display: inline-block;
                         width: 87px;
@@ -1105,7 +1107,7 @@ nav {
                     }
 
                     .note_3{
-                        background: url('../img/star.png');
+                        background: url('/img/star.png');
                         background-size: 100% 100%;
                         display: inline-block;
                         width: 99px;
@@ -1253,7 +1255,7 @@ nav {
                     }
 
                     .film-note_3{
-                        background: url('../img/star.png');
+                        background: url('/img/star.png');
                         background-size: 100% 100%;
                         display: inline-block;
                         width: 87px;
@@ -1677,6 +1679,7 @@ nav {
 
 .newsletter{
     width: 100%;
+    display: none;
     height: 72px;
     padding-top: 27px;
     border-top: solid 1px $link_gray-color;
@@ -1830,7 +1833,7 @@ footer{
 .affiche-film{
     width: 100%;
     height: 700px;
-    background: linear-gradient(to bottom, rgba($header_black-color, 0.5), rgba($header_black-color, 1.0)), url("../img/bg-affiche-film.jpg");
+    background: linear-gradient(to bottom, rgba($header_black-color, 0.5), rgba($header_black-color, 1.0)), url("/img/bg-affiche-film.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1839,13 +1842,16 @@ footer{
         width: 100%;
         line-height: 27px;
         background-color: rgba(0, 0, 0, 0.15);
-        padding-left: 96px;
 
         a{
             text-decoration: none;
             color: $white-color;
             font: $roboto;
             font-size: 13px;
+            margin-left: 96px;
+        }
+        a:last-child{
+            margin-left: 0;
         }
         a.titlebread{
             color: rgba($white-color, 0.6);
@@ -1855,6 +1861,7 @@ footer{
     .description-film{
         float: left;
         padding: 0 0 0 96px;
+        width: 857px;
 
         h1{
             color: $white-color;
@@ -1895,10 +1902,247 @@ footer{
             max-height: 75px;
             overflow: hidden;
             text-overflow: ellipsis;
-            font-family: $roboto-medium;
+            font-family: $roboto;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
+            margin: 30px 0 6px 0;
+        }
+
+        a{
+            color: rgba($white-color, 0.7);
+            text-decoration: none;
+            font-family: $roboto;
+            font-size: 15px;
+        }
+
+        .bloc-facebook{
+            ul{
+                padding: 30px 0 0 0;
+                margin: 0;
+                li{
+                    float: left;
+                    list-style-type: none;
+                    display: block;
+                    margin-left: 7px;
+
+                    img{
+                        width: 44px;
+                        height: 44px;
+                        @include  border-radius(50%);
+                        @include box-shadow($shadow-image);
+                    }
+                }
+                li:first-child{
+                    margin-left: 0;
+                }
+            }
+            p{
+                img{
+                    width: 16px;
+                    height: 16px;
+                    @include  border-radius(2px);
+                    margin: -7px 7px 0 13px;
+                    @include box-shadow($shadow-image);
+                }
+
+                width: auto;
+                margin: 0;
+                font-family: $roboto;
+                font-size: 13px;
+                color: $white-color;
+                line-height: 44px;
+            }
+        }
+
+        .bloc-video{
+            margin: 36px 0 0 0;
+            a{
+                img{
+                    width: 44px;
+                    height: 44px;
+                    margin: 0 11px 0 0;
+                    float: left;
+                }
+
+                display: block;
+                font-family: $montserrat-bold;
+                font-size: 13px;
+                color: $white-color;
+                text-transform: uppercase;
+                .ba{
+                    margin: 3px 17px 0 0;
+                    width: 175px;
+                    float: left;
+                    span{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .more-video{
+                float: left;
+                a{
+                    text-decoration: none;
+                    color: rgba($white-color, 0.7);
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    margin-top: 20px;
+                    font-family: $montserrat-bold;
+                    display: block;
+                }
+            }
+        }
+
+        .button-affiche{
+            padding-top: 35px;
+
+            a{
+                width: 250px;
+                display: block;
+                height: 60px;
+                float: left;
+                margin-right: 20px;
+                @include border-radius(3px);
+                font-size: 13px;
+                font-family: $montserrat-bold;
+                text-transform: uppercase;
+                padding: 16px 0 0 26px;
+            }
+
+            .affiche-price{
+                font-family: $montserrat;
+                font-size: 24px;
+            }
+
+            .location{
+                background-color: $gray-tabs;
+                color: $location;
+                .affiche-old-price{
+                    font-size: 18px;
+                    text-decoration: line-through;
+                    margin-left: 7px;
+                    color: rgba($location, 0.6);
+                }
+            }
+
+            .location:after{
+                content: url(/img/little-play.png);
+                width: 24px;
+                height: 24px;
+                margin-left: 68px;
+                position: absolute;
+                margin-top: -7px;
+            }
+
+            .buy{
+                background-color: $film-color;
+                color: $white-color;
+            }
+            .buy:after{
+                content: url(/img/little-cart.png);
+                width: 22px;
+                height: 21px;
+                margin-left: 131px;
+                position: absolute;
+                margin-top: -6px
+            }
+        }
+
+        .buy-disk{
+            padding-top: 20px;
+
+            a{
+                color: $white-color;
+                font-size: 15px;
+                font-family: $roboto-medium;
+                img{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    
+    .notation-film{
+        float:left;
+        margin-left: 22px;
+        img{
+            margin-top: 68px;
+            width: 210px;
+            height: 280px;
+        }
+
+        .attr-note{
+            width: 210px;
+            height: 59px;
+            padding-top: 17px;
+            background-color: rgba($white-color, 0.17);
+
+            h3{
+                color: $white-color;
+                margin: 0;
+                padding: 0;
+                font-family: $montserrat-bold;
+                font-weight: normal;
+                font-size: 13px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        .attr-list{
+            width: 210px;
+            height: 59px;
+            padding: 17px 0 0 0;
+            margin-top: 58px;
+            background-color: rgba($white-color, 0.17);
+            @include border-radius(3px);
+
+            h3{
+                color: $white-color;
+                margin: 0;
+                padding: 0;
+                font-family: $montserrat-bold;
+                font-weight: normal;
+                font-size: 13px;
+                text-transform: uppercase;
+                span{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .follow{
+        padding-top: 17px;
+        margin: 0 0 0 96px;
+
+        hr{
+            width: 857px;
+            display: block;
+            height: 1px;
+            border: 0;
+            float: left;
+            margin: 12px 0 0 0;
+            border-top: 1px solid rgba($white-color, 0.1);
+            padding: 0;
+        }
+
+        h3{
+            float: left;
+            margin: 0 0 0 22px;
+            font-size: 13px;
+            line-height: 23px;
+            color: $white-color;
+            text-transform: uppercase;
+            padding: 0;
+            font-family: $montserrat;
+            font-weight: normal;
+        }
+
+        i{
+            color: $white-color;
+            margin: 0 10px 0 10px;
+            font-size: 24px;
         }
     }
 }
@@ -1909,8 +2153,264 @@ footer{
 
 .information-film{
     width: 100%;
-    height: 538px;
+    min-height: 538px;
+    margin: 0;
     background-color: $header_black-color;
+
+    .casting{
+        float: left;
+        h2{
+            margin: 0 0 23px 96px;
+            color: $white-color;
+            font-size: 32px;
+            font-family: $roboto-light;
+            font-weight: normal;
+        }
+
+        h3{
+            padding: 0;
+            margin: 0 0 0 96px;
+            font-weight: normal;
+            font-size: 15px;
+            font-family: $roboto;
+            color: $white-color;
+            span{
+                font-family: $roboto-medium;
+            }
+        }
+        ul{
+            margin: 35px 0 0 96px;
+            padding: 0;
+            li{
+                float: left;
+                margin: 0 0 0 20px;
+                list-style-type: none;
+                img{
+                    width: 96px;
+                    height: 120px;
+                }
+            }
+            li:first-child{
+                margin: 0;
+            }
+        }
+    }
+
+    .users-note{
+        float: left;
+        margin: 0 0 70px 155px;
+
+        h2{
+            color: $white-color;
+            font-size: 32px;
+            margin: 0;
+            padding: 0;
+            font-family: $roboto-light;
+            font-weight: normal;
+        }
+
+        .note-attr{
+            float: left;
+
+            h4{
+                color: $primary-color;
+                font-family: $montserrat-light;
+                font-weight: normal;
+                padding: 0;
+                margin: 0;
+                font-size: 66px;
+            }
+
+            h5{
+                font-family: $roboto;
+                font-size: 15px;
+                margin: 0;
+                font-weight: normal;
+                padding: 0;
+                color: rgba($white-color, 0.5);
+            }
+        }
+
+        .note-details{
+            float:left;
+            margin: 17px 0 0 28px;
+            .note-top{
+                padding: 2px 0 0 0 !important;
+            }
+            ul{
+                margin: 0 0 0 0;
+                padding: 0;
+                li{
+                    list-style-type: none;
+                    color: rgba($white-color, 0.5);
+                    font-size: 13px;
+                    font-family: $roboto;
+
+                    .n5{
+                        float: left;
+                        width: 70px;
+                        height: 12px;
+                        display:block;
+                        background: url('/img/stars-aff.png');
+                        background-size: cover;
+                        background-position: 0 95px;
+                    }
+                    .b5{
+                        margin: 5px 18px 0 18px;
+                        float: left;
+                        width: 120px;
+                        height: 3px;
+                        display:block;
+                        background: url('/img/bars-aff.png');
+                        background-size: cover;
+                        background-position: 0 83px;
+                    }
+                    .n4{
+                        float: left;
+                        width: 70px;
+                        height: 12px;
+                        display:block;
+                        background: url('/img/stars-aff.png');
+                        background-size: cover;
+                        background-position: 0 74px;
+                    }
+                    .b4{
+                    margin: 5px 18px 0 18px;
+                        float: left;
+                        width: 120px;
+                        height: 3px;
+                        display:block;
+                        background: url('/img/bars-aff.png');
+                        background-size: cover;
+                        background-position: 0 63px;
+                    }
+                    .n3{
+                        float: left;
+                        width: 70px;
+                        height: 12px;
+                        display:block;
+                        background: url('/img/stars-aff.png');
+                        background-size: cover;
+                        background-position: 0 54px;
+                    }
+                    .b3{
+                        margin: 5px 18px 0 18px;
+                        float: left;
+                        width: 120px;
+                        height: 3px;
+                        display:block;
+                        background: url('/img/bars-aff.png');
+                        background-size: cover;
+                        background-position: 0 43px;
+                    }
+                    .n2{
+                        float: left;
+                        width: 70px;
+                        height: 12px;
+                        display:block;
+                        background: url('/img/stars-aff.png');
+                        background-size: cover;
+                        background-position: 0 33px;
+                    }
+                    .b2{
+                        margin: 5px 18px 0 18px;
+                        float: left;
+                        width: 120px;
+                        height: 3px;
+                        display:block;
+                        background: url('/img/bars-aff.png');
+                        background-size: cover;
+                        background-position: 0 23px;
+                    }
+                    .n1{
+                        float: left;
+                        width: 70px;
+                        height: 12px;
+                        display:block;
+                        background: url('/img/stars-aff.png');
+                        background-size: cover;
+                        background-position: 0 12px;
+                    }
+                    .b1{
+                        margin: 5px 18px 0 18px;
+                        float: left;
+                        width: 120px;
+                        height: 3px;
+                        display:block;
+                        background: url('/img/bars-aff.png');
+                        background-size: cover;
+                        background-position: 0 3px;
+                    }
+                    .nbr{
+                    margin: 0;
+                    float: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .presse{
+        h4{
+            color: $white-color;
+            font-size: 18px;
+            font-family: $roboto;
+            font-weight: normal;
+            padding: 32px 0 0 0;
+            margin: 0;
+            width: 255px;
+        }
+
+        p{
+            margin: 4px 0 0 0;
+            color: rgba($white-color, 0.5);
+            font-family: $montserrat;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+    }
+
+    .avis-expert{
+        margin: 70px 0 0 96px;
+        width: 1049px;
+        height: 108px;
+        background-color: $avis;
+        padding: 32px 0 0 41px;
+        @include border-radius(6px);
+
+        img{
+            @include border-radius(50%);
+            float: left;
+            width: 70px;
+            height: 70px;
+            border: solid 3px $film-color;
+        }
+
+        h4{
+            float: left;
+            color: $white-color;
+            font-size: 13px;
+            font-weight: normal;
+            font-family: $montserrat-bold;
+            margin: 16px 0 0 20px;
+            padding: 0;
+            text-transform: uppercase;
+            span{
+                font-size: 18px;
+                color: $film-color;
+            }
+        }
+
+        p{
+            width: 555px;
+            float: left;
+            color: $white-color;
+            font-size: 18px;
+            margin:13px 0 0 70px;
+            padding: 0;
+            font-family: $roboto;
+        }
+    }
 }
 
 /*** Fin Information Film ***/
@@ -2042,7 +2542,7 @@ footer{
     width: 90px;
     margin-right: 5px;
     height: 16px;
-    background: url("../img/note_4.png");
+    background: url("/img/note_4.png");
 } 
 
 /***** Fin Note *****/
