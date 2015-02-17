@@ -2240,6 +2240,16 @@ footer{
 
 /*** Information Film ***/
 
+.information-serie{
+    .casting{
+        margin: 50px 0 0 0;
+    }
+
+    .users-note{
+        margin: 50px 0 70px 155px !important;
+    }
+}
+
 .information-film, .information-serie{
     width: 100%;
     min-height: 538px;
@@ -2507,6 +2517,65 @@ footer{
 /***** Fin affiche film *****/
 
 /***** Affiche Serie *****/
+
+.serie-episode{
+    margin:0 0 0 96px;
+    padding-bottom: 52px;
+    width: 1090px;
+    border-bottom: 1px solid rgba($white-color, 0.1);
+
+    h2{
+        color: $white-color;
+        font-size: 32px;
+        margin: 0;
+        padding: 0;
+        font-family: $roboto-light;
+        font-weight: normal;
+        span{
+            font-size: 24px;
+            color: rgba($white-color, 0.6);
+        }
+    }
+
+    p{
+        color: rgba($white-color, 0.4);
+        margin: 14px 0 52px 0;
+        font-family: $roboto;
+        width: 296px;
+        font-size: 15px;
+    }
+
+    ol{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        counter-reset: li-counter;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+
+        li{
+            color: $white-color;
+            font-size: 18px;
+            font-family: roboto-light;
+            line-height: 50px;
+        }
+
+        li:before {
+            position: relative;
+            width: 0.8em;
+             
+            font-size: 12px;
+            line-height: 1;
+            font-weight: bold;
+            text-align: right;
+            color: $white-color;
+         
+            content: counter(li-counter, decimal-leading-zero);
+            counter-increment: li-counter;
+        }
+    }
+}
 
 /***** Fin Affiche Serie *****/
 
