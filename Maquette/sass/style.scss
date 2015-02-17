@@ -1,40 +1,51 @@
 /***** Variables *****/
 
 /***** Univers color *****/
+
 $primary-color: #f5b027;
 $adult-color: #de0477;
 $film-color: #15B4A8;
 $young-color: #f46317;
 $serie-color: #714299;
 $spectacle-color: #15b4a8;
-/***** Fin Univers color *****/
 
 /***** Color Spec Aff film *****/
 
 $gradient: #1F2020;
 $location: #6A6760;
 $avis: #2A2C2E;
+$aff_black-color: #18191a;
 
-/***** Fin Color Aff film *****/
+/***** Color Header *****/
+
+$nav_dark-gray: #2a2a2a;
+$nav_light-gray: #353638;
+$header_black-color: #18191a;
+$border-menu: #eeeeee;
+$bg-notification: #EEF0F2;
+$border-notification: #18191a;
+$account_gray-color: #fff;
+$name_gray-color: #fff;
+
+/***** Color tabs *****/
+
+$tabs_dark-gray: #2a2a2a;
+$tabs_black-color: #18191a;
+$gray-tabs: #f8f8f8;
+$aff-tabs: #534940;
+
+/***** Color uni*****/
 
 $white-color: #fff;
 $black-color: #000;
-$nav_dark-gray: #2a2a2a;
-$nav_light-gray: #eef0f2;
-$border-notification: #d9d9d9;
 $link_gray-color: #d8d8d8;
 $black_title-color: #171717;
-$header_black-color: #18191a; /*Change name*/
 $color-limit-age: #151515;
 $selection_black-color: #212324;
-$name_gray-color: #202123;
-$account_gray-color: #383a3c;
-$border-menu: #eeeeee;
 $title-menu-film: #040404;
 $new-price: #e70000;
 $old-price: #222222;
-$gray-tabs: #f8f8f8;
-$aff-tabs: #534940;
+
 $white-button: #E9E6E0;
 $color-white-button: #56544D;
 $button-inscrire: #212324;
@@ -80,6 +91,28 @@ $font-size-48: 48px;
     border-radius: $radius;
 }
 
+@mixin border-bottom-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+    -ms-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    -ms-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-top-radius($radius) {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -ms-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    -ms-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
 @mixin transform($transforms) {
     -webkit-transform: $transforms;
     -moz-transform: $transforms;
@@ -102,6 +135,14 @@ $font-size-48: 48px;
 
 *:focus, *:active, *:hover{
     outline: 0;
+}
+
+.serie-bg{
+    background-color: $serie-color !important;
+}
+
+.serie-txt{
+    color: $serie-color !important;
 }
 
 /***** Debut CSS *****/
@@ -504,6 +545,18 @@ nav {
     }
 }
 
+.serie.active{
+    background-color: $serie-color;
+
+    a{
+        color: $white-color;
+    }
+
+    .border-color {
+        display: block;
+    }
+}
+
 .young:hover {
     background-color: $young-color;
 
@@ -590,7 +643,7 @@ nav {
 }
 
 .my_fnacplay {
-    width: 281px;
+    width: 291px;
     float: right;
     height: 70px;
     background-color: $nav_light-gray;
@@ -611,11 +664,11 @@ nav {
         margin-left: 31px;
         font-family: $roboto-bold;
         width: 20px;
-        border-radius: 6px;
+        @include border-radius(6px);
         border: solid 2px $nav_light-gray;
         line-height: 20px;
-        color: $white-color;
-        background-color: $header_black-color;
+        color: $nav_light-gray;
+        background-color: $bg_notification;
     }
 
     img {
@@ -731,7 +784,7 @@ nav {
 }
 
 .my_account {
-    width: 220px;
+    width: 230px;
     height: 70px;
     float: right;
     img {
@@ -743,7 +796,7 @@ nav {
     p {
         font-family: $montserrat-light;
         text-transform: uppercase;
-        color: $name_gray-color;
+        color: rgba($name_gray-color, 0.6);
         font-size: $font-size-13;
         margin: 18px 0 0 0;
     }
@@ -846,7 +899,7 @@ nav {
         padding: 0;
         margin: 0;
         height: 120px;
-        background-color: $header_black-color;
+        background-color: $tabs_black-color;
     }
 
     #tabs .ul-link-tabs li{
@@ -860,17 +913,17 @@ nav {
     }
 
     #tabs .ul-link-tabs .ui-tabs-active .link-tabs h2{
-        color: $nav_dark-gray;
+        color: $tabs_dark-gray;
     }
 
     #tabs .tabs-news{
         width: 443px;
-        border-right: solid 1px $nav_dark-gray;
+        border-right: solid 1px $tabs_dark-gray;
     }
 
     #tabs .tabs-best{
         width: 377px;
-        border-right: solid 1px $nav_dark-gray;
+        border-right: solid 1px $tabs_dark-gray;
     }
 
     #tabs .tabs-good{
@@ -990,7 +1043,7 @@ nav {
                                 text-align:center; 
                                 font-size: $font-size-15;
                                 border: none;
-                                color: $header_black-color;
+                                color: $tabs_black-color;
                                 @include border-radius(3px);
                                 background-color: $gray-tabs;
                                 @include box-shadow($shadow-image);
@@ -1277,7 +1330,7 @@ nav {
                                 text-align:center; 
                                 font-size: $font-size-15;
                                 border: none;
-                                color: $header_black-color;
+                                color: $tabs_black-color;
                                 @include border-radius(3px);
                                 background-color: $gray-tabs;
                                 @include box-shadow($shadow-image);
@@ -1596,7 +1649,7 @@ nav {
                                 text-align:center; 
                                 font-size: $font-size-15;
                                 border: none;
-                                color: $header_black-color;
+                                color: $tabs_black-color;
                                 @include border-radius(3px);
                                 background-color: $gray-tabs;
                                 @include box-shadow($shadow-image);
@@ -1831,9 +1884,16 @@ footer{
 /*** Description film ***/
 
 .affiche-film{
+    background: linear-gradient(to bottom, rgba($aff_black-color, 0.5), rgba($aff_black-color, 1.0)), url("/img/bg-affiche-film-2.jpg");    
+}
+
+.affiche-serie{
+    background: linear-gradient(to bottom, rgba($aff_black-color, 0.5), rgba($aff_black-color, 1.0)), url("/img/bg-affiche-serie-2.jpg");   
+}
+
+.affiche-film, .affiche-serie{
     width: 100%;
     height: 700px;
-    background: linear-gradient(to bottom, rgba($header_black-color, 0.5), rgba($header_black-color, 1.0)), url("/img/bg-affiche-film.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1858,7 +1918,7 @@ footer{
         }
     }
 
-    .description-film{
+    .description-film, .description-serie{
         float: left;
         padding: 0 0 0 96px;
         width: 857px;
@@ -2062,19 +2122,30 @@ footer{
         }
     }
     
-    .notation-film{
+    .notation-film, .notation-serie{
         float:left;
         margin-left: 22px;
         img{
             margin-top: 68px;
             width: 210px;
             height: 280px;
+            @include border-top-radius (3px);
         }
 
+        .cdc:after{
+            content: '';
+            width: 120px;
+            height: 80px;
+            background: url('/img/coup-de-coeur-fnac.png') no-repeat;
+            margin-left: 131px;
+            position: absolute;
+            margin-top: -6px
+        }
         .attr-note{
             width: 210px;
             height: 59px;
             padding-top: 17px;
+            @include border-bottom-radius (3px);
             background-color: rgba($white-color, 0.17);
 
             h3{
@@ -2091,15 +2162,33 @@ footer{
 
         .attr-list{
             width: 210px;
-            height: 59px;
-            padding: 17px 0 0 0;
+            height: 76px;
+            padding: 0 0 0 0;
             margin-top: 58px;
             background-color: rgba($white-color, 0.17);
             @include border-radius(3px);
 
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            a:hover i{
+                color: #C51B1B;
+            }
+
+            i{
+                color: rgba($white-color, 0.6);
+                font-size: 22px;
+                float: left;
+                margin: 29px 0 0 20px;
+            }
+
             h3{
                 color: $white-color;
-                margin: 0;
+                float: right;
+                margin: 17px 17px 0 0;
                 padding: 0;
                 font-family: $montserrat-bold;
                 font-weight: normal;
@@ -2151,11 +2240,11 @@ footer{
 
 /*** Information Film ***/
 
-.information-film{
+.information-film, .information-serie{
     width: 100%;
     min-height: 538px;
     margin: 0;
-    background-color: $header_black-color;
+    background-color: $aff_black-color;
 
     .casting{
         float: left;
@@ -2417,6 +2506,10 @@ footer{
 
 /***** Fin affiche film *****/
 
+/***** Affiche Serie *****/
+
+/***** Fin Affiche Serie *****/
+
 /****** Style custom tooltip *****/
 
 .tooltipster-content{
@@ -2428,7 +2521,7 @@ footer{
     @include box-shadow($shadow-image);
 
     h4{
-        color: $header_black-color;
+        color: $tabs_black-color;
         font-family: $roboto-medium;
         font-size: $font-size-22;
         width: 230px;
@@ -2439,7 +2532,7 @@ footer{
     .genre-aff{
         font-family: $roboto-medium;
         font-size: $font-size-13;
-        color: $header_black-color;
+        color: $tabs_black-color;
         margin: 10px 0 0 30px;
 
         .vost-aff{
@@ -2456,7 +2549,7 @@ footer{
     }
 
     .acteur-aff{
-        color: rgba($header_black-color, 0.8);
+        color: rgba($tabs_black-color, 0.8);
         font-family: $roboto-medium;
         font-size: $font-size-13;
         white-space: nowrap;
@@ -2467,7 +2560,7 @@ footer{
     }
 
     .origine-aff{
-        color: rgba($header_black-color, 0.8);
+        color: rgba($tabs_black-color, 0.8);
         font-family: $roboto-medium;
         font-size: $font-size-13;
         width: 270px;
@@ -2475,11 +2568,11 @@ footer{
     }
 
     .catchphrase{
-        color: rgba($header_black-color, 0.5);
+        color: rgba($tabs_black-color, 0.5);
         font-family: $roboto-bolditalic;
         display: block;
         padding-left: 10px;
-        border-left: solid 3px rgba($header_black-color, 0.1);
+        border-left: solid 3px rgba($tabs_black-color, 0.1);
         font-size: $font-size-13;
         width: 230px;
         margin: 24px 0 0 30px;
@@ -2522,7 +2615,7 @@ footer{
     }
 
     a{
-        color: rgba($header_black-color, 0.5);
+        color: rgba($tabs_black-color, 0.5);
         font-size: $font-size-13;
         text-align:center;
         $font-family: $roboto-medium;

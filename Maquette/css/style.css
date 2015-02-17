@@ -1,12 +1,18 @@
 /***** Variables *****/
 /***** Univers color *****/
-/***** Fin Univers color *****/
 /***** Color Spec Aff film *****/
-/***** Fin Color Aff film *****/
-/*Change name*/
+/***** Color Header *****/
+/***** Color tabs *****/
+/***** Color uni*****/
 /***** Mixins *****/
 *:focus, *:active, *:hover {
   outline: 0; }
+
+.serie-bg {
+  background-color: #714299 !important; }
+
+.serie-txt {
+  color: #714299 !important; }
 
 /***** Debut CSS *****/
 .clear {
@@ -287,6 +293,13 @@ nav {
     .serie:hover .sub-menu h2 {
       color: #714299; }
 
+.serie.active {
+  background-color: #714299; }
+  .serie.active a {
+    color: #fff; }
+  .serie.active .border-color {
+    display: block; }
+
 .young:hover {
   background-color: #f46317; }
   .young:hover a {
@@ -346,15 +359,15 @@ nav {
     margin-right: 13px; }
 
 .my_fnacplay {
-  width: 281px;
+  width: 291px;
   float: right;
   height: 70px;
-  background-color: #eef0f2; }
+  background-color: #353638; }
 
 .notification {
   width: 60px;
   height: 70px;
-  border-right: solid 1px #d9d9d9;
+  border-right: solid 1px #18191a;
   float: left;
   cursor: pointer; }
   .notification .indice-notification {
@@ -365,11 +378,14 @@ nav {
     margin-left: 31px;
     font-family: "Roboto-Bold", sans-serif;
     width: 20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
     border-radius: 6px;
-    border: solid 2px #eef0f2;
+    border: solid 2px #353638;
     line-height: 20px;
-    color: #fff;
-    background-color: #18191a; }
+    color: #353638;
+    background-color: #EEF0F2; }
   .notification img {
     width: 24px;
     height: 26px;
@@ -461,7 +477,7 @@ nav {
   display: block; }
 
 .my_account {
-  width: 220px;
+  width: 230px;
   height: 70px;
   float: right; }
   .my_account img {
@@ -472,7 +488,7 @@ nav {
   .my_account p {
     font-family: "Montserrat-Light", sans-serif;
     text-transform: uppercase;
-    color: #202123;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 13px;
     margin: 18px 0 0 0; }
   .my_account a {
@@ -481,7 +497,7 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 700;
-    color: #383a3c; }
+    color: #fff; }
 
 /***** Fin Header-Navogation *****/
 /***** Partie Caroussel *****/
@@ -1335,38 +1351,43 @@ footer {
 /***** Affiche film *****/
 /*** Description film ***/
 .affiche-film {
+  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-film-2.jpg"); }
+
+.affiche-serie {
+  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-serie-2.jpg"); }
+
+.affiche-film, .affiche-serie {
   width: 100%;
   height: 700px;
-  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-film.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-  .affiche-film .breadcrumbs {
+  .affiche-film .breadcrumbs, .affiche-serie .breadcrumbs {
     width: 100%;
     line-height: 27px;
     background-color: rgba(0, 0, 0, 0.15); }
-    .affiche-film .breadcrumbs a {
+    .affiche-film .breadcrumbs a, .affiche-serie .breadcrumbs a {
       text-decoration: none;
       color: #fff;
       font: "Roboto", sans-serif;
       font-size: 13px;
       margin-left: 96px; }
-    .affiche-film .breadcrumbs a:last-child {
+    .affiche-film .breadcrumbs a:last-child, .affiche-serie .breadcrumbs a:last-child {
       margin-left: 0; }
-    .affiche-film .breadcrumbs a.titlebread {
+    .affiche-film .breadcrumbs a.titlebread, .affiche-serie .breadcrumbs a.titlebread {
       color: rgba(255, 255, 255, 0.6); }
-  .affiche-film .description-film {
+  .affiche-film .description-film, .affiche-film .description-serie, .affiche-serie .description-film, .affiche-serie .description-serie {
     float: left;
     padding: 0 0 0 96px;
     width: 857px; }
-    .affiche-film .description-film h1 {
+    .affiche-film .description-film h1, .affiche-film .description-serie h1, .affiche-serie .description-film h1, .affiche-serie .description-serie h1 {
       color: #fff;
       font-family: "Montserrat-Bold", sans-serif;
       font-size: 48px;
       margin: 64px 0 6px 0;
       text-transform: uppercase;
       text-shadow: 0px 2px rgba(0, 0, 0, 0.6); }
-    .affiche-film .description-film h3 {
+    .affiche-film .description-film h3, .affiche-film .description-serie h3, .affiche-serie .description-film h3, .affiche-serie .description-serie h3 {
       padding: 0;
       margin: 0;
       font-weight: normal;
@@ -1375,14 +1396,14 @@ footer {
       color: #fff;
       font-family: "Roboto", sans-serif;
       line-height: 0; }
-      .affiche-film .description-film h3 .white-vost {
+      .affiche-film .description-film h3 .white-vost, .affiche-film .description-serie h3 .white-vost, .affiche-serie .description-film h3 .white-vost, .affiche-serie .description-serie h3 .white-vost {
         width: 44px;
         height: 19px;
         margin-left: 5px; }
-      .affiche-film .description-film h3 .white-limit {
+      .affiche-film .description-film h3 .white-limit, .affiche-film .description-serie h3 .white-limit, .affiche-serie .description-film h3 .white-limit, .affiche-serie .description-serie h3 .white-limit {
         width: 21px;
         height: 21px; }
-    .affiche-film .description-film p {
+    .affiche-film .description-film p, .affiche-film .description-serie p, .affiche-serie .description-film p, .affiche-serie .description-serie p {
       text-shadow: 0px 2px rgba(0, 0, 0, 0.6);
       width: 510px;
       color: #fff;
@@ -1395,20 +1416,20 @@ footer {
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       margin: 30px 0 6px 0; }
-    .affiche-film .description-film a {
+    .affiche-film .description-film a, .affiche-film .description-serie a, .affiche-serie .description-film a, .affiche-serie .description-serie a {
       color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
       font-family: "Roboto", sans-serif;
       font-size: 15px; }
-    .affiche-film .description-film .bloc-facebook ul {
+    .affiche-film .description-film .bloc-facebook ul, .affiche-film .description-serie .bloc-facebook ul, .affiche-serie .description-film .bloc-facebook ul, .affiche-serie .description-serie .bloc-facebook ul {
       padding: 30px 0 0 0;
       margin: 0; }
-      .affiche-film .description-film .bloc-facebook ul li {
+      .affiche-film .description-film .bloc-facebook ul li, .affiche-film .description-serie .bloc-facebook ul li, .affiche-serie .description-film .bloc-facebook ul li, .affiche-serie .description-serie .bloc-facebook ul li {
         float: left;
         list-style-type: none;
         display: block;
         margin-left: 7px; }
-        .affiche-film .description-film .bloc-facebook ul li img {
+        .affiche-film .description-film .bloc-facebook ul li img, .affiche-film .description-serie .bloc-facebook ul li img, .affiche-serie .description-film .bloc-facebook ul li img, .affiche-serie .description-serie .bloc-facebook ul li img {
           width: 44px;
           height: 44px;
           -webkit-border-radius: 50%;
@@ -1418,16 +1439,16 @@ footer {
           -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
           -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-      .affiche-film .description-film .bloc-facebook ul li:first-child {
+      .affiche-film .description-film .bloc-facebook ul li:first-child, .affiche-film .description-serie .bloc-facebook ul li:first-child, .affiche-serie .description-film .bloc-facebook ul li:first-child, .affiche-serie .description-serie .bloc-facebook ul li:first-child {
         margin-left: 0; }
-    .affiche-film .description-film .bloc-facebook p {
+    .affiche-film .description-film .bloc-facebook p, .affiche-film .description-serie .bloc-facebook p, .affiche-serie .description-film .bloc-facebook p, .affiche-serie .description-serie .bloc-facebook p {
       width: auto;
       margin: 0;
       font-family: "Roboto", sans-serif;
       font-size: 13px;
       color: #fff;
       line-height: 44px; }
-      .affiche-film .description-film .bloc-facebook p img {
+      .affiche-film .description-film .bloc-facebook p img, .affiche-film .description-serie .bloc-facebook p img, .affiche-serie .description-film .bloc-facebook p img, .affiche-serie .description-serie .bloc-facebook p img {
         width: 16px;
         height: 16px;
         -webkit-border-radius: 2px;
@@ -1438,28 +1459,28 @@ footer {
         -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-    .affiche-film .description-film .bloc-video {
+    .affiche-film .description-film .bloc-video, .affiche-film .description-serie .bloc-video, .affiche-serie .description-film .bloc-video, .affiche-serie .description-serie .bloc-video {
       margin: 36px 0 0 0; }
-      .affiche-film .description-film .bloc-video a {
+      .affiche-film .description-film .bloc-video a, .affiche-film .description-serie .bloc-video a, .affiche-serie .description-film .bloc-video a, .affiche-serie .description-serie .bloc-video a {
         display: block;
         font-family: "Montserrat-Bold", sans-serif;
         font-size: 13px;
         color: #fff;
         text-transform: uppercase; }
-        .affiche-film .description-film .bloc-video a img {
+        .affiche-film .description-film .bloc-video a img, .affiche-film .description-serie .bloc-video a img, .affiche-serie .description-film .bloc-video a img, .affiche-serie .description-serie .bloc-video a img {
           width: 44px;
           height: 44px;
           margin: 0 11px 0 0;
           float: left; }
-        .affiche-film .description-film .bloc-video a .ba {
+        .affiche-film .description-film .bloc-video a .ba, .affiche-film .description-serie .bloc-video a .ba, .affiche-serie .description-film .bloc-video a .ba, .affiche-serie .description-serie .bloc-video a .ba {
           margin: 3px 17px 0 0;
           width: 175px;
           float: left; }
-          .affiche-film .description-film .bloc-video a .ba span {
+          .affiche-film .description-film .bloc-video a .ba span, .affiche-film .description-serie .bloc-video a .ba span, .affiche-serie .description-film .bloc-video a .ba span, .affiche-serie .description-serie .bloc-video a .ba span {
             font-size: 18px; }
-      .affiche-film .description-film .bloc-video .more-video {
+      .affiche-film .description-film .bloc-video .more-video, .affiche-film .description-serie .bloc-video .more-video, .affiche-serie .description-film .bloc-video .more-video, .affiche-serie .description-serie .bloc-video .more-video {
         float: left; }
-        .affiche-film .description-film .bloc-video .more-video a {
+        .affiche-film .description-film .bloc-video .more-video a, .affiche-film .description-serie .bloc-video .more-video a, .affiche-serie .description-film .bloc-video .more-video a, .affiche-serie .description-serie .bloc-video .more-video a {
           text-decoration: none;
           color: rgba(255, 255, 255, 0.7);
           text-transform: uppercase;
@@ -1467,9 +1488,9 @@ footer {
           margin-top: 20px;
           font-family: "Montserrat-Bold", sans-serif;
           display: block; }
-    .affiche-film .description-film .button-affiche {
+    .affiche-film .description-film .button-affiche, .affiche-film .description-serie .button-affiche, .affiche-serie .description-film .button-affiche, .affiche-serie .description-serie .button-affiche {
       padding-top: 35px; }
-      .affiche-film .description-film .button-affiche a {
+      .affiche-film .description-film .button-affiche a, .affiche-film .description-serie .button-affiche a, .affiche-serie .description-film .button-affiche a, .affiche-serie .description-serie .button-affiche a {
         width: 250px;
         display: block;
         height: 60px;
@@ -1483,55 +1504,79 @@ footer {
         font-family: "Montserrat-Bold", sans-serif;
         text-transform: uppercase;
         padding: 16px 0 0 26px; }
-      .affiche-film .description-film .button-affiche .affiche-price {
+      .affiche-film .description-film .button-affiche .affiche-price, .affiche-film .description-serie .button-affiche .affiche-price, .affiche-serie .description-film .button-affiche .affiche-price, .affiche-serie .description-serie .button-affiche .affiche-price {
         font-family: "Montserrat", sans-serif;
         font-size: 24px; }
-      .affiche-film .description-film .button-affiche .location {
+      .affiche-film .description-film .button-affiche .location, .affiche-film .description-serie .button-affiche .location, .affiche-serie .description-film .button-affiche .location, .affiche-serie .description-serie .button-affiche .location {
         background-color: #f8f8f8;
         color: #6A6760; }
-        .affiche-film .description-film .button-affiche .location .affiche-old-price {
+        .affiche-film .description-film .button-affiche .location .affiche-old-price, .affiche-film .description-serie .button-affiche .location .affiche-old-price, .affiche-serie .description-film .button-affiche .location .affiche-old-price, .affiche-serie .description-serie .button-affiche .location .affiche-old-price {
           font-size: 18px;
           text-decoration: line-through;
           margin-left: 7px;
           color: rgba(106, 103, 96, 0.6); }
-      .affiche-film .description-film .button-affiche .location:after {
+      .affiche-film .description-film .button-affiche .location:after, .affiche-film .description-serie .button-affiche .location:after, .affiche-serie .description-film .button-affiche .location:after, .affiche-serie .description-serie .button-affiche .location:after {
         content: url(/img/little-play.png);
         width: 24px;
         height: 24px;
         margin-left: 68px;
         position: absolute;
         margin-top: -7px; }
-      .affiche-film .description-film .button-affiche .buy {
+      .affiche-film .description-film .button-affiche .buy, .affiche-film .description-serie .button-affiche .buy, .affiche-serie .description-film .button-affiche .buy, .affiche-serie .description-serie .button-affiche .buy {
         background-color: #15B4A8;
         color: #fff; }
-      .affiche-film .description-film .button-affiche .buy:after {
+      .affiche-film .description-film .button-affiche .buy:after, .affiche-film .description-serie .button-affiche .buy:after, .affiche-serie .description-film .button-affiche .buy:after, .affiche-serie .description-serie .button-affiche .buy:after {
         content: url(/img/little-cart.png);
         width: 22px;
         height: 21px;
         margin-left: 131px;
         position: absolute;
         margin-top: -6px; }
-    .affiche-film .description-film .buy-disk {
+    .affiche-film .description-film .buy-disk, .affiche-film .description-serie .buy-disk, .affiche-serie .description-film .buy-disk, .affiche-serie .description-serie .buy-disk {
       padding-top: 20px; }
-      .affiche-film .description-film .buy-disk a {
+      .affiche-film .description-film .buy-disk a, .affiche-film .description-serie .buy-disk a, .affiche-serie .description-film .buy-disk a, .affiche-serie .description-serie .buy-disk a {
         color: #fff;
         font-size: 15px;
         font-family: "Roboto-Medium", sans-serif; }
-        .affiche-film .description-film .buy-disk a img {
+        .affiche-film .description-film .buy-disk a img, .affiche-film .description-serie .buy-disk a img, .affiche-serie .description-film .buy-disk a img, .affiche-serie .description-serie .buy-disk a img {
           margin-right: 10px; }
-  .affiche-film .notation-film {
+  .affiche-film .notation-film, .affiche-film .notation-serie, .affiche-serie .notation-film, .affiche-serie .notation-serie {
     float: left;
     margin-left: 22px; }
-    .affiche-film .notation-film img {
+    .affiche-film .notation-film img, .affiche-film .notation-serie img, .affiche-serie .notation-film img, .affiche-serie .notation-serie img {
       margin-top: 68px;
       width: 210px;
-      height: 280px; }
-    .affiche-film .notation-film .attr-note {
+      height: 280px;
+      -webkit-border-top-left-radius: 3px;
+      -moz-border-top-left-radius: 3px;
+      -ms-border-top-left-radius: 3px;
+      border-top-left-radius: 3px;
+      -webkit-border-top-right-radius: 3px;
+      -moz-border-top-right-radius: 3px;
+      -ms-border-top-right-radius: 3px;
+      border-top-right-radius: 3px; }
+    .affiche-film .notation-film .cdc:after, .affiche-film .notation-serie .cdc:after, .affiche-serie .notation-film .cdc:after, .affiche-serie .notation-serie .cdc:after {
+      content: '';
+      width: 120px;
+      height: 80px;
+      background: url("/img/coup-de-coeur-fnac.png") no-repeat;
+      margin-left: 131px;
+      position: absolute;
+      margin-top: -6px; }
+    .affiche-film .notation-film .attr-note, .affiche-film .notation-serie .attr-note, .affiche-serie .notation-film .attr-note, .affiche-serie .notation-serie .attr-note {
       width: 210px;
       height: 59px;
       padding-top: 17px;
+      -webkit-border-bottom-left-radius: 3px;
+      -moz-border-bottom-left-radius: 3px;
+      -ms-border-bottom-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      -moz-border-bottom-right-radius: 3px;
+      -ms-border-bottom-right-radius: 3px;
+      border-bottom-right-radius: 3px;
       background-color: rgba(255, 255, 255, 0.17); }
-      .affiche-film .notation-film .attr-note h3 {
+      .affiche-film .notation-film .attr-note h3, .affiche-film .notation-serie .attr-note h3, .affiche-serie .notation-film .attr-note h3, .affiche-serie .notation-serie .attr-note h3 {
         color: #fff;
         margin: 0;
         padding: 0;
@@ -1540,30 +1585,42 @@ footer {
         font-size: 13px;
         text-align: center;
         text-transform: uppercase; }
-    .affiche-film .notation-film .attr-list {
+    .affiche-film .notation-film .attr-list, .affiche-film .notation-serie .attr-list, .affiche-serie .notation-film .attr-list, .affiche-serie .notation-serie .attr-list {
       width: 210px;
-      height: 59px;
-      padding: 17px 0 0 0;
+      height: 76px;
+      padding: 0 0 0 0;
       margin-top: 58px;
       background-color: rgba(255, 255, 255, 0.17);
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
       border-radius: 3px; }
-      .affiche-film .notation-film .attr-list h3 {
+      .affiche-film .notation-film .attr-list a, .affiche-film .notation-serie .attr-list a, .affiche-serie .notation-film .attr-list a, .affiche-serie .notation-serie .attr-list a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+      .affiche-film .notation-film .attr-list a:hover i, .affiche-film .notation-serie .attr-list a:hover i, .affiche-serie .notation-film .attr-list a:hover i, .affiche-serie .notation-serie .attr-list a:hover i {
+        color: #C51B1B; }
+      .affiche-film .notation-film .attr-list i, .affiche-film .notation-serie .attr-list i, .affiche-serie .notation-film .attr-list i, .affiche-serie .notation-serie .attr-list i {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 22px;
+        float: left;
+        margin: 29px 0 0 20px; }
+      .affiche-film .notation-film .attr-list h3, .affiche-film .notation-serie .attr-list h3, .affiche-serie .notation-film .attr-list h3, .affiche-serie .notation-serie .attr-list h3 {
         color: #fff;
-        margin: 0;
+        float: right;
+        margin: 17px 17px 0 0;
         padding: 0;
         font-family: "Montserrat-Bold", sans-serif;
         font-weight: normal;
         font-size: 13px;
         text-transform: uppercase; }
-        .affiche-film .notation-film .attr-list h3 span {
+        .affiche-film .notation-film .attr-list h3 span, .affiche-film .notation-serie .attr-list h3 span, .affiche-serie .notation-film .attr-list h3 span, .affiche-serie .notation-serie .attr-list h3 span {
           font-size: 18px; }
-  .affiche-film .follow {
+  .affiche-film .follow, .affiche-serie .follow {
     padding-top: 17px;
     margin: 0 0 0 96px; }
-    .affiche-film .follow hr {
+    .affiche-film .follow hr, .affiche-serie .follow hr {
       width: 857px;
       display: block;
       height: 1px;
@@ -1572,7 +1629,7 @@ footer {
       margin: 12px 0 0 0;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding: 0; }
-    .affiche-film .follow h3 {
+    .affiche-film .follow h3, .affiche-serie .follow h3 {
       float: left;
       margin: 0 0 0 22px;
       font-size: 13px;
@@ -1582,87 +1639,87 @@ footer {
       padding: 0;
       font-family: "Montserrat", sans-serif;
       font-weight: normal; }
-    .affiche-film .follow i {
+    .affiche-film .follow i, .affiche-serie .follow i {
       color: #fff;
       margin: 0 10px 0 10px;
       font-size: 24px; }
 
 /*** Fin description film ***/
 /*** Information Film ***/
-.information-film {
+.information-film, .information-serie {
   width: 100%;
   min-height: 538px;
   margin: 0;
   background-color: #18191a; }
-  .information-film .casting {
+  .information-film .casting, .information-serie .casting {
     float: left; }
-    .information-film .casting h2 {
+    .information-film .casting h2, .information-serie .casting h2 {
       margin: 0 0 23px 96px;
       color: #fff;
       font-size: 32px;
       font-family: "Roboto-Light", sans-serif;
       font-weight: normal; }
-    .information-film .casting h3 {
+    .information-film .casting h3, .information-serie .casting h3 {
       padding: 0;
       margin: 0 0 0 96px;
       font-weight: normal;
       font-size: 15px;
       font-family: "Roboto", sans-serif;
       color: #fff; }
-      .information-film .casting h3 span {
+      .information-film .casting h3 span, .information-serie .casting h3 span {
         font-family: "Roboto-Medium", sans-serif; }
-    .information-film .casting ul {
+    .information-film .casting ul, .information-serie .casting ul {
       margin: 35px 0 0 96px;
       padding: 0; }
-      .information-film .casting ul li {
+      .information-film .casting ul li, .information-serie .casting ul li {
         float: left;
         margin: 0 0 0 20px;
         list-style-type: none; }
-        .information-film .casting ul li img {
+        .information-film .casting ul li img, .information-serie .casting ul li img {
           width: 96px;
           height: 120px; }
-      .information-film .casting ul li:first-child {
+      .information-film .casting ul li:first-child, .information-serie .casting ul li:first-child {
         margin: 0; }
-  .information-film .users-note {
+  .information-film .users-note, .information-serie .users-note {
     float: left;
     margin: 0 0 70px 155px; }
-    .information-film .users-note h2 {
+    .information-film .users-note h2, .information-serie .users-note h2 {
       color: #fff;
       font-size: 32px;
       margin: 0;
       padding: 0;
       font-family: "Roboto-Light", sans-serif;
       font-weight: normal; }
-    .information-film .users-note .note-attr {
+    .information-film .users-note .note-attr, .information-serie .users-note .note-attr {
       float: left; }
-      .information-film .users-note .note-attr h4 {
+      .information-film .users-note .note-attr h4, .information-serie .users-note .note-attr h4 {
         color: #f5b027;
         font-family: "Montserrat-Light", sans-serif;
         font-weight: normal;
         padding: 0;
         margin: 0;
         font-size: 66px; }
-      .information-film .users-note .note-attr h5 {
+      .information-film .users-note .note-attr h5, .information-serie .users-note .note-attr h5 {
         font-family: "Roboto", sans-serif;
         font-size: 15px;
         margin: 0;
         font-weight: normal;
         padding: 0;
         color: rgba(255, 255, 255, 0.5); }
-    .information-film .users-note .note-details {
+    .information-film .users-note .note-details, .information-serie .users-note .note-details {
       float: left;
       margin: 17px 0 0 28px; }
-      .information-film .users-note .note-details .note-top {
+      .information-film .users-note .note-details .note-top, .information-serie .users-note .note-details .note-top {
         padding: 2px 0 0 0 !important; }
-      .information-film .users-note .note-details ul {
+      .information-film .users-note .note-details ul, .information-serie .users-note .note-details ul {
         margin: 0 0 0 0;
         padding: 0; }
-        .information-film .users-note .note-details ul li {
+        .information-film .users-note .note-details ul li, .information-serie .users-note .note-details ul li {
           list-style-type: none;
           color: rgba(255, 255, 255, 0.5);
           font-size: 13px;
           font-family: "Roboto", sans-serif; }
-          .information-film .users-note .note-details ul li .n5 {
+          .information-film .users-note .note-details ul li .n5, .information-serie .users-note .note-details ul li .n5 {
             float: left;
             width: 70px;
             height: 12px;
@@ -1670,7 +1727,7 @@ footer {
             background: url("/img/stars-aff.png");
             background-size: cover;
             background-position: 0 95px; }
-          .information-film .users-note .note-details ul li .b5 {
+          .information-film .users-note .note-details ul li .b5, .information-serie .users-note .note-details ul li .b5 {
             margin: 5px 18px 0 18px;
             float: left;
             width: 120px;
@@ -1679,7 +1736,7 @@ footer {
             background: url("/img/bars-aff.png");
             background-size: cover;
             background-position: 0 83px; }
-          .information-film .users-note .note-details ul li .n4 {
+          .information-film .users-note .note-details ul li .n4, .information-serie .users-note .note-details ul li .n4 {
             float: left;
             width: 70px;
             height: 12px;
@@ -1687,7 +1744,7 @@ footer {
             background: url("/img/stars-aff.png");
             background-size: cover;
             background-position: 0 74px; }
-          .information-film .users-note .note-details ul li .b4 {
+          .information-film .users-note .note-details ul li .b4, .information-serie .users-note .note-details ul li .b4 {
             margin: 5px 18px 0 18px;
             float: left;
             width: 120px;
@@ -1696,7 +1753,7 @@ footer {
             background: url("/img/bars-aff.png");
             background-size: cover;
             background-position: 0 63px; }
-          .information-film .users-note .note-details ul li .n3 {
+          .information-film .users-note .note-details ul li .n3, .information-serie .users-note .note-details ul li .n3 {
             float: left;
             width: 70px;
             height: 12px;
@@ -1704,7 +1761,7 @@ footer {
             background: url("/img/stars-aff.png");
             background-size: cover;
             background-position: 0 54px; }
-          .information-film .users-note .note-details ul li .b3 {
+          .information-film .users-note .note-details ul li .b3, .information-serie .users-note .note-details ul li .b3 {
             margin: 5px 18px 0 18px;
             float: left;
             width: 120px;
@@ -1713,7 +1770,7 @@ footer {
             background: url("/img/bars-aff.png");
             background-size: cover;
             background-position: 0 43px; }
-          .information-film .users-note .note-details ul li .n2 {
+          .information-film .users-note .note-details ul li .n2, .information-serie .users-note .note-details ul li .n2 {
             float: left;
             width: 70px;
             height: 12px;
@@ -1721,7 +1778,7 @@ footer {
             background: url("/img/stars-aff.png");
             background-size: cover;
             background-position: 0 33px; }
-          .information-film .users-note .note-details ul li .b2 {
+          .information-film .users-note .note-details ul li .b2, .information-serie .users-note .note-details ul li .b2 {
             margin: 5px 18px 0 18px;
             float: left;
             width: 120px;
@@ -1730,7 +1787,7 @@ footer {
             background: url("/img/bars-aff.png");
             background-size: cover;
             background-position: 0 23px; }
-          .information-film .users-note .note-details ul li .n1 {
+          .information-film .users-note .note-details ul li .n1, .information-serie .users-note .note-details ul li .n1 {
             float: left;
             width: 70px;
             height: 12px;
@@ -1738,7 +1795,7 @@ footer {
             background: url("/img/stars-aff.png");
             background-size: cover;
             background-position: 0 12px; }
-          .information-film .users-note .note-details ul li .b1 {
+          .information-film .users-note .note-details ul li .b1, .information-serie .users-note .note-details ul li .b1 {
             margin: 5px 18px 0 18px;
             float: left;
             width: 120px;
@@ -1747,10 +1804,10 @@ footer {
             background: url("/img/bars-aff.png");
             background-size: cover;
             background-position: 0 3px; }
-          .information-film .users-note .note-details ul li .nbr {
+          .information-film .users-note .note-details ul li .nbr, .information-serie .users-note .note-details ul li .nbr {
             margin: 0;
             float: left; }
-  .information-film .presse h4 {
+  .information-film .presse h4, .information-serie .presse h4 {
     color: #fff;
     font-size: 18px;
     font-family: "Roboto", sans-serif;
@@ -1758,13 +1815,13 @@ footer {
     padding: 32px 0 0 0;
     margin: 0;
     width: 255px; }
-  .information-film .presse p {
+  .information-film .presse p, .information-serie .presse p {
     margin: 4px 0 0 0;
     color: rgba(255, 255, 255, 0.5);
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-size: 13px; }
-  .information-film .avis-expert {
+  .information-film .avis-expert, .information-serie .avis-expert {
     margin: 70px 0 0 96px;
     width: 1049px;
     height: 108px;
@@ -1774,7 +1831,7 @@ footer {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     border-radius: 6px; }
-    .information-film .avis-expert img {
+    .information-film .avis-expert img, .information-serie .avis-expert img {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
@@ -1783,7 +1840,7 @@ footer {
       width: 70px;
       height: 70px;
       border: solid 3px #15B4A8; }
-    .information-film .avis-expert h4 {
+    .information-film .avis-expert h4, .information-serie .avis-expert h4 {
       float: left;
       color: #fff;
       font-size: 13px;
@@ -1792,10 +1849,10 @@ footer {
       margin: 16px 0 0 20px;
       padding: 0;
       text-transform: uppercase; }
-      .information-film .avis-expert h4 span {
+      .information-film .avis-expert h4 span, .information-serie .avis-expert h4 span {
         font-size: 18px;
         color: #15B4A8; }
-    .information-film .avis-expert p {
+    .information-film .avis-expert p, .information-serie .avis-expert p {
       width: 555px;
       float: left;
       color: #fff;
@@ -1806,6 +1863,8 @@ footer {
 
 /*** Fin Information Film ***/
 /***** Fin affiche film *****/
+/***** Affiche Serie *****/
+/***** Fin Affiche Serie *****/
 /****** Style custom tooltip *****/
 .tooltipster-content {
   background-color: #fff;
