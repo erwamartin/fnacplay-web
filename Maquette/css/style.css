@@ -1354,7 +1354,7 @@ footer {
   background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-film-2.jpg"); }
 
 .affiche-serie {
-  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-serie-2.jpg"); }
+  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-serie-3.jpg"); }
 
 .affiche-film, .affiche-serie {
   width: 100%;
@@ -1869,9 +1869,13 @@ footer {
 /*** Fin Information Film ***/
 /***** Fin affiche film *****/
 /***** Affiche Serie *****/
+.saison-slider {
+  padding: 0 0 70px 0; }
+
 .serie-episode {
   margin: 0 0 0 96px;
   padding-bottom: 52px;
+  width: 1090px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   .serie-episode h2 {
     color: #fff;
@@ -1900,17 +1904,112 @@ footer {
     .serie-episode ol li {
       color: #fff;
       font-size: 18px;
-      font-family: roboto-light; }
+      font-family: roboto-light;
+      line-height: 50px;
+      width: 433px; }
+      .serie-episode ol li label {
+        position: relative; }
+      .serie-episode ol li .fa.viewed {
+        color: rgba(255, 255, 255, 0.1) !important; }
+      .serie-episode ol li i {
+        float: right;
+        margin: 16px 0 0 0; }
+      .serie-episode ol li input[type=checkbox] {
+        display: none; }
+      .serie-episode ol li input[type=checkbox]:checked + label:after {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: #714299; }
+      .serie-episode ol li input[type=checkbox] + label:after {
+        content: "\f00c";
+        font-family: FontAwesome;
+        position: absolute;
+        left: 417px;
+        top: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0);
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.1); }
+      .serie-episode ol li hr {
+        width: 455px;
+        display: block;
+        height: 1px;
+        border: 0;
+        margin: 0 0 0 41px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0; }
     .serie-episode ol li:before {
       position: relative;
-      width: 0.8em;
-      font-size: 12px;
+      width: 21px;
+      font-size: 18px;
       line-height: 1;
-      font-weight: bold;
+      font-family: "Roboto-Medium", sans-serif;
+      font-weight: normal;
       text-align: right;
       color: #fff;
+      margin: 0 20px 0 0;
       content: counter(li-counter,decimal-leading-zero);
       counter-increment: li-counter; }
+  .serie-episode .button-serie {
+    display: inline-flex; }
+    .serie-episode .button-serie a {
+      display: block;
+      width: 258px;
+      height: 55px;
+      float: left;
+      padding: 15px 0 0 22px;
+      margin: 45px 0 0 0;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      text-decoration: none;
+      font-family: "Montserrat-Bold", sans-serif;
+      font-size: 13px;
+      text-transform: uppercase; }
+      .serie-episode .button-serie a span {
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif; }
+    .serie-episode .button-serie .location-serie {
+      background-color: #f8f8f8;
+      color: #6A6760; }
+      .serie-episode .button-serie .location-serie span {
+        color: rgba(106, 103, 96, 0.6); }
+    .serie-episode .button-serie .buy-serie {
+      color: #fff;
+      margin-left: 20px;
+      background-color: #714299; }
+      .serie-episode .button-serie .buy-serie span {
+        color: rgba(255, 255, 255, 0.6); }
+    .serie-episode .button-serie .total-price {
+      text-align: right;
+      margin: -37px 25px 0 0;
+      font-size: 20px;
+      font-family: "Montserrat", sans-serif; }
+  .serie-episode .price-unit {
+    padding: 0;
+    margin: 20px 0 0 0; }
+
+.saison-slider h3 {
+  margin: 52px 0 0 96px;
+  color: #fff;
+  font-size: 32px;
+  width: 1090px;
+  border-top: solid 1px rgba(255, 255, 255, 0.1);
+  padding: 40px 0 0 0;
+  font-family: "Roboto-Light", sans-serif;
+  font-weight: normal; }
 
 /***** Fin Affiche Serie *****/
 /****** Style custom tooltip *****/

@@ -1888,7 +1888,7 @@ footer{
 }
 
 .affiche-serie{
-    background: linear-gradient(to bottom, rgba($aff_black-color, 0.5), rgba($aff_black-color, 1.0)), url("/img/bg-affiche-serie-2.jpg");   
+    background: linear-gradient(to bottom, rgba($aff_black-color, 0.5), rgba($aff_black-color, 1.0)), url("/img/bg-affiche-serie-3.jpg");   
 }
 
 .affiche-film, .affiche-serie{
@@ -2518,6 +2518,10 @@ footer{
 
 /***** Affiche Serie *****/
 
+.saison-slider{
+    padding:0 0 70px 0;
+}
+
 .serie-episode{
     margin:0 0 0 96px;
     padding-bottom: 52px;
@@ -2559,21 +2563,140 @@ footer{
             font-size: 18px;
             font-family: roboto-light;
             line-height: 50px;
+            width: 433px;
+
+            label{
+                position: relative;
+            }
+
+            .fa.viewed{
+                    color: rgba($white-color, 0.1) !important;
+                }
+
+            i{
+                float:right;
+                margin: 16px 0 0 0;
+            }
+
+            input[type=checkbox]{
+                display: none;
+            }
+
+            input[type=checkbox]:checked + label:after {
+                 content: "\f00c";
+                 font-family: FontAwesome;
+                 font-size: 12px;
+                 text-align: center;
+                 color: $white-color;
+                 line-height: 20px;
+                 width: 20px;
+                 height: 20px;
+                 border-radius: 2px;
+                 background-color: $serie-color;
+             }
+
+            input[type=checkbox] + label:after {
+                content: "\f00c";
+                font-family: FontAwesome;
+                position: absolute;
+                left: 417px;
+                top: 3px;
+                font-size: 12px;
+                text-align: center;
+                color: rgba($white-color, 0.0);
+                line-height: 20px;
+                width: 20px;
+                height: 20px;
+                border-radius: 2px;
+                background-color: rgba($white-color, 0.1);
+            }
+
+
+            hr{
+                width: 455px;
+                display: block;
+                height: 1px;
+                border: 0;
+                margin: 0 0 0 41px;
+                border-top: 1px solid rgba($white-color, 0.1);
+                padding: 0;
+            }
         }
 
         li:before {
             position: relative;
-            width: 0.8em;
-             
-            font-size: 12px;
+            width: 21px;
+            font-size: 18px;
             line-height: 1;
-            font-weight: bold;
+            font-family: $roboto-medium;
+            font-weight: normal;
             text-align: right;
             color: $white-color;
-         
+            margin: 0 20px 0 0;
             content: counter(li-counter, decimal-leading-zero);
             counter-increment: li-counter;
         }
+    }
+
+    .button-serie{
+        display: inline-flex;
+            a{
+                display: block;
+                width: 258px;
+                height: 55px;
+                float:left;
+                padding: 15px 0 0 22px;
+                margin: 45px 0 0 0;
+                @include border-radius(3px);
+                text-decoration: none;
+                font-family: $montserrat-bold;
+                font-size: 13px;
+                text-transform: uppercase;
+                span{
+                    font-size: 18px;
+                    font-family: $montserrat;
+                }
+            }
+
+            .location-serie{
+                background-color: $gray-tabs;
+                color: $location;
+                span{
+                    color: rgba($location, 0.6);
+                }
+            }
+
+            .buy-serie{
+                color: $white-color;
+                margin-left: 20px; 
+                background-color: $serie-color;
+                span{
+                    color:rgba($white-color, 0.6);
+                }
+            }
+            .total-price{
+                text-align: right;
+                margin: -37px 25px 0 0;
+                font-size: 20px;
+                font-family: $montserrat;
+            }
+        }
+    .price-unit{
+        padding: 0;
+        margin: 20px 0 0 0;
+    }
+}
+
+.saison-slider{
+    h3{
+        margin: 52px 0 0 96px;
+        color: $white-color;
+        font-size: 32px;
+        width: 1090px;
+        border-top: solid 1px rgba($white-color, 0.1);
+        padding: 40px 0 0 0;
+        font-family: $roboto-light;
+        font-weight: normal;
     }
 }
 
