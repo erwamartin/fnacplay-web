@@ -25,4 +25,34 @@ $(document).ready(function($) {
     $('#reduction').tabs({
         show: {effect: "fade", duration: 800}
     });
+
+    $('.select-genre').selectbox();
+    $('.select-tri').selectbox();
+    $('.select-langue').selectbox();
+
+    $('.slider-input').jRange({
+    from: 2002,
+    to: 2015,
+    step: 1,
+    scale: [2002,2015],
+    format: '%s',
+    width: 570,
+    showLabels: true,
+    isRange : true
+    });
+
+    $('#Container').mixItUp({
+    animation: {
+        enable: false       
+    },
+    callbacks: {
+        onMixLoad: function(){
+            $(this).mixItUp('setOptions', {
+                animation: {
+                    enable: true    
+                },
+            });
+        }
+    }
+});
 });

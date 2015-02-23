@@ -16,6 +16,13 @@ $location: #6A6760;
 $avis: #2A2C2E;
 $aff_black-color: #18191a;
 
+/***** Color spec search *****/
+
+$black-search: #18191a;
+$black-active: #232323;
+
+/***** Fin *****/
+
 /***** Color Header *****/
 
 $nav_dark-gray: #2a2a2a;
@@ -137,12 +144,44 @@ $font-size-48: 48px;
     outline: 0;
 }
 
+.movie-bg{
+    background-color: $film-color !important;
+}
+
+.movie-txt{
+    color: $film-color !important;
+}
+
 .serie-bg{
     background-color: $serie-color !important;
 }
 
 .serie-txt{
     color: $serie-color !important;
+}
+
+.young-bg{
+    background-color: $young-color !important;
+}
+
+.young-txt{
+    color: $young-color !important;
+}
+
+.spectacle-bg{
+    background-color: $spectacle-color !important;
+}
+
+.spectacle-txt{
+    color: $spectacle-color !important;
+}
+
+.adult-bg{
+    background-color: $film-color !important;
+}
+
+.adult-txt{
+    color: $film-color !important;
 }
 
 /***** Debut CSS *****/
@@ -204,6 +243,7 @@ nav {
 
 .sub-menu {
     position: absolute;
+    z-index: 10;
     left: 60px;
     width: 1160px;
     top: 73px;
@@ -493,20 +533,32 @@ nav {
     }
 }
 
-.movie:hover {
-    background-color: $film-color;
+.movie:hover, .serie:hover, .young:hover, .spectacle:hover, .adult:hover{
+    a{
+        color: $white-color;
+    }
+    .border-color {
+        display: block;
+    }
+    .sub-menu {
+        display: block;
+    }
+}
 
-	a{
-    	color: $white-color;
+.movie.active, .serie.active, .young.active, .spectacle.active, .adult.active{
+    a{
+        color: $white-color;
     }
 
     .border-color {
         display: block;
     }
+} 
+
+.movie:hover {
+    background-color: $film-color;
 
     .sub-menu {
-        display: block;
-
         h2{
             color: $film-color;
         }
@@ -515,30 +567,12 @@ nav {
 
 .movie.active{
     background-color: $film-color;
-
-    a{
-        color: $white-color;
-    }
-
-    .border-color {
-        display: block;
-    }
 }
 
 .serie:hover {
     background-color: $serie-color;
 
-	a{
-    	color: $white-color;
-    }
-
-    .border-color {
-        display: block;
-    }
-
     .sub-menu {
-        display: block;
-
         h2{
         color: $serie-color;
         }
@@ -547,74 +581,52 @@ nav {
 
 .serie.active{
     background-color: $serie-color;
-
-    a{
-        color: $white-color;
-    }
-
-    .border-color {
-        display: block;
-    }
 }
 
 .young:hover {
     background-color: $young-color;
 
-    a{
-    	color: $white-color;
-    }
-
-    .border-color {
-        display: block;
-    }
-
     .sub-menu {
-        display: block;
-
         h2{
         color: $young-color;
     }
     }
 }
 
+.young.active{
+    background-color: $young-color;
+}
+
 .spectacle:hover {
     background-color: $spectacle-color;
 
-	a{
-    	color: $white-color;
-    }
-
-    .border-color {
-        display: block;
-    }
-
     .sub-menu {
-        display: block;
-
         h2{
             color: $spectacle-color;
         }
     }
 }
 
+.spectacle.active{
+    background-color: $spectacle-color;
+}
+
 .adult:hover {
     background-color: $adult-color;
 
-    .limit-age, a{
+    .limit-age{
     	color: $white-color;
     }
 
-    .border-color {
-        display: block;
-    }
-
     .sub-menu {
-        display: block;
-
         h2{
             color: $adult-color;
         }
     }
+}
+
+.adult.active{
+    background-color: $adult-color;
 }
 
 .search {
@@ -698,6 +710,7 @@ nav {
         background-color: $white-color;
         position: relative;
         top: 20px;
+        z-index: 10;
         left: -169px;
         padding-top: 30px;
         @include box-shadow(0px 1px 5px rgba($black-color, 0.3));
@@ -989,134 +1002,6 @@ nav {
         background-color: $gray-tabs;
         padding-top: 61px;
 
-        #tabs-1, #tabs-2{
-
-            ul{
-                margin-left: 28px;
-
-                li{
-                    width: 195px;
-                    height: 260px;
-                    float: left;
-                    list-style-type: none;
-                    margin: 0 0 90px 28px;
-                    @include box-shadow($shadow-image);
-
-                    img{
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    h2{
-                        text-align:center;
-                        text-overflow: ellipsis;
-                        font-family: $roboto;
-                        font-size: $font-size-15;
-                        font-weight:normal;
-                        color: rgba( $black-color, 0.8);
-                        width: 195px;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        margin: 18px 0 0 0;
-                    }
-
-                    .film-note_3{
-                        background: url('/img/star.png');
-                        background-size: 100% 100%;
-                        display: inline-block;
-                        width: 87px;
-                        height: 15px;
-                        margin: 4px 0 0 53px;
-                    }
-
-                    a{
-                        .overflow-img{
-                            display: none;
-                            position: absolute;
-                            width: 195px;
-                            height: 260px;
-                            @include linear-gradient($from-gradient, $to-gradient);
-
-                            button{
-                                width: 38px;
-                                height: 30px;
-                                text-align:center; 
-                                font-size: $font-size-15;
-                                border: none;
-                                color: $tabs_black-color;
-                                @include border-radius(3px);
-                                background-color: $gray-tabs;
-                                @include box-shadow($shadow-image);
-                                margin: 12px 0 0 146px;
-                            }
-
-                            button:hover{
-                                background-color: $film-color;
-                                color: $white-color;
-                            }
-
-                            .see-ba:before, .add-list:before{
-                                content: "";
-                                position: absolute;
-                                z-index: 9999999999;
-                                border-color: $selection_black-color;
-                                background-color: $selection_black-color;
-                                border-style:solid;
-                                height:5px;
-                                width: 5px;
-                                @include rotate(45);
-                            }
-
-                            .add-list:before{
-                                left: 86px;
-                                top: 25px; 
-                            }
-
-                            .see-ba:before{
-                                left: 86px;
-                                top: -5px;
-                            }
-
-                            .see-ba, .add-list{
-                                display: none;
-                                white-space: nowrap;
-                                text-align: center;
-                                width: 177px;
-                                left: 74px;
-                                position: absolute;
-                                z-index: 9999999999;
-                                line-height: 32px;
-                                font-family: $roboto-medium;
-                                font-size: $font-size-13;
-                                @include border-radius(2px);
-                                @include box-shadow($shadow-image);
-                            }
-
-                            .add-list{
-                                margin-top: -73px;
-                            }
-
-                            .see-ba{
-                                margin-top: 15px;
-                            }
-
-                            button:hover .see-ba, button:hover .add-list{
-                                display: block;
-                                background-color: $selection_black-color;
-                                
-                            }
-                        }
-                    }
-
-                    a:hover{
-                        .overflow-img{
-                            display: block;
-                        }
-                    }
-                }
-            }
-        }
-
         #tabs-3{
             ul{
                 margin-left: 28px;
@@ -1202,6 +1087,136 @@ nav {
 }
 
 /***** Fin Tabs *****/
+
+/***** organisation tabs *****/
+
+#tabs-1, #tabs-2, .result{
+            ul{
+                margin-left: 28px;
+
+                li{
+                    width: 195px;
+                    height: 260px;
+                    float: left;
+                    list-style-type: none;
+                    margin: 0 0 90px 28px;
+                    @include box-shadow($shadow-image);
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    h2{
+                        text-align:center;
+                        text-overflow: ellipsis;
+                        font-family: $roboto;
+                        font-size: $font-size-15;
+                        font-weight:normal;
+                        color: rgba( $black-color, 0.8);
+                        width: 195px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        margin: 18px 0 0 0;
+                    }
+
+                    .film-note_3{
+                        background: url('/img/star.png');
+                        background-size: 100% 100%;
+                        display: inline-block;
+                        width: 87px;
+                        height: 15px;
+                        margin: 4px 0 0 53px;
+                    }
+
+                    a{
+                        .overflow-img{
+                            display: none;
+                            position: absolute;
+                            width: 195px;
+                            height: 260px;
+                            @include linear-gradient($from-gradient, $to-gradient);
+
+                            button{
+                                width: 38px;
+                                height: 30px;
+                                text-align:center; 
+                                font-size: $font-size-15;
+                                border: none;
+                                color: $tabs_black-color;
+                                @include border-radius(3px);
+                                background-color: $gray-tabs;
+                                @include box-shadow($shadow-image);
+                                margin: 12px 0 0 146px;
+                                padding: 0;
+                            }
+
+                            button:hover{
+                                background-color: $film-color;
+                                color: $white-color;
+                            }
+
+                            .see-ba:before, .add-list:before{
+                                content: "";
+                                position: absolute;
+                                z-index: 9999999999;
+                                border-color: $selection_black-color;
+                                background-color: $selection_black-color;
+                                border-style:solid;
+                                height:5px;
+                                width: 5px;
+                                @include rotate(45);
+                            }
+
+                            .add-list:before{
+                                left: 86px;
+                                top: 25px; 
+                            }
+
+                            .see-ba:before{
+                                left: 86px;
+                                top: -5px;
+                            }
+
+                            .see-ba, .add-list{
+                                display: none;
+                                white-space: nowrap;
+                                text-align: center;
+                                width: 177px;
+                                left: 74px;
+                                position: absolute;
+                                z-index: 9999999999;
+                                line-height: 32px;
+                                font-family: $roboto-medium;
+                                font-size: $font-size-13;
+                                @include border-radius(2px);
+                                @include box-shadow($shadow-image);
+                            }
+
+                            .add-list{
+                                margin-top: -73px;
+                            }
+
+                            .see-ba{
+                                margin-top: 15px;
+                            }
+
+                            button:hover .see-ba, button:hover .add-list{
+                                display: block;
+                                background-color: $selection_black-color;
+                                
+                            }
+                        }
+                    }
+
+                    a:hover{
+                        .overflow-img{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
 
 /***** Just for You *****/
 
@@ -1404,7 +1419,7 @@ nav {
             }
         }
 
-/***** Fin Jus for You *****/
+/***** Fin Just for You *****/
 
 /***** Our Selection *****/
 
@@ -1908,10 +1923,10 @@ footer{
             color: $white-color;
             font: $roboto;
             font-size: 13px;
-            margin-left: 96px;
+            margin-left: 0px;
         }
-        a:last-child{
-            margin-left: 0;
+        a:first-child{
+            margin-left: 96px;
         }
         a.titlebread{
             color: rgba($white-color, 0.6);
@@ -2522,6 +2537,12 @@ footer{
     padding:0 0 70px 0;
 }
 
+.description-serie{
+    h3{
+        margin: 6px 0 0 0 !important;
+    }
+}
+
 .serie-episode{
     margin:0 0 0 96px;
     padding-bottom: 52px;
@@ -2702,6 +2723,250 @@ footer{
 
 /***** Fin Affiche Serie *****/
 
+/***** Recherche *****/
+
+.filtre{
+    width: 100%;
+    height: 198px;
+    background-color: $white-color;
+    @include box-shadow(0px 2px 4px rgba($black-color, 0.15));
+
+    .breadcrumbs{
+        width: 100%;
+        line-height: 27px;
+        background-color: rgba(0, 0, 0, 0.05);
+
+        a{
+            text-decoration: none;
+            color: $black-color;
+            font: $roboto;
+            font-size: 13px;
+            margin-left: 0px;
+        }
+        a:first-child{
+            margin-left: 96px;
+        }
+        a.titlebread{
+            color: rgba($black-color, 0.6);
+        }
+    }
+
+    .filtre-genre, .filtre-tri, .filtre-langue{
+        float:left; 
+        position: relative;
+
+        .sbSelector{
+            display: block;
+            border-right: solid 1px rgba($black-color, 0.2);
+            border-bottom: solid 1px rgba($black-color, 0.2);
+            line-height: 120px;
+            color: $black-search;
+            text-decoration: none;
+            font-family: $roboto-light;
+            font-size: 32px;
+        }
+
+        .sbOptions{
+            position: absolute; 
+            top: 120px !important;
+            display: block;
+            z-index: 5;            
+            background-color: $white-color;
+            @include box-shadow(0px 2px 4px rgba($black-color, 0.15));
+            min-height: 400px;
+
+            li{
+                list-style-type:none;
+                margin: 0;
+                padding: 0;
+                a{
+                    width: 310px;
+                    border-top: solid 1px rgba($black-color, 0.2);                    
+                    display: block;
+                    line-height: 50px;
+                    font-family: $roboto;
+                    font-size: 15px;
+                    text-decoration: none;
+                    color: $black-color;
+                }
+            }
+        }
+    }
+
+    .filtre-genre:after, .filtre-tri:after, .filtre-langue:after{
+        content: '';
+        width: 32px;
+        height: 32px;
+        top: 50px;
+        right: 40px;
+        position: absolute;
+        background: url("/img/dropdown.png");
+        background-size: cover;
+    }
+
+    .filtre-genre{
+        .sbSelector{
+            margin:0 0 0 0px;
+            padding: 0 0 0 96px;
+            display: block;
+            width: 345px;
+        }
+
+        .sbOptions{
+            margin:0 0 0 56px;
+        }
+    }
+
+    .filtre-tri{
+        .sbSelector{
+            margin:0 0 0 0px;
+            padding: 0 0 0 40px;
+            width: 347px;
+        }
+
+        .sbOptions{
+            margin:0;
+            padding: 0 0 0 40px;
+            width: 347px;
+        }
+    }
+    .filtre-langue{
+        .sbSelector{
+            margin:0 0 0 0px;
+            border-right: none;
+            padding: 0 0 0 40px;
+            width: 410px;
+        }
+
+        .sbOptions{
+            margin:0;
+            padding: 0 0 0 40px;
+            width: 345px;
+        }
+    }
+}
+
+.check-achat{
+    margin-left: 97px;
+}
+
+.check-achat, .check-location{
+    width: 171px;
+    float: left;
+    text-align: center;
+    border-left: solid 1px rgba($black-color, 0.2);
+    line-height: 50px;
+
+    label{
+        margin-left: 20px;
+    }
+
+    input[type=checkbox]{
+                display: none;
+    }
+
+    input[type=checkbox]:checked + label:before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 12px;
+        text-align: center;
+        color: $white-color;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: $primary-color;
+    }
+
+    input[type=checkbox] + label:before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        position: absolute;
+        margin-left: -33px;
+        margin-top: 14px;
+        font-size: 12px;
+        text-align: center;
+        color: rgba($white-color, 0.0);
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: rgba($black-color, 0.1);
+    }
+}
+
+.range{
+    float:left;
+    height: 28px;
+    padding-top: 22px;
+    padding-left: 104px;
+    border-left: solid 1px rgba($black-color, 0.2);
+}
+
+.result{
+    min-height: 390px;
+    width: 100%;
+    background-color: $gray-tabs;
+
+    button{
+        .circle{
+            width: 9px;
+            height: 9px;
+            margin-right: 7px;
+            display: inline-block;
+            @include border-radius(50%);
+            border: solid 1px rgba($black-color, 0.4);
+        }
+        width: 236px;
+        height: 40px;
+        border: solid 1px rgba($black-color, 0.03);
+        margin: 0 21px 0 0;
+        padding: 0 12px 0 16px;
+        text-align: left;
+        font-size: 15px;
+        font-family: $roboto;
+        color: rgba($black-active, 0.6);
+        background-color: $white-color;
+        @include border-radius(40px);
+        @include box-shadow(0px 1px 2px rgba($black-color, 0.3));
+        .nbr-filter{
+            float: right;
+            padding: 2px 10px 2px 10px;
+            font-family: $roboto-medium;
+            border: solid 1px $primary-color;
+            color: $primary-color;
+            background-color: $white-color;
+            @include border-radius(29px);
+        }
+    }
+
+    button.all{
+        width: 190px;
+        margin: 30px 21px 0px 96px;
+    }
+
+    button.active{
+        .circle{
+            border: solid 1px $primary-color;
+            background-color: $primary-color;
+        }
+        color: $black-active;
+        .nbr-filter{
+            background-color: $primary-color;
+            color: $white-color;
+        }
+    }
+
+    p{
+        margin: 25px 0px 25px 96px;
+        font-size: 15px;
+        font-family: $roboto-bold;
+        color: rgba($black-search, 0.6);
+    }
+} 
+
+/***** Fin Recherche *****/
+
 /****** Style custom tooltip *****/
 
 .tooltipster-content{
@@ -2831,3 +3096,7 @@ footer{
 } 
 
 /***** Fin Note *****/
+
+#Container .mix{
+    display: none;
+}
