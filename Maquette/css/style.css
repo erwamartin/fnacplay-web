@@ -489,6 +489,16 @@ nav {
 .notification:hover .description-notification {
   display: block; }
 
+.co-facebook:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  top: 40px;
+  right: 172px;
+  position: absolute;
+  background: url("/img/facebook-profil.png");
+  background-size: cover; }
+
 .my_account {
   width: 230px;
   height: 70px;
@@ -718,6 +728,14 @@ nav {
 
 /***** Fin Tabs *****/
 /***** organisation tabs *****/
+.cdc:before {
+  content: '';
+  width: 120px;
+  height: 80px;
+  background: url("/img/coup-de-coeur-fnac.png") no-repeat;
+  background-size: cover;
+  position: absolute; }
+
 #tabs-1 ul, #tabs-2 ul, .result ul {
   margin-left: 28px; }
   #tabs-1 ul li, #tabs-2 ul li, .result ul li {
@@ -1531,6 +1549,8 @@ footer {
           text-decoration: line-through;
           margin-left: 7px;
           color: rgba(106, 103, 96, 0.6); }
+      .affiche-film .description-film .button-affiche .location:hover, .affiche-film .description-serie .button-affiche .location:hover, .affiche-serie .description-film .button-affiche .location:hover, .affiche-serie .description-serie .button-affiche .location:hover {
+        background-color: #dfdfdf; }
       .affiche-film .description-film .button-affiche .location:after, .affiche-film .description-serie .button-affiche .location:after, .affiche-serie .description-film .button-affiche .location:after, .affiche-serie .description-serie .button-affiche .location:after {
         content: url(/img/little-play.png);
         width: 24px;
@@ -1541,6 +1561,10 @@ footer {
       .affiche-film .description-film .button-affiche .buy, .affiche-film .description-serie .button-affiche .buy, .affiche-serie .description-film .button-affiche .buy, .affiche-serie .description-serie .button-affiche .buy {
         background-color: #15B4A8;
         color: #fff; }
+      .affiche-film .description-film .button-affiche .buy:hover, .affiche-film .description-serie .button-affiche .buy:hover, .affiche-serie .description-film .button-affiche .buy:hover, .affiche-serie .description-serie .button-affiche .buy:hover {
+        background-color: #10867d; }
+      .affiche-film .description-film .button-affiche .buy.serie-bg:hover, .affiche-film .description-serie .button-affiche .buy.serie-bg:hover, .affiche-serie .description-film .button-affiche .buy.serie-bg:hover, .affiche-serie .description-serie .button-affiche .buy.serie-bg:hover {
+        background-color: #573375 !important; }
       .affiche-film .description-film .button-affiche .buy:after, .affiche-film .description-serie .button-affiche .buy:after, .affiche-serie .description-film .button-affiche .buy:after, .affiche-serie .description-serie .button-affiche .buy:after {
         content: url(/img/little-cart.png);
         width: 22px;
@@ -1556,6 +1580,14 @@ footer {
         font-family: "Roboto-Medium", sans-serif; }
         .affiche-film .description-film .buy-disk a img, .affiche-film .description-serie .buy-disk a img, .affiche-serie .description-film .buy-disk a img, .affiche-serie .description-serie .buy-disk a img {
           margin-right: 10px; }
+  .affiche-film .cdc:before, .affiche-serie .cdc:before {
+    content: '';
+    width: 120px;
+    margin-top: 68px;
+    height: 80px;
+    background: url("/img/coup-de-coeur-fnac.png") no-repeat;
+    background-size: cover;
+    position: absolute; }
   .affiche-film .notation-film, .affiche-film .notation-serie, .affiche-serie .notation-film, .affiche-serie .notation-serie {
     float: left;
     margin-left: 22px; }
@@ -1571,14 +1603,6 @@ footer {
       -moz-border-top-right-radius: 3px;
       -ms-border-top-right-radius: 3px;
       border-top-right-radius: 3px; }
-    .affiche-film .notation-film .cdc:after, .affiche-film .notation-serie .cdc:after, .affiche-serie .notation-film .cdc:after, .affiche-serie .notation-serie .cdc:after {
-      content: '';
-      width: 120px;
-      height: 80px;
-      background: url("/img/coup-de-coeur-fnac.png") no-repeat;
-      margin-left: 131px;
-      position: absolute;
-      margin-top: -6px; }
     .affiche-film .notation-film .attr-note, .affiche-film .notation-serie .attr-note, .affiche-serie .notation-film .attr-note, .affiche-serie .notation-serie .attr-note {
       width: 210px;
       height: 59px;
@@ -1633,6 +1657,8 @@ footer {
         text-transform: uppercase; }
         .affiche-film .notation-film .attr-list h3 span, .affiche-film .notation-serie .attr-list h3 span, .affiche-serie .notation-film .attr-list h3 span, .affiche-serie .notation-serie .attr-list h3 span {
           font-size: 18px; }
+    .affiche-film .notation-film .attr-list:hover, .affiche-film .notation-serie .attr-list:hover, .affiche-serie .notation-film .attr-list:hover, .affiche-serie .notation-serie .attr-list:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
   .affiche-film .follow, .affiche-serie .follow {
     padding-top: 17px;
     margin: 0 0 0 96px; }
@@ -1659,6 +1685,12 @@ footer {
       color: #fff;
       margin: 0 10px 0 10px;
       font-size: 24px; }
+    .affiche-film .follow .fa-twitter:hover, .affiche-serie .follow .fa-twitter:hover {
+      color: #30D8F0; }
+    .affiche-film .follow .fa-facebook-official:hover, .affiche-serie .follow .fa-facebook-official:hover {
+      color: #3b5999; }
+    .affiche-film .follow .fa-google-plus:hover, .affiche-serie .follow .fa-google-plus:hover {
+      color: #D34836; }
 
 /*** Fin description film ***/
 /*** Information Film ***/
@@ -1935,7 +1967,7 @@ footer {
         margin: 16px 0 0 0; }
       .serie-episode ol li input[type=checkbox] {
         display: none; }
-      .serie-episode ol li input[type=checkbox]:checked + label:after {
+      .serie-episode ol li input[type=checkbox]:checked + label:after, .serie-episode ol li input[type=checkbox]:checked:hover + label:after {
         content: "\f00c";
         font-family: FontAwesome;
         font-size: 12px;
@@ -1960,6 +1992,20 @@ footer {
         height: 20px;
         border-radius: 2px;
         background-color: rgba(255, 255, 255, 0.1); }
+      .serie-episode ol li input[type=checkbox]:hover + label:after {
+        content: "\f00c";
+        font-family: FontAwesome;
+        position: absolute;
+        left: 417px;
+        top: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.3);
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: rgba(113, 66, 153, 0.5); }
       .serie-episode ol li hr {
         width: 455px;
         display: block;
@@ -2005,12 +2051,16 @@ footer {
       color: #6A6760; }
       .serie-episode .button-serie .location-serie span {
         color: rgba(106, 103, 96, 0.6); }
+    .serie-episode .button-serie .location-serie:hover {
+      background-color: #dfdfdf; }
     .serie-episode .button-serie .buy-serie {
       color: #fff;
       margin-left: 20px;
       background-color: #714299; }
       .serie-episode .button-serie .buy-serie span {
         color: rgba(255, 255, 255, 0.6); }
+    .serie-episode .button-serie .buy-serie:hover {
+      background-color: #573375; }
     .serie-episode .button-serie .total-price {
       text-align: right;
       margin: -37px 25px 0 0;
@@ -2033,6 +2083,7 @@ footer {
 /***** Fin Affiche Serie *****/
 /***** Recherche *****/
 .filtre {
+  position: relative;
   width: 100%;
   height: 198px;
   background-color: #fff;
@@ -2327,6 +2378,45 @@ footer {
   margin-right: 5px;
   height: 16px;
   background: url("/img/note_4.png"); }
+
+ul.notes-echelle {
+  width: 155px;
+  margin: 0 auto;
+  padding: 0;
+  font: .75em/1.2 Arial, Helvetica, sans-serif; }
+
+ul.notes-echelle li {
+  float: left;
+  margin: 4px 0 0 7px;
+  padding: 0;
+  list-style: none; }
+
+ul.notes-echelle li label {
+  display: block;
+  text-align: center;
+  line-height: 21px;
+  background: url(/img/etoiles.png) center top no-repeat;
+  cursor: pointer; }
+  ul.notes-echelle li label span {
+    visibility: hidden; }
+
+ul.notes-echelle li.note-off label {
+  background-position: center -60px; }
+
+ul.notes-echelle li.note-checked {
+  font-weight: bold; }
+
+ul.notes-echelle.js li {
+  min-width: 24px;
+  min-height: 21px; }
+
+ul.notes-echelle.js input {
+  position: absolute;
+  left: -999%; }
+
+* html ul.notes-echelle.js li {
+  width: 24px;
+  height: 21px; }
 
 /***** Fin Note *****/
 #Container .mix {

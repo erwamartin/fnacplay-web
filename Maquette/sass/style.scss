@@ -796,6 +796,17 @@ nav {
     display: block;
 }
 
+.co-facebook:after{
+        content:'';
+        width: 16px;
+        height: 16px;
+        top: 40px;
+        right: 172px;
+        position: absolute;
+        background: url("/img/facebook-profil.png");
+        background-size: cover;
+    }
+
 .my_account {
     width: 230px;
     height: 70px;
@@ -1089,6 +1100,15 @@ nav {
 /***** Fin Tabs *****/
 
 /***** organisation tabs *****/
+
+.cdc:before{
+            content: '';
+            width: 120px;
+            height: 80px;
+            background: url('/img/coup-de-coeur-fnac.png') no-repeat;
+            background-size: cover;
+            position: absolute;
+        }
 
 #tabs-1, #tabs-2, .result{
             ul{
@@ -2099,7 +2119,9 @@ footer{
                     color: rgba($location, 0.6);
                 }
             }
-
+            .location:hover{
+                background-color: darken($gray-tabs, 10);
+            }
             .location:after{
                 content: url(/img/little-play.png);
                 width: 24px;
@@ -2112,6 +2134,12 @@ footer{
             .buy{
                 background-color: $film-color;
                 color: $white-color;
+            }
+            .buy:hover{
+                background-color: darken($film-color, 10);
+            }
+            .buy.serie-bg:hover{
+                background-color: darken($serie-color, 10) !important;
             }
             .buy:after{
                 content: url(/img/little-cart.png);
@@ -2137,6 +2165,16 @@ footer{
         }
     }
     
+    .cdc:before{
+            content: '';
+            width: 120px;
+            margin-top: 68px;
+            height: 80px;
+            background: url('/img/coup-de-coeur-fnac.png') no-repeat;
+            background-size: cover;
+            position: absolute;
+        }
+
     .notation-film, .notation-serie{
         float:left;
         margin-left: 22px;
@@ -2147,15 +2185,6 @@ footer{
             @include border-top-radius (3px);
         }
 
-        .cdc:after{
-            content: '';
-            width: 120px;
-            height: 80px;
-            background: url('/img/coup-de-coeur-fnac.png') no-repeat;
-            margin-left: 131px;
-            position: absolute;
-            margin-top: -6px
-        }
         .attr-note{
             width: 210px;
             height: 59px;
@@ -2214,6 +2243,10 @@ footer{
                 }
             }
         }
+
+        .attr-list:hover{
+            background-color: rgba($white-color, 0.1);
+        }
     }
 
     .follow{
@@ -2247,6 +2280,18 @@ footer{
             color: $white-color;
             margin: 0 10px 0 10px;
             font-size: 24px;
+        }
+
+        .fa-twitter:hover{
+            color:#30D8F0;
+        }
+
+        .fa-facebook-official:hover{
+            color: #3b5999;
+        }
+
+        .fa-google-plus:hover{
+            color:#D34836;
         }
     }
 }
@@ -2603,7 +2648,7 @@ footer{
                 display: none;
             }
 
-            input[type=checkbox]:checked + label:after {
+            input[type=checkbox]:checked + label:after, input[type=checkbox]:checked:hover + label:after {
                  content: "\f00c";
                  font-family: FontAwesome;
                  font-size: 12px;
@@ -2632,6 +2677,21 @@ footer{
                 background-color: rgba($white-color, 0.1);
             }
 
+            input[type=checkbox]:hover + label:after {
+                content: "\f00c";
+                font-family: FontAwesome;
+                position: absolute;
+                left: 417px;
+                top: 3px;
+                font-size: 12px;
+                text-align: center;
+                color: rgba($white-color, 0.3);
+                line-height: 20px;
+                width: 20px;
+                height: 20px;
+                border-radius: 2px;
+                background-color: rgba($serie-color, 0.5);
+            }
 
             hr{
                 width: 455px;
@@ -2687,6 +2747,10 @@ footer{
                 }
             }
 
+            .location-serie:hover{
+                background-color: darken($gray-tabs, 10);
+            }
+
             .buy-serie{
                 color: $white-color;
                 margin-left: 20px; 
@@ -2695,6 +2759,11 @@ footer{
                     color:rgba($white-color, 0.6);
                 }
             }
+
+            .buy-serie:hover{
+                background-color: darken($serie-color, 10);
+            }
+
             .total-price{
                 text-align: right;
                 margin: -37px 25px 0 0;
@@ -2726,6 +2795,7 @@ footer{
 /***** Recherche *****/
 
 .filtre{
+    position: relative;
     width: 100%;
     height: 198px;
     background-color: $white-color;
@@ -3094,6 +3164,46 @@ footer{
     height: 16px;
     background: url("/img/note_4.png");
 } 
+ul.notes-echelle {
+    width: 155px;
+    margin:0 auto;
+    padding:0;
+    font:.75em/1.2 Arial, Helvetica, sans-serif;
+}
+ul.notes-echelle li {
+    float:left;
+    margin:4px 0 0 7px;
+    padding:0;
+    list-style:none;
+}
+ul.notes-echelle li label {
+    display:block;
+    text-align:center;
+    line-height:21px;
+    background:url(/img/etoiles.png) center top no-repeat;
+    cursor:pointer;
+    span{
+        visibility: hidden;
+    }
+}
+ul.notes-echelle li.note-off label {
+    background-position:center -60px;
+}
+ul.notes-echelle li.note-checked {
+    font-weight:bold;
+}
+ul.notes-echelle.js li {
+    min-width:24px;
+    min-height:21px;
+}
+ul.notes-echelle.js input {
+    position:absolute;
+    left:-999%;
+}
+* html ul.notes-echelle.js li {
+    width:24px;
+    height:21px;
+}
 
 /***** Fin Note *****/
 

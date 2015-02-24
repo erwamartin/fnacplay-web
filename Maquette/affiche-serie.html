@@ -26,11 +26,11 @@
 
         <header>
             <div class="logo">
-                <a href="#" title="Retour sur la page d'accueil"><img src="img/logo-fnac.png" alt="logo fnac play" /></a>
+                <a href="index.html" title="Retour sur la page d'accueil"><img src="img/logo-fnac.png" alt="logo fnac play" /></a>
             </div>
             <nav>
                 <ul>
-                    <li class="movie"><a href="#"><h2>Films</h2></a>
+                    <li class="movie"><a href="film.html"><h2>Films</h2></a>
                         <div class="border-color"></div>
                         <div class="sub-menu">
                             <div class="genre">
@@ -82,7 +82,7 @@
                             <div class="border-bottom"></div>
                         </div>     
                     </li>
-                    <li class="serie active"><a href="#"><h2>Séries</h2></a>
+                    <li class="serie active"><a href="serie.html"><h2>Séries</h2></a>
                         <div class="border-color"></div>
                         <div class="sub-menu">
                             <div class="genre">
@@ -134,7 +134,7 @@
                             <div class="border-bottom"></div>
                         </div> 
                     </li>
-                    <li class="young"><a href="#"><h2>KIDS</h2></a>
+                    <li class="young"><a href="young.html"><h2>KIDS</h2></a>
                         <div class="border-color"></div>
                         <div class="sub-menu">
                             <div class="genre">
@@ -186,7 +186,7 @@
                             <div class="border-bottom"></div>
                         </div> 
                     </li>
-                    <li class="spectacle"><a href="#"><h2>Spectacles</h2></a>
+                    <li class="spectacle"><a href="spectacle.html"><h2>Spectacles</h2></a>
                         <div class="border-color"></div>
                         <div class="sub-menu">
                             <div class="genre">
@@ -393,7 +393,29 @@
                 <section class="notation-film">
                         <img src="img/affiche-serie.png" alt="" />
                     <div class="attr-note">
-                        <h3>Noter le film</h3>
+                        <h3>Noter la série</h3>
+                        <ul class="notes-echelle js">
+                            <li class="note-off">
+                                <label for="note01" title="Note : 1 sur 5"><span>1</span></label>
+                                <input type="radio" name="notesA" id="note01" value="1">
+                            </li>
+                            <li class="note-off">
+                                <label for="note02" title="Note : 2 sur 5"><span>2</span></label>
+                                <input type="radio" name="notesA" id="note02" value="2">
+                            </li>
+                            <li class="note-off">
+                                <label for="note03" title="Note : 3 sur 5"><span>3</span></label>
+                                <input type="radio" name="notesA" id="note03" value="3">
+                            </li>
+                            <li class="note-off">
+                                <label for="note04" title="Note : 4 sur 5"><span>4</span></label>
+                                <input type="radio" name="notesA" id="note04" value="4">
+                            </li>
+                            <li class="note-off">
+                                <label for="note05" title="Note : 5 sur 5"><span>5</span></label>
+                                <input type="radio" name="notesA" id="note05" value="5">
+                            </li>
+                        </ul>
                     </div>
                     <div class="attr-list">
                         <a href="#"><i class="fa fa-heart"></i><h3>Ajouter à ma<br /><span>Liste d'envies</span></h3></a>
@@ -576,7 +598,7 @@
                 <section class="carousel">
                     <ul class="bxslider">
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="cdc">
                                             <div class="overflow-img tooltip">
                                                 <div class="button-aff">
                                                     <button class="button-top">
@@ -598,7 +620,7 @@
                                         <h2>Les Gardiens de la Galaxie</h2>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="cdc">
                                             <div class="overflow-img tooltip">
                                                 <div class="button-aff">
                                                     <button class="button-top">
@@ -709,7 +731,7 @@
                                         <h2>Gone Girl</h2>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="cdc">
                                             <div class="overflow-img tooltip">
                                                 <div class="button-aff">
                                                     <button class="button-top">
@@ -775,7 +797,7 @@
                                         <h2>Les Gardiens de la Galaxie</h2>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" class="cdc">
                                             <div class="overflow-img tooltip">
                                                 <div class="button-aff">
                                                     <button class="button-top">
@@ -855,7 +877,48 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
         <script src="js/jquery.js"></script>-->
-        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $("ul.notes-echelle").addClass("js");
+                $("ul.notes-echelle li").addClass("note-off");
+                
+                $("ul.notes-echelle input")
+                    .focus(function() {
+                        $(this).parents("ul.notes-echelle").find("li").removeClass("note-focus");
+                        $(this).parent("li").addClass("note-focus");
+                        $(this).parent("li").nextAll("li").addClass("note-off");
+                        $(this).parent("li").prevAll("li").removeClass("note-off");
+                        $(this).parent("li").removeClass("note-off");
+                    })
+                    .blur(function() {
+                        $(this).parents("ul.notes-echelle").find("li").removeClass("note-focus");
+                        if($(this).parents("ul.notes-echelle").find("li input:checked").length == 0) {
+                            $(this).parents("ul.notes-echelle").find("li").addClass("note-off");
+                        }
+                    })
+                    .click(function() {
+                        $(this).parents("ul.notes-echelle").find("li").removeClass("note-checked");
+                        $(this).parent("li").addClass("note-checked");
+                    });
+                    
+                $("ul.notes-echelle li").mouseover(function() {
+                    $(this).nextAll("li").addClass("note-off");
+                    $(this).prevAll("li").removeClass("note-off");
+                    $(this).removeClass("note-off");
+                });
+                    
+                $("ul.notes-echelle").mouseout(function() {
+                    $(this).children("li").addClass("note-off");
+                    $(this).find("li input:checked").parent("li").trigger("mouseover");
+                });
+                
+                $("ul.notes-echelle input:checked").parent("li").trigger("mouseover");
+                $("ul.notes-echelle input:checked").trigger("click");
+                
+            });
+        </script>
         <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
         <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
