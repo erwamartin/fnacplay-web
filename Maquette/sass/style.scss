@@ -4,7 +4,7 @@
 
 $primary-color: #f5b027;
 $adult-color: #de0477;
-$film-color: #15B4A8;
+$movie-color: #15B4A8;
 $young-color: #f46317;
 $serie-color: #714299;
 $spectacle-color: #15b4a8;
@@ -145,11 +145,15 @@ $font-size-48: 48px;
 }
 
 .movie-bg{
-    background-color: $film-color !important;
+    background-color: $movie-color !important;
 }
 
 .movie-txt{
-    color: $film-color !important;
+    color: $movie-color !important;
+}
+
+.darken-movie-bg{
+    background-color: darken($movie-color, 10) !important;    
 }
 
 .serie-bg{
@@ -160,12 +164,20 @@ $font-size-48: 48px;
     color: $serie-color !important;
 }
 
+.darken-serie-bg{
+    background-color: darken($serie-color, 10) !important;    
+}
+
 .young-bg{
     background-color: $young-color !important;
 }
 
 .young-txt{
     color: $young-color !important;
+}
+
+.darken-young-bg{
+    background-color: darken($young-color, 10) !important;    
 }
 
 .spectacle-bg{
@@ -176,12 +188,16 @@ $font-size-48: 48px;
     color: $spectacle-color !important;
 }
 
+.darken-spectacle-bg{
+    background-color: darken($spectacle-color, 10) !important;    
+}
+
 .adult-bg{
-    background-color: $film-color !important;
+    background-color: $adult-color !important;
 }
 
 .adult-txt{
-    color: $film-color !important;
+    color: $adult-color !important;
 }
 
 /***** Debut CSS *****/
@@ -466,11 +482,11 @@ nav {
 
 .movie {
     .border-color{
-        border-top: solid 3px $film-color;
+        border-top: solid 3px $movie-color;
     }
     .sub-menu {
         .border-bottom {
-            border-bottom: solid 10px $film-color;
+            border-bottom: solid 10px $movie-color;
         }
     }
 }
@@ -538,6 +554,7 @@ nav {
         color: $white-color;
     }
     .border-color {
+        z-index: 1000;
         display: block;
     }
     .sub-menu {
@@ -556,17 +573,17 @@ nav {
 } 
 
 .movie:hover {
-    background-color: $film-color;
+    background-color: $movie-color;
 
     .sub-menu {
         h2{
-            color: $film-color;
+            color: $movie-color;
         }
     }
 }
 
 .movie.active{
-    background-color: $film-color;
+    background-color: $movie-color;
 }
 
 .serie:hover {
@@ -836,6 +853,84 @@ nav {
 
 /***** Fin Header-Navogation *****/
 
+/***** slider partial *****/
+
+#wrapper {
+    background-color: $white-color;
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+    position: relative;
+}
+#carousel section {
+    display: block;
+    float: left;
+    width: 1090px;
+    height: 530px;
+}
+#carousel section img{
+    width: 100%;
+}
+#carousel section article{
+    position: absolute;
+    padding:75px 0 0 75px;
+    h2, h3{
+        font-familly: $montserrat-bold;
+        color: $white-color;
+        padding:0;
+        text-transform: uppercase;
+    }
+    h2{
+        font-size: 48px;
+        margin: 0;
+    }
+    h3{
+        font-size:17px;
+        width: 264px;
+        margin: 30px 0 0 0;
+    }
+}
+#prev, #next {
+    background-color: rgba($black-color, 0.5);
+    display: block;
+    height: 530px;
+    width: 50%;
+    top: 0px;
+    position: absolute;
+}
+#prev:hover, #next:hover {
+    background-color: $black-color;
+    background-color: rgba($black-color, 0.6);
+}
+#prev {
+    left: -545px;
+}
+#next {
+    right: -545px;
+}
+#pager {
+    margin-left: 350px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+}
+#pager a {
+    border-radius: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 14px 0 0;
+    background-color: rgba($white-color, 0.5);
+}
+#pager a span {
+    display: none;
+}
+#pager a.selected {
+    background-color: $white-color;
+}
+
+/***** fin *****/
+
 /***** Partie Caroussel *****/
 
 .slider {
@@ -860,7 +955,22 @@ nav {
         }
     }
 }
-
+.slider.movie{
+    background: url("/img/bg-affiche-film-3.jpg");
+    background-size: cover;
+}
+.slider.serie{
+    background: url("/img/bg-affiche-serie-5.jpeg");
+    background-size: cover;
+}
+.slider.young{
+    background: url("/img/bg-affiche-young-2.jpg");
+    background-size: cover;
+}
+.slider.spectacle{
+    background: url("/img/bg-affiche-spectacle.jpg");
+    background-size: cover;
+}
 .little-title {
     width: 124px;
     height: 31px;
@@ -903,7 +1013,7 @@ nav {
         font-size: $font-size-18;
         text-decoration: none;
         @include border-radius(3px);
-        background-color: $film-color;
+        background-color: $primary-color;
         display: block;
         text-align: center;
         line-height: 56px;
@@ -1112,7 +1222,7 @@ nav {
 
 #tabs-1, #tabs-2, .result{
             ul{
-                margin-left: 28px;
+                margin:0 0 0 28px;
 
                 li{
                     width: 195px;
@@ -1172,7 +1282,7 @@ nav {
                             }
 
                             button:hover{
-                                background-color: $film-color;
+                                background-color: $primary-color;
                                 color: $white-color;
                             }
 
@@ -1272,7 +1382,7 @@ nav {
 .just-for-you{
     width: 100%;
     height: 440px;
-    background-color: $film-color;
+    background-color: $primary-color;
     padding-top: 50px;
 
     .title-just{
@@ -1303,7 +1413,7 @@ nav {
         a{
             color: $white-color;
             display: block;
-            background-color: darken($film-color, 8);
+            background-color: darken($primary-color, 8);
             @include border-radius(50px);
             font-family: $roboto-light;
             text-decoration:none;
@@ -1373,7 +1483,7 @@ nav {
                             }
 
                             button:hover{
-                                background-color: $film-color;
+                                background-color: $movie-color;
                                 color: $white-color;
                             }
 
@@ -1615,10 +1725,22 @@ nav {
             }
 
             .ui-state-active{
-                background-color: $film-color;
+                background-color: $primary-color;
                 a{
                     color: $white-color;
                 }
+            }
+            .movie.ui-state-active{
+                background-color: $movie-color;
+            }
+            .serie.ui-state-active{
+                background-color: $serie-color;
+            }
+            .young.ui-state-active{
+                background-color: $young-color;
+            }
+            .spectacle.ui-state-active{
+                background-color: $spectacle-color;
             }
 
             .ui-state-active:after{
@@ -1628,8 +1750,21 @@ nav {
                 margin-top: -49px;
                 height: 60px;
                 margin-left: -37px;
-                background-color: $film-color;
+                background-color: $primary-color;
                 @include rotate(45);
+            }
+
+            .movie.ui-state-active:after{
+                background-color: $movie-color;
+            }
+            .serie.ui-state-active:after{
+                background-color: $serie-color;
+            }
+            .young.ui-state-active:after{
+                background-color: $young-color;
+            }
+            .spectacle.ui-state-active:after{
+                background-color: $spectacle-color;
             }
         }
 
@@ -1692,7 +1827,7 @@ nav {
                             }
 
                             button:hover{
-                                background-color: $film-color;
+                                background-color: $primary-color;
                                 color: $white-color;
                             }
 
@@ -1918,15 +2053,19 @@ footer{
 
 /*** Description film ***/
 
+.affiche-spectacle{
+    background: linear-gradient(to bottom, rgba($aff_black-color, 0.5), rgba($aff_black-color, 1.0)), url("/img/bg-affiche-spectacle-3.jpg");    
+}
 .affiche-film{
     background: linear-gradient(to bottom, rgba($aff_black-color, 0.5), rgba($aff_black-color, 1.0)), url("/img/bg-affiche-film-2.jpg");    
 }
-
 .affiche-serie{
     background: linear-gradient(to bottom, rgba($aff_black-color, 0.5), rgba($aff_black-color, 1.0)), url("/img/bg-affiche-serie-3.jpg");   
 }
-
-.affiche-film, .affiche-serie{
+.affiche-young{
+    background: linear-gradient(to bottom, rgba($aff_black-color, 0.5), rgba($aff_black-color, 1.0)), url("/img/bg-affiche-young-2.jpg");   
+}
+.affiche-film, .affiche-serie, .affiche-young, .affiche-spectacle{
     width: 100%;
     height: 700px;
     background-repeat: no-repeat;
@@ -2132,11 +2271,11 @@ footer{
             }
 
             .buy{
-                background-color: $film-color;
+                background-color: $movie-color;
                 color: $white-color;
             }
             .buy:hover{
-                background-color: darken($film-color, 10);
+                background-color: darken($movie-color, 10);
             }
             .buy.serie-bg:hover{
                 background-color: darken($serie-color, 10) !important;
@@ -2542,8 +2681,12 @@ footer{
             float: left;
             width: 70px;
             height: 70px;
-            border: solid 3px $film-color;
+            border: solid 3px $movie-color;
         }
+
+            img.young{
+                border: solid 3px $young-color;
+            }
 
         h4{
             float: left;
@@ -2556,7 +2699,7 @@ footer{
             text-transform: uppercase;
             span{
                 font-size: 18px;
-                color: $film-color;
+                color: $movie-color;
             }
         }
 
@@ -2978,7 +3121,7 @@ footer{
     width: 100%;
     background-color: $gray-tabs;
 
-    button{
+    .button-filter{
         .circle{
             width: 9px;
             height: 9px;
@@ -2990,8 +3133,9 @@ footer{
         width: 236px;
         height: 40px;
         border: solid 1px rgba($black-color, 0.03);
+        position: relative;
         margin: 0 21px 0 0;
-        padding: 0 12px 0 16px;
+        padding: 0px 12px 0 16px;
         text-align: left;
         font-size: 15px;
         font-family: $roboto;
@@ -3000,9 +3144,11 @@ footer{
         @include border-radius(40px);
         @include box-shadow(0px 1px 2px rgba($black-color, 0.3));
         .nbr-filter{
-            float: right;
+            right: 12px;
+            top: 6px;
             padding: 2px 10px 2px 10px;
             font-family: $roboto-medium;
+            position: absolute;
             border: solid 1px $primary-color;
             color: $primary-color;
             background-color: $white-color;
@@ -3118,7 +3264,7 @@ footer{
     }
 
     .achat-aff{
-        background-color: $film-color;
+        background-color: $primary-color;
         margin: 12px 0 0 30px;
         color: $white-color;
     }

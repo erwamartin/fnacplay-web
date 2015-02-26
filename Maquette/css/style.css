@@ -16,11 +16,17 @@
 .movie-txt {
   color: #15B4A8 !important; }
 
+.darken-movie-bg {
+  background-color: #10867d !important; }
+
 .serie-bg {
   background-color: #714299 !important; }
 
 .serie-txt {
   color: #714299 !important; }
+
+.darken-serie-bg {
+  background-color: #573375 !important; }
 
 .young-bg {
   background-color: #f46317 !important; }
@@ -28,17 +34,23 @@
 .young-txt {
   color: #f46317 !important; }
 
+.darken-young-bg {
+  background-color: #ce4d0a !important; }
+
 .spectacle-bg {
   background-color: #15b4a8 !important; }
 
 .spectacle-txt {
   color: #15b4a8 !important; }
 
+.darken-spectacle-bg {
+  background-color: #10867d !important; }
+
 .adult-bg {
-  background-color: #15B4A8 !important; }
+  background-color: #de0477 !important; }
 
 .adult-txt {
-  color: #15B4A8 !important; }
+  color: #de0477 !important; }
 
 /***** Debut CSS *****/
 .clear {
@@ -294,6 +306,7 @@ nav {
 .movie:hover a, .serie:hover a, .young:hover a, .spectacle:hover a, .adult:hover a {
   color: #fff; }
 .movie:hover .border-color, .serie:hover .border-color, .young:hover .border-color, .spectacle:hover .border-color, .adult:hover .border-color {
+  z-index: 1000;
   display: block; }
 .movie:hover .sub-menu, .serie:hover .sub-menu, .young:hover .sub-menu, .spectacle:hover .sub-menu, .adult:hover .sub-menu {
   display: block; }
@@ -523,6 +536,78 @@ nav {
     color: #fff; }
 
 /***** Fin Header-Navogation *****/
+/***** slider partial *****/
+#wrapper {
+  background-color: #fff;
+  width: 100%;
+  height: 530px;
+  overflow: hidden;
+  position: relative; }
+
+#carousel section {
+  display: block;
+  float: left;
+  width: 1090px;
+  height: 530px; }
+
+#carousel section img {
+  width: 100%; }
+
+#carousel section article {
+  position: absolute;
+  padding: 75px 0 0 75px; }
+  #carousel section article h2, #carousel section article h3 {
+    font-familly: "Montserrat-Bold", sans-serif;
+    color: #fff;
+    padding: 0;
+    text-transform: uppercase; }
+  #carousel section article h2 {
+    font-size: 48px;
+    margin: 0; }
+  #carousel section article h3 {
+    font-size: 17px;
+    width: 264px;
+    margin: 30px 0 0 0; }
+
+#prev, #next {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  height: 530px;
+  width: 50%;
+  top: 0px;
+  position: absolute; }
+
+#prev:hover, #next:hover {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+#prev {
+  left: -545px; }
+
+#next {
+  right: -545px; }
+
+#pager {
+  margin-left: -470px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px; }
+
+#pager a {
+  border-radius: 10px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 14px 0 0;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+#pager a span {
+  display: none; }
+
+#pager a.selected {
+  background-color: #fff; }
+
+/***** fin *****/
 /***** Partie Caroussel *****/
 .slider {
   width: 100%;
@@ -543,6 +628,22 @@ nav {
       margin: 14px 0 0 92px;
       padding: 0;
       text-transform: uppercase; }
+
+.slider.movie {
+  background: url("/img/bg-affiche-film-3.jpg");
+  background-size: cover; }
+
+.slider.serie {
+  background: url("/img/bg-affiche-serie-5.jpeg");
+  background-size: cover; }
+
+.slider.young {
+  background: url("/img/bg-affiche-young-2.jpg");
+  background-size: cover; }
+
+.slider.spectacle {
+  background: url("/img/bg-affiche-spectacle.jpg");
+  background-size: cover; }
 
 .little-title {
   width: 124px;
@@ -586,7 +687,7 @@ nav {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
-  background-color: #15B4A8;
+  background-color: #f5b027;
   display: block;
   text-align: center;
   line-height: 56px;
@@ -737,7 +838,7 @@ nav {
   position: absolute; }
 
 #tabs-1 ul, #tabs-2 ul, .result ul {
-  margin-left: 28px; }
+  margin: 0 0 0 28px; }
   #tabs-1 ul li, #tabs-2 ul li, .result ul li {
     width: 195px;
     height: 260px;
@@ -802,7 +903,7 @@ nav {
         margin: 12px 0 0 146px;
         padding: 0; }
       #tabs-1 ul li a .overflow-img button:hover, #tabs-2 ul li a .overflow-img button:hover, .result ul li a .overflow-img button:hover {
-        background-color: #15B4A8;
+        background-color: #f5b027;
         color: #fff; }
       #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .add-list:before {
         content: "";
@@ -866,7 +967,7 @@ nav {
 .just-for-you {
   width: 100%;
   height: 440px;
-  background-color: #15B4A8;
+  background-color: #f5b027;
   padding-top: 50px; }
   .just-for-you .title-just {
     float: left; }
@@ -889,7 +990,7 @@ nav {
     .just-for-you .discover-just a {
       color: #fff;
       display: block;
-      background-color: #118f86;
+      background-color: #e89e0b;
       -webkit-border-radius: 50px;
       -moz-border-radius: 50px;
       -ms-border-radius: 50px;
@@ -1148,9 +1249,17 @@ nav {
           font-weight: normal;
           margin: 0; }
     .bloc-reduction #reduction .ul-link-reduction .ui-state-active {
-      background-color: #15B4A8; }
+      background-color: #f5b027; }
       .bloc-reduction #reduction .ul-link-reduction .ui-state-active a {
         color: #fff; }
+    .bloc-reduction #reduction .ul-link-reduction .movie.ui-state-active {
+      background-color: #15B4A8; }
+    .bloc-reduction #reduction .ul-link-reduction .serie.ui-state-active {
+      background-color: #714299; }
+    .bloc-reduction #reduction .ul-link-reduction .young.ui-state-active {
+      background-color: #f46317; }
+    .bloc-reduction #reduction .ul-link-reduction .spectacle.ui-state-active {
+      background-color: #15b4a8; }
     .bloc-reduction #reduction .ul-link-reduction .ui-state-active:after {
       position: absolute;
       content: "";
@@ -1158,11 +1267,19 @@ nav {
       margin-top: -49px;
       height: 60px;
       margin-left: -37px;
-      background-color: #15B4A8;
+      background-color: #f5b027;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
+    .bloc-reduction #reduction .ul-link-reduction .movie.ui-state-active:after {
+      background-color: #15B4A8; }
+    .bloc-reduction #reduction .ul-link-reduction .serie.ui-state-active:after {
+      background-color: #714299; }
+    .bloc-reduction #reduction .ul-link-reduction .young.ui-state-active:after {
+      background-color: #f46317; }
+    .bloc-reduction #reduction .ul-link-reduction .spectacle.ui-state-active:after {
+      background-color: #15b4a8; }
   .bloc-reduction #reduction #reduction_container {
     min-height: 420px;
     width: 100%;
@@ -1226,7 +1343,7 @@ nav {
             box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
             margin: 12px 0 0 146px; }
           .bloc-reduction #reduction #reduction_container #reduction-1 ul li a .overflow-img button:hover, .bloc-reduction #reduction #reduction_container #reduction-2 ul li a .overflow-img button:hover {
-            background-color: #15B4A8;
+            background-color: #f5b027;
             color: #fff; }
           .bloc-reduction #reduction #reduction_container #reduction-1 ul li a .overflow-img .see-ba:before, .bloc-reduction #reduction #reduction_container #reduction-1 ul li a .overflow-img .add-list:before, .bloc-reduction #reduction #reduction_container #reduction-2 ul li a .overflow-img .see-ba:before, .bloc-reduction #reduction #reduction_container #reduction-2 ul li a .overflow-img .add-list:before {
             content: "";
@@ -1384,44 +1501,50 @@ footer {
 /***** Fin Footer *****/
 /***** Affiche film *****/
 /*** Description film ***/
+.affiche-spectacle {
+  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-spectacle-3.jpg"); }
+
 .affiche-film {
   background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-film-2.jpg"); }
 
 .affiche-serie {
   background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-serie-3.jpg"); }
 
-.affiche-film, .affiche-serie {
+.affiche-young {
+  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/bg-affiche-young-2.jpg"); }
+
+.affiche-film, .affiche-serie, .affiche-young, .affiche-spectacle {
   width: 100%;
   height: 700px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-  .affiche-film .breadcrumbs, .affiche-serie .breadcrumbs {
+  .affiche-film .breadcrumbs, .affiche-serie .breadcrumbs, .affiche-young .breadcrumbs, .affiche-spectacle .breadcrumbs {
     width: 100%;
     line-height: 27px;
     background-color: rgba(0, 0, 0, 0.15); }
-    .affiche-film .breadcrumbs a, .affiche-serie .breadcrumbs a {
+    .affiche-film .breadcrumbs a, .affiche-serie .breadcrumbs a, .affiche-young .breadcrumbs a, .affiche-spectacle .breadcrumbs a {
       text-decoration: none;
       color: #fff;
       font: "Roboto", sans-serif;
       font-size: 13px;
       margin-left: 0px; }
-    .affiche-film .breadcrumbs a:first-child, .affiche-serie .breadcrumbs a:first-child {
+    .affiche-film .breadcrumbs a:first-child, .affiche-serie .breadcrumbs a:first-child, .affiche-young .breadcrumbs a:first-child, .affiche-spectacle .breadcrumbs a:first-child {
       margin-left: 96px; }
-    .affiche-film .breadcrumbs a.titlebread, .affiche-serie .breadcrumbs a.titlebread {
+    .affiche-film .breadcrumbs a.titlebread, .affiche-serie .breadcrumbs a.titlebread, .affiche-young .breadcrumbs a.titlebread, .affiche-spectacle .breadcrumbs a.titlebread {
       color: rgba(255, 255, 255, 0.6); }
-  .affiche-film .description-film, .affiche-film .description-serie, .affiche-serie .description-film, .affiche-serie .description-serie {
+  .affiche-film .description-film, .affiche-film .description-serie, .affiche-serie .description-film, .affiche-serie .description-serie, .affiche-young .description-film, .affiche-young .description-serie, .affiche-spectacle .description-film, .affiche-spectacle .description-serie {
     float: left;
     padding: 0 0 0 96px;
     width: 857px; }
-    .affiche-film .description-film h1, .affiche-film .description-serie h1, .affiche-serie .description-film h1, .affiche-serie .description-serie h1 {
+    .affiche-film .description-film h1, .affiche-film .description-serie h1, .affiche-serie .description-film h1, .affiche-serie .description-serie h1, .affiche-young .description-film h1, .affiche-young .description-serie h1, .affiche-spectacle .description-film h1, .affiche-spectacle .description-serie h1 {
       color: #fff;
       font-family: "Montserrat-Bold", sans-serif;
       font-size: 48px;
       margin: 64px 0 6px 0;
       text-transform: uppercase;
       text-shadow: 0px 2px rgba(0, 0, 0, 0.6); }
-    .affiche-film .description-film h3, .affiche-film .description-serie h3, .affiche-serie .description-film h3, .affiche-serie .description-serie h3 {
+    .affiche-film .description-film h3, .affiche-film .description-serie h3, .affiche-serie .description-film h3, .affiche-serie .description-serie h3, .affiche-young .description-film h3, .affiche-young .description-serie h3, .affiche-spectacle .description-film h3, .affiche-spectacle .description-serie h3 {
       padding: 0;
       margin: 0;
       font-weight: normal;
@@ -1430,14 +1553,14 @@ footer {
       color: #fff;
       font-family: "Roboto", sans-serif;
       line-height: 0; }
-      .affiche-film .description-film h3 .white-vost, .affiche-film .description-serie h3 .white-vost, .affiche-serie .description-film h3 .white-vost, .affiche-serie .description-serie h3 .white-vost {
+      .affiche-film .description-film h3 .white-vost, .affiche-film .description-serie h3 .white-vost, .affiche-serie .description-film h3 .white-vost, .affiche-serie .description-serie h3 .white-vost, .affiche-young .description-film h3 .white-vost, .affiche-young .description-serie h3 .white-vost, .affiche-spectacle .description-film h3 .white-vost, .affiche-spectacle .description-serie h3 .white-vost {
         width: 44px;
         height: 19px;
         margin-left: 5px; }
-      .affiche-film .description-film h3 .white-limit, .affiche-film .description-serie h3 .white-limit, .affiche-serie .description-film h3 .white-limit, .affiche-serie .description-serie h3 .white-limit {
+      .affiche-film .description-film h3 .white-limit, .affiche-film .description-serie h3 .white-limit, .affiche-serie .description-film h3 .white-limit, .affiche-serie .description-serie h3 .white-limit, .affiche-young .description-film h3 .white-limit, .affiche-young .description-serie h3 .white-limit, .affiche-spectacle .description-film h3 .white-limit, .affiche-spectacle .description-serie h3 .white-limit {
         width: 21px;
         height: 21px; }
-    .affiche-film .description-film p, .affiche-film .description-serie p, .affiche-serie .description-film p, .affiche-serie .description-serie p {
+    .affiche-film .description-film p, .affiche-film .description-serie p, .affiche-serie .description-film p, .affiche-serie .description-serie p, .affiche-young .description-film p, .affiche-young .description-serie p, .affiche-spectacle .description-film p, .affiche-spectacle .description-serie p {
       text-shadow: 0px 2px rgba(0, 0, 0, 0.6);
       width: 510px;
       color: #fff;
@@ -1450,20 +1573,20 @@ footer {
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       margin: 30px 0 6px 0; }
-    .affiche-film .description-film a, .affiche-film .description-serie a, .affiche-serie .description-film a, .affiche-serie .description-serie a {
+    .affiche-film .description-film a, .affiche-film .description-serie a, .affiche-serie .description-film a, .affiche-serie .description-serie a, .affiche-young .description-film a, .affiche-young .description-serie a, .affiche-spectacle .description-film a, .affiche-spectacle .description-serie a {
       color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
       font-family: "Roboto", sans-serif;
       font-size: 15px; }
-    .affiche-film .description-film .bloc-facebook ul, .affiche-film .description-serie .bloc-facebook ul, .affiche-serie .description-film .bloc-facebook ul, .affiche-serie .description-serie .bloc-facebook ul {
+    .affiche-film .description-film .bloc-facebook ul, .affiche-film .description-serie .bloc-facebook ul, .affiche-serie .description-film .bloc-facebook ul, .affiche-serie .description-serie .bloc-facebook ul, .affiche-young .description-film .bloc-facebook ul, .affiche-young .description-serie .bloc-facebook ul, .affiche-spectacle .description-film .bloc-facebook ul, .affiche-spectacle .description-serie .bloc-facebook ul {
       padding: 30px 0 0 0;
       margin: 0; }
-      .affiche-film .description-film .bloc-facebook ul li, .affiche-film .description-serie .bloc-facebook ul li, .affiche-serie .description-film .bloc-facebook ul li, .affiche-serie .description-serie .bloc-facebook ul li {
+      .affiche-film .description-film .bloc-facebook ul li, .affiche-film .description-serie .bloc-facebook ul li, .affiche-serie .description-film .bloc-facebook ul li, .affiche-serie .description-serie .bloc-facebook ul li, .affiche-young .description-film .bloc-facebook ul li, .affiche-young .description-serie .bloc-facebook ul li, .affiche-spectacle .description-film .bloc-facebook ul li, .affiche-spectacle .description-serie .bloc-facebook ul li {
         float: left;
         list-style-type: none;
         display: block;
         margin-left: 7px; }
-        .affiche-film .description-film .bloc-facebook ul li img, .affiche-film .description-serie .bloc-facebook ul li img, .affiche-serie .description-film .bloc-facebook ul li img, .affiche-serie .description-serie .bloc-facebook ul li img {
+        .affiche-film .description-film .bloc-facebook ul li img, .affiche-film .description-serie .bloc-facebook ul li img, .affiche-serie .description-film .bloc-facebook ul li img, .affiche-serie .description-serie .bloc-facebook ul li img, .affiche-young .description-film .bloc-facebook ul li img, .affiche-young .description-serie .bloc-facebook ul li img, .affiche-spectacle .description-film .bloc-facebook ul li img, .affiche-spectacle .description-serie .bloc-facebook ul li img {
           width: 44px;
           height: 44px;
           -webkit-border-radius: 50%;
@@ -1473,16 +1596,16 @@ footer {
           -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
           -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-      .affiche-film .description-film .bloc-facebook ul li:first-child, .affiche-film .description-serie .bloc-facebook ul li:first-child, .affiche-serie .description-film .bloc-facebook ul li:first-child, .affiche-serie .description-serie .bloc-facebook ul li:first-child {
+      .affiche-film .description-film .bloc-facebook ul li:first-child, .affiche-film .description-serie .bloc-facebook ul li:first-child, .affiche-serie .description-film .bloc-facebook ul li:first-child, .affiche-serie .description-serie .bloc-facebook ul li:first-child, .affiche-young .description-film .bloc-facebook ul li:first-child, .affiche-young .description-serie .bloc-facebook ul li:first-child, .affiche-spectacle .description-film .bloc-facebook ul li:first-child, .affiche-spectacle .description-serie .bloc-facebook ul li:first-child {
         margin-left: 0; }
-    .affiche-film .description-film .bloc-facebook p, .affiche-film .description-serie .bloc-facebook p, .affiche-serie .description-film .bloc-facebook p, .affiche-serie .description-serie .bloc-facebook p {
+    .affiche-film .description-film .bloc-facebook p, .affiche-film .description-serie .bloc-facebook p, .affiche-serie .description-film .bloc-facebook p, .affiche-serie .description-serie .bloc-facebook p, .affiche-young .description-film .bloc-facebook p, .affiche-young .description-serie .bloc-facebook p, .affiche-spectacle .description-film .bloc-facebook p, .affiche-spectacle .description-serie .bloc-facebook p {
       width: auto;
       margin: 0;
       font-family: "Roboto", sans-serif;
       font-size: 13px;
       color: #fff;
       line-height: 44px; }
-      .affiche-film .description-film .bloc-facebook p img, .affiche-film .description-serie .bloc-facebook p img, .affiche-serie .description-film .bloc-facebook p img, .affiche-serie .description-serie .bloc-facebook p img {
+      .affiche-film .description-film .bloc-facebook p img, .affiche-film .description-serie .bloc-facebook p img, .affiche-serie .description-film .bloc-facebook p img, .affiche-serie .description-serie .bloc-facebook p img, .affiche-young .description-film .bloc-facebook p img, .affiche-young .description-serie .bloc-facebook p img, .affiche-spectacle .description-film .bloc-facebook p img, .affiche-spectacle .description-serie .bloc-facebook p img {
         width: 16px;
         height: 16px;
         -webkit-border-radius: 2px;
@@ -1493,28 +1616,28 @@ footer {
         -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-    .affiche-film .description-film .bloc-video, .affiche-film .description-serie .bloc-video, .affiche-serie .description-film .bloc-video, .affiche-serie .description-serie .bloc-video {
+    .affiche-film .description-film .bloc-video, .affiche-film .description-serie .bloc-video, .affiche-serie .description-film .bloc-video, .affiche-serie .description-serie .bloc-video, .affiche-young .description-film .bloc-video, .affiche-young .description-serie .bloc-video, .affiche-spectacle .description-film .bloc-video, .affiche-spectacle .description-serie .bloc-video {
       margin: 36px 0 0 0; }
-      .affiche-film .description-film .bloc-video a, .affiche-film .description-serie .bloc-video a, .affiche-serie .description-film .bloc-video a, .affiche-serie .description-serie .bloc-video a {
+      .affiche-film .description-film .bloc-video a, .affiche-film .description-serie .bloc-video a, .affiche-serie .description-film .bloc-video a, .affiche-serie .description-serie .bloc-video a, .affiche-young .description-film .bloc-video a, .affiche-young .description-serie .bloc-video a, .affiche-spectacle .description-film .bloc-video a, .affiche-spectacle .description-serie .bloc-video a {
         display: block;
         font-family: "Montserrat-Bold", sans-serif;
         font-size: 13px;
         color: #fff;
         text-transform: uppercase; }
-        .affiche-film .description-film .bloc-video a img, .affiche-film .description-serie .bloc-video a img, .affiche-serie .description-film .bloc-video a img, .affiche-serie .description-serie .bloc-video a img {
+        .affiche-film .description-film .bloc-video a img, .affiche-film .description-serie .bloc-video a img, .affiche-serie .description-film .bloc-video a img, .affiche-serie .description-serie .bloc-video a img, .affiche-young .description-film .bloc-video a img, .affiche-young .description-serie .bloc-video a img, .affiche-spectacle .description-film .bloc-video a img, .affiche-spectacle .description-serie .bloc-video a img {
           width: 44px;
           height: 44px;
           margin: 0 11px 0 0;
           float: left; }
-        .affiche-film .description-film .bloc-video a .ba, .affiche-film .description-serie .bloc-video a .ba, .affiche-serie .description-film .bloc-video a .ba, .affiche-serie .description-serie .bloc-video a .ba {
+        .affiche-film .description-film .bloc-video a .ba, .affiche-film .description-serie .bloc-video a .ba, .affiche-serie .description-film .bloc-video a .ba, .affiche-serie .description-serie .bloc-video a .ba, .affiche-young .description-film .bloc-video a .ba, .affiche-young .description-serie .bloc-video a .ba, .affiche-spectacle .description-film .bloc-video a .ba, .affiche-spectacle .description-serie .bloc-video a .ba {
           margin: 3px 17px 0 0;
           width: 175px;
           float: left; }
-          .affiche-film .description-film .bloc-video a .ba span, .affiche-film .description-serie .bloc-video a .ba span, .affiche-serie .description-film .bloc-video a .ba span, .affiche-serie .description-serie .bloc-video a .ba span {
+          .affiche-film .description-film .bloc-video a .ba span, .affiche-film .description-serie .bloc-video a .ba span, .affiche-serie .description-film .bloc-video a .ba span, .affiche-serie .description-serie .bloc-video a .ba span, .affiche-young .description-film .bloc-video a .ba span, .affiche-young .description-serie .bloc-video a .ba span, .affiche-spectacle .description-film .bloc-video a .ba span, .affiche-spectacle .description-serie .bloc-video a .ba span {
             font-size: 18px; }
-      .affiche-film .description-film .bloc-video .more-video, .affiche-film .description-serie .bloc-video .more-video, .affiche-serie .description-film .bloc-video .more-video, .affiche-serie .description-serie .bloc-video .more-video {
+      .affiche-film .description-film .bloc-video .more-video, .affiche-film .description-serie .bloc-video .more-video, .affiche-serie .description-film .bloc-video .more-video, .affiche-serie .description-serie .bloc-video .more-video, .affiche-young .description-film .bloc-video .more-video, .affiche-young .description-serie .bloc-video .more-video, .affiche-spectacle .description-film .bloc-video .more-video, .affiche-spectacle .description-serie .bloc-video .more-video {
         float: left; }
-        .affiche-film .description-film .bloc-video .more-video a, .affiche-film .description-serie .bloc-video .more-video a, .affiche-serie .description-film .bloc-video .more-video a, .affiche-serie .description-serie .bloc-video .more-video a {
+        .affiche-film .description-film .bloc-video .more-video a, .affiche-film .description-serie .bloc-video .more-video a, .affiche-serie .description-film .bloc-video .more-video a, .affiche-serie .description-serie .bloc-video .more-video a, .affiche-young .description-film .bloc-video .more-video a, .affiche-young .description-serie .bloc-video .more-video a, .affiche-spectacle .description-film .bloc-video .more-video a, .affiche-spectacle .description-serie .bloc-video .more-video a {
           text-decoration: none;
           color: rgba(255, 255, 255, 0.7);
           text-transform: uppercase;
@@ -1522,9 +1645,9 @@ footer {
           margin-top: 20px;
           font-family: "Montserrat-Bold", sans-serif;
           display: block; }
-    .affiche-film .description-film .button-affiche, .affiche-film .description-serie .button-affiche, .affiche-serie .description-film .button-affiche, .affiche-serie .description-serie .button-affiche {
+    .affiche-film .description-film .button-affiche, .affiche-film .description-serie .button-affiche, .affiche-serie .description-film .button-affiche, .affiche-serie .description-serie .button-affiche, .affiche-young .description-film .button-affiche, .affiche-young .description-serie .button-affiche, .affiche-spectacle .description-film .button-affiche, .affiche-spectacle .description-serie .button-affiche {
       padding-top: 35px; }
-      .affiche-film .description-film .button-affiche a, .affiche-film .description-serie .button-affiche a, .affiche-serie .description-film .button-affiche a, .affiche-serie .description-serie .button-affiche a {
+      .affiche-film .description-film .button-affiche a, .affiche-film .description-serie .button-affiche a, .affiche-serie .description-film .button-affiche a, .affiche-serie .description-serie .button-affiche a, .affiche-young .description-film .button-affiche a, .affiche-young .description-serie .button-affiche a, .affiche-spectacle .description-film .button-affiche a, .affiche-spectacle .description-serie .button-affiche a {
         width: 250px;
         display: block;
         height: 60px;
@@ -1538,49 +1661,49 @@ footer {
         font-family: "Montserrat-Bold", sans-serif;
         text-transform: uppercase;
         padding: 16px 0 0 26px; }
-      .affiche-film .description-film .button-affiche .affiche-price, .affiche-film .description-serie .button-affiche .affiche-price, .affiche-serie .description-film .button-affiche .affiche-price, .affiche-serie .description-serie .button-affiche .affiche-price {
+      .affiche-film .description-film .button-affiche .affiche-price, .affiche-film .description-serie .button-affiche .affiche-price, .affiche-serie .description-film .button-affiche .affiche-price, .affiche-serie .description-serie .button-affiche .affiche-price, .affiche-young .description-film .button-affiche .affiche-price, .affiche-young .description-serie .button-affiche .affiche-price, .affiche-spectacle .description-film .button-affiche .affiche-price, .affiche-spectacle .description-serie .button-affiche .affiche-price {
         font-family: "Montserrat", sans-serif;
         font-size: 24px; }
-      .affiche-film .description-film .button-affiche .location, .affiche-film .description-serie .button-affiche .location, .affiche-serie .description-film .button-affiche .location, .affiche-serie .description-serie .button-affiche .location {
+      .affiche-film .description-film .button-affiche .location, .affiche-film .description-serie .button-affiche .location, .affiche-serie .description-film .button-affiche .location, .affiche-serie .description-serie .button-affiche .location, .affiche-young .description-film .button-affiche .location, .affiche-young .description-serie .button-affiche .location, .affiche-spectacle .description-film .button-affiche .location, .affiche-spectacle .description-serie .button-affiche .location {
         background-color: #f8f8f8;
         color: #6A6760; }
-        .affiche-film .description-film .button-affiche .location .affiche-old-price, .affiche-film .description-serie .button-affiche .location .affiche-old-price, .affiche-serie .description-film .button-affiche .location .affiche-old-price, .affiche-serie .description-serie .button-affiche .location .affiche-old-price {
+        .affiche-film .description-film .button-affiche .location .affiche-old-price, .affiche-film .description-serie .button-affiche .location .affiche-old-price, .affiche-serie .description-film .button-affiche .location .affiche-old-price, .affiche-serie .description-serie .button-affiche .location .affiche-old-price, .affiche-young .description-film .button-affiche .location .affiche-old-price, .affiche-young .description-serie .button-affiche .location .affiche-old-price, .affiche-spectacle .description-film .button-affiche .location .affiche-old-price, .affiche-spectacle .description-serie .button-affiche .location .affiche-old-price {
           font-size: 18px;
           text-decoration: line-through;
           margin-left: 7px;
           color: rgba(106, 103, 96, 0.6); }
-      .affiche-film .description-film .button-affiche .location:hover, .affiche-film .description-serie .button-affiche .location:hover, .affiche-serie .description-film .button-affiche .location:hover, .affiche-serie .description-serie .button-affiche .location:hover {
+      .affiche-film .description-film .button-affiche .location:hover, .affiche-film .description-serie .button-affiche .location:hover, .affiche-serie .description-film .button-affiche .location:hover, .affiche-serie .description-serie .button-affiche .location:hover, .affiche-young .description-film .button-affiche .location:hover, .affiche-young .description-serie .button-affiche .location:hover, .affiche-spectacle .description-film .button-affiche .location:hover, .affiche-spectacle .description-serie .button-affiche .location:hover {
         background-color: #dfdfdf; }
-      .affiche-film .description-film .button-affiche .location:after, .affiche-film .description-serie .button-affiche .location:after, .affiche-serie .description-film .button-affiche .location:after, .affiche-serie .description-serie .button-affiche .location:after {
+      .affiche-film .description-film .button-affiche .location:after, .affiche-film .description-serie .button-affiche .location:after, .affiche-serie .description-film .button-affiche .location:after, .affiche-serie .description-serie .button-affiche .location:after, .affiche-young .description-film .button-affiche .location:after, .affiche-young .description-serie .button-affiche .location:after, .affiche-spectacle .description-film .button-affiche .location:after, .affiche-spectacle .description-serie .button-affiche .location:after {
         content: url(/img/little-play.png);
         width: 24px;
         height: 24px;
         margin-left: 68px;
         position: absolute;
         margin-top: -7px; }
-      .affiche-film .description-film .button-affiche .buy, .affiche-film .description-serie .button-affiche .buy, .affiche-serie .description-film .button-affiche .buy, .affiche-serie .description-serie .button-affiche .buy {
+      .affiche-film .description-film .button-affiche .buy, .affiche-film .description-serie .button-affiche .buy, .affiche-serie .description-film .button-affiche .buy, .affiche-serie .description-serie .button-affiche .buy, .affiche-young .description-film .button-affiche .buy, .affiche-young .description-serie .button-affiche .buy, .affiche-spectacle .description-film .button-affiche .buy, .affiche-spectacle .description-serie .button-affiche .buy {
         background-color: #15B4A8;
         color: #fff; }
-      .affiche-film .description-film .button-affiche .buy:hover, .affiche-film .description-serie .button-affiche .buy:hover, .affiche-serie .description-film .button-affiche .buy:hover, .affiche-serie .description-serie .button-affiche .buy:hover {
+      .affiche-film .description-film .button-affiche .buy:hover, .affiche-film .description-serie .button-affiche .buy:hover, .affiche-serie .description-film .button-affiche .buy:hover, .affiche-serie .description-serie .button-affiche .buy:hover, .affiche-young .description-film .button-affiche .buy:hover, .affiche-young .description-serie .button-affiche .buy:hover, .affiche-spectacle .description-film .button-affiche .buy:hover, .affiche-spectacle .description-serie .button-affiche .buy:hover {
         background-color: #10867d; }
-      .affiche-film .description-film .button-affiche .buy.serie-bg:hover, .affiche-film .description-serie .button-affiche .buy.serie-bg:hover, .affiche-serie .description-film .button-affiche .buy.serie-bg:hover, .affiche-serie .description-serie .button-affiche .buy.serie-bg:hover {
+      .affiche-film .description-film .button-affiche .buy.serie-bg:hover, .affiche-film .description-serie .button-affiche .buy.serie-bg:hover, .affiche-serie .description-film .button-affiche .buy.serie-bg:hover, .affiche-serie .description-serie .button-affiche .buy.serie-bg:hover, .affiche-young .description-film .button-affiche .buy.serie-bg:hover, .affiche-young .description-serie .button-affiche .buy.serie-bg:hover, .affiche-spectacle .description-film .button-affiche .buy.serie-bg:hover, .affiche-spectacle .description-serie .button-affiche .buy.serie-bg:hover {
         background-color: #573375 !important; }
-      .affiche-film .description-film .button-affiche .buy:after, .affiche-film .description-serie .button-affiche .buy:after, .affiche-serie .description-film .button-affiche .buy:after, .affiche-serie .description-serie .button-affiche .buy:after {
+      .affiche-film .description-film .button-affiche .buy:after, .affiche-film .description-serie .button-affiche .buy:after, .affiche-serie .description-film .button-affiche .buy:after, .affiche-serie .description-serie .button-affiche .buy:after, .affiche-young .description-film .button-affiche .buy:after, .affiche-young .description-serie .button-affiche .buy:after, .affiche-spectacle .description-film .button-affiche .buy:after, .affiche-spectacle .description-serie .button-affiche .buy:after {
         content: url(/img/little-cart.png);
         width: 22px;
         height: 21px;
         margin-left: 131px;
         position: absolute;
         margin-top: -6px; }
-    .affiche-film .description-film .buy-disk, .affiche-film .description-serie .buy-disk, .affiche-serie .description-film .buy-disk, .affiche-serie .description-serie .buy-disk {
+    .affiche-film .description-film .buy-disk, .affiche-film .description-serie .buy-disk, .affiche-serie .description-film .buy-disk, .affiche-serie .description-serie .buy-disk, .affiche-young .description-film .buy-disk, .affiche-young .description-serie .buy-disk, .affiche-spectacle .description-film .buy-disk, .affiche-spectacle .description-serie .buy-disk {
       padding-top: 20px; }
-      .affiche-film .description-film .buy-disk a, .affiche-film .description-serie .buy-disk a, .affiche-serie .description-film .buy-disk a, .affiche-serie .description-serie .buy-disk a {
+      .affiche-film .description-film .buy-disk a, .affiche-film .description-serie .buy-disk a, .affiche-serie .description-film .buy-disk a, .affiche-serie .description-serie .buy-disk a, .affiche-young .description-film .buy-disk a, .affiche-young .description-serie .buy-disk a, .affiche-spectacle .description-film .buy-disk a, .affiche-spectacle .description-serie .buy-disk a {
         color: #fff;
         font-size: 15px;
         font-family: "Roboto-Medium", sans-serif; }
-        .affiche-film .description-film .buy-disk a img, .affiche-film .description-serie .buy-disk a img, .affiche-serie .description-film .buy-disk a img, .affiche-serie .description-serie .buy-disk a img {
+        .affiche-film .description-film .buy-disk a img, .affiche-film .description-serie .buy-disk a img, .affiche-serie .description-film .buy-disk a img, .affiche-serie .description-serie .buy-disk a img, .affiche-young .description-film .buy-disk a img, .affiche-young .description-serie .buy-disk a img, .affiche-spectacle .description-film .buy-disk a img, .affiche-spectacle .description-serie .buy-disk a img {
           margin-right: 10px; }
-  .affiche-film .cdc:before, .affiche-serie .cdc:before {
+  .affiche-film .cdc:before, .affiche-serie .cdc:before, .affiche-young .cdc:before, .affiche-spectacle .cdc:before {
     content: '';
     width: 120px;
     margin-top: 68px;
@@ -1588,10 +1711,10 @@ footer {
     background: url("/img/coup-de-coeur-fnac.png") no-repeat;
     background-size: cover;
     position: absolute; }
-  .affiche-film .notation-film, .affiche-film .notation-serie, .affiche-serie .notation-film, .affiche-serie .notation-serie {
+  .affiche-film .notation-film, .affiche-film .notation-serie, .affiche-serie .notation-film, .affiche-serie .notation-serie, .affiche-young .notation-film, .affiche-young .notation-serie, .affiche-spectacle .notation-film, .affiche-spectacle .notation-serie {
     float: left;
     margin-left: 22px; }
-    .affiche-film .notation-film img, .affiche-film .notation-serie img, .affiche-serie .notation-film img, .affiche-serie .notation-serie img {
+    .affiche-film .notation-film img, .affiche-film .notation-serie img, .affiche-serie .notation-film img, .affiche-serie .notation-serie img, .affiche-young .notation-film img, .affiche-young .notation-serie img, .affiche-spectacle .notation-film img, .affiche-spectacle .notation-serie img {
       margin-top: 68px;
       width: 210px;
       height: 280px;
@@ -1603,7 +1726,7 @@ footer {
       -moz-border-top-right-radius: 3px;
       -ms-border-top-right-radius: 3px;
       border-top-right-radius: 3px; }
-    .affiche-film .notation-film .attr-note, .affiche-film .notation-serie .attr-note, .affiche-serie .notation-film .attr-note, .affiche-serie .notation-serie .attr-note {
+    .affiche-film .notation-film .attr-note, .affiche-film .notation-serie .attr-note, .affiche-serie .notation-film .attr-note, .affiche-serie .notation-serie .attr-note, .affiche-young .notation-film .attr-note, .affiche-young .notation-serie .attr-note, .affiche-spectacle .notation-film .attr-note, .affiche-spectacle .notation-serie .attr-note {
       width: 210px;
       height: 59px;
       padding-top: 17px;
@@ -1616,7 +1739,7 @@ footer {
       -ms-border-bottom-right-radius: 3px;
       border-bottom-right-radius: 3px;
       background-color: rgba(255, 255, 255, 0.17); }
-      .affiche-film .notation-film .attr-note h3, .affiche-film .notation-serie .attr-note h3, .affiche-serie .notation-film .attr-note h3, .affiche-serie .notation-serie .attr-note h3 {
+      .affiche-film .notation-film .attr-note h3, .affiche-film .notation-serie .attr-note h3, .affiche-serie .notation-film .attr-note h3, .affiche-serie .notation-serie .attr-note h3, .affiche-young .notation-film .attr-note h3, .affiche-young .notation-serie .attr-note h3, .affiche-spectacle .notation-film .attr-note h3, .affiche-spectacle .notation-serie .attr-note h3 {
         color: #fff;
         margin: 0;
         padding: 0;
@@ -1625,7 +1748,7 @@ footer {
         font-size: 13px;
         text-align: center;
         text-transform: uppercase; }
-    .affiche-film .notation-film .attr-list, .affiche-film .notation-serie .attr-list, .affiche-serie .notation-film .attr-list, .affiche-serie .notation-serie .attr-list {
+    .affiche-film .notation-film .attr-list, .affiche-film .notation-serie .attr-list, .affiche-serie .notation-film .attr-list, .affiche-serie .notation-serie .attr-list, .affiche-young .notation-film .attr-list, .affiche-young .notation-serie .attr-list, .affiche-spectacle .notation-film .attr-list, .affiche-spectacle .notation-serie .attr-list {
       width: 210px;
       height: 76px;
       padding: 0 0 0 0;
@@ -1635,18 +1758,18 @@ footer {
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
       border-radius: 3px; }
-      .affiche-film .notation-film .attr-list a, .affiche-film .notation-serie .attr-list a, .affiche-serie .notation-film .attr-list a, .affiche-serie .notation-serie .attr-list a {
+      .affiche-film .notation-film .attr-list a, .affiche-film .notation-serie .attr-list a, .affiche-serie .notation-film .attr-list a, .affiche-serie .notation-serie .attr-list a, .affiche-young .notation-film .attr-list a, .affiche-young .notation-serie .attr-list a, .affiche-spectacle .notation-film .attr-list a, .affiche-spectacle .notation-serie .attr-list a {
         display: block;
         width: 100%;
         height: 100%; }
-      .affiche-film .notation-film .attr-list a:hover i, .affiche-film .notation-serie .attr-list a:hover i, .affiche-serie .notation-film .attr-list a:hover i, .affiche-serie .notation-serie .attr-list a:hover i {
+      .affiche-film .notation-film .attr-list a:hover i, .affiche-film .notation-serie .attr-list a:hover i, .affiche-serie .notation-film .attr-list a:hover i, .affiche-serie .notation-serie .attr-list a:hover i, .affiche-young .notation-film .attr-list a:hover i, .affiche-young .notation-serie .attr-list a:hover i, .affiche-spectacle .notation-film .attr-list a:hover i, .affiche-spectacle .notation-serie .attr-list a:hover i {
         color: #C51B1B; }
-      .affiche-film .notation-film .attr-list i, .affiche-film .notation-serie .attr-list i, .affiche-serie .notation-film .attr-list i, .affiche-serie .notation-serie .attr-list i {
+      .affiche-film .notation-film .attr-list i, .affiche-film .notation-serie .attr-list i, .affiche-serie .notation-film .attr-list i, .affiche-serie .notation-serie .attr-list i, .affiche-young .notation-film .attr-list i, .affiche-young .notation-serie .attr-list i, .affiche-spectacle .notation-film .attr-list i, .affiche-spectacle .notation-serie .attr-list i {
         color: rgba(255, 255, 255, 0.6);
         font-size: 22px;
         float: left;
         margin: 29px 0 0 20px; }
-      .affiche-film .notation-film .attr-list h3, .affiche-film .notation-serie .attr-list h3, .affiche-serie .notation-film .attr-list h3, .affiche-serie .notation-serie .attr-list h3 {
+      .affiche-film .notation-film .attr-list h3, .affiche-film .notation-serie .attr-list h3, .affiche-serie .notation-film .attr-list h3, .affiche-serie .notation-serie .attr-list h3, .affiche-young .notation-film .attr-list h3, .affiche-young .notation-serie .attr-list h3, .affiche-spectacle .notation-film .attr-list h3, .affiche-spectacle .notation-serie .attr-list h3 {
         color: #fff;
         float: right;
         margin: 17px 17px 0 0;
@@ -1655,14 +1778,14 @@ footer {
         font-weight: normal;
         font-size: 13px;
         text-transform: uppercase; }
-        .affiche-film .notation-film .attr-list h3 span, .affiche-film .notation-serie .attr-list h3 span, .affiche-serie .notation-film .attr-list h3 span, .affiche-serie .notation-serie .attr-list h3 span {
+        .affiche-film .notation-film .attr-list h3 span, .affiche-film .notation-serie .attr-list h3 span, .affiche-serie .notation-film .attr-list h3 span, .affiche-serie .notation-serie .attr-list h3 span, .affiche-young .notation-film .attr-list h3 span, .affiche-young .notation-serie .attr-list h3 span, .affiche-spectacle .notation-film .attr-list h3 span, .affiche-spectacle .notation-serie .attr-list h3 span {
           font-size: 18px; }
-    .affiche-film .notation-film .attr-list:hover, .affiche-film .notation-serie .attr-list:hover, .affiche-serie .notation-film .attr-list:hover, .affiche-serie .notation-serie .attr-list:hover {
+    .affiche-film .notation-film .attr-list:hover, .affiche-film .notation-serie .attr-list:hover, .affiche-serie .notation-film .attr-list:hover, .affiche-serie .notation-serie .attr-list:hover, .affiche-young .notation-film .attr-list:hover, .affiche-young .notation-serie .attr-list:hover, .affiche-spectacle .notation-film .attr-list:hover, .affiche-spectacle .notation-serie .attr-list:hover {
       background-color: rgba(255, 255, 255, 0.1); }
-  .affiche-film .follow, .affiche-serie .follow {
+  .affiche-film .follow, .affiche-serie .follow, .affiche-young .follow, .affiche-spectacle .follow {
     padding-top: 17px;
     margin: 0 0 0 96px; }
-    .affiche-film .follow hr, .affiche-serie .follow hr {
+    .affiche-film .follow hr, .affiche-serie .follow hr, .affiche-young .follow hr, .affiche-spectacle .follow hr {
       width: 857px;
       display: block;
       height: 1px;
@@ -1671,7 +1794,7 @@ footer {
       margin: 12px 0 0 0;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding: 0; }
-    .affiche-film .follow h3, .affiche-serie .follow h3 {
+    .affiche-film .follow h3, .affiche-serie .follow h3, .affiche-young .follow h3, .affiche-spectacle .follow h3 {
       float: left;
       margin: 0 0 0 22px;
       font-size: 13px;
@@ -1681,15 +1804,15 @@ footer {
       padding: 0;
       font-family: "Montserrat", sans-serif;
       font-weight: normal; }
-    .affiche-film .follow i, .affiche-serie .follow i {
+    .affiche-film .follow i, .affiche-serie .follow i, .affiche-young .follow i, .affiche-spectacle .follow i {
       color: #fff;
       margin: 0 10px 0 10px;
       font-size: 24px; }
-    .affiche-film .follow .fa-twitter:hover, .affiche-serie .follow .fa-twitter:hover {
+    .affiche-film .follow .fa-twitter:hover, .affiche-serie .follow .fa-twitter:hover, .affiche-young .follow .fa-twitter:hover, .affiche-spectacle .follow .fa-twitter:hover {
       color: #30D8F0; }
-    .affiche-film .follow .fa-facebook-official:hover, .affiche-serie .follow .fa-facebook-official:hover {
+    .affiche-film .follow .fa-facebook-official:hover, .affiche-serie .follow .fa-facebook-official:hover, .affiche-young .follow .fa-facebook-official:hover, .affiche-spectacle .follow .fa-facebook-official:hover {
       color: #3b5999; }
-    .affiche-film .follow .fa-google-plus:hover, .affiche-serie .follow .fa-google-plus:hover {
+    .affiche-film .follow .fa-google-plus:hover, .affiche-serie .follow .fa-google-plus:hover, .affiche-young .follow .fa-google-plus:hover, .affiche-spectacle .follow .fa-google-plus:hover {
       color: #D34836; }
 
 /*** Fin description film ***/
@@ -1893,6 +2016,8 @@ footer {
       width: 70px;
       height: 70px;
       border: solid 3px #15B4A8; }
+    .information-film .avis-expert img.young, .information-serie .avis-expert img.young {
+      border: solid 3px #f46317; }
     .information-film .avis-expert h4, .information-serie .avis-expert h4 {
       float: left;
       color: #fff;
@@ -2223,12 +2348,13 @@ footer {
   min-height: 390px;
   width: 100%;
   background-color: #f8f8f8; }
-  .result button {
+  .result .button-filter {
     width: 236px;
     height: 40px;
     border: solid 1px rgba(0, 0, 0, 0.03);
+    position: relative;
     margin: 0 21px 0 0;
-    padding: 0 12px 0 16px;
+    padding: 0px 12px 0 16px;
     text-align: left;
     font-size: 15px;
     font-family: "Roboto", sans-serif;
@@ -2241,7 +2367,7 @@ footer {
     -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); }
-    .result button .circle {
+    .result .button-filter .circle {
       width: 9px;
       height: 9px;
       margin-right: 7px;
@@ -2251,10 +2377,12 @@ footer {
       -ms-border-radius: 50%;
       border-radius: 50%;
       border: solid 1px rgba(0, 0, 0, 0.4); }
-    .result button .nbr-filter {
-      float: right;
+    .result .button-filter .nbr-filter {
+      right: 12px;
+      top: 6px;
       padding: 2px 10px 2px 10px;
       font-family: "Roboto-Medium", sans-serif;
+      position: absolute;
       border: solid 1px #f5b027;
       color: #f5b027;
       background-color: #fff;
@@ -2348,7 +2476,7 @@ footer {
     border: none;
     padding: 0 13px 0 16px; }
   .tooltipster-content .achat-aff {
-    background-color: #15B4A8;
+    background-color: #f5b027;
     margin: 12px 0 0 30px;
     color: #fff; }
   .tooltipster-content .cross-bar {
