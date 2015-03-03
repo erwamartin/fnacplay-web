@@ -555,19 +555,63 @@ nav {
 
 #carousel section article {
   position: absolute;
-  padding: 75px 0 0 75px; }
-  #carousel section article h2, #carousel section article h3 {
-    font-familly: "Montserrat-Bold", sans-serif;
+  padding: 75px 0 75px 75px; }
+  #carousel section article .carousel-left {
+    float: left;
+    width: 547px; }
+  #carousel section article .carousel-right {
+    width: 150px;
+    margin: 0 0 0 243px;
+    height: 200px;
+    float: right; }
+    #carousel section article .carousel-right img {
+      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
+  #carousel section article .carousel-right-selection {
+    float: right;
+    margin: 0 0 0 0; }
+  #carousel section article h2, #carousel section article h3, #carousel section article h4, #carousel section article button, #carousel section article a {
+    font-family: "Montserrat-Bold", sans-serif;
     color: #fff;
     padding: 0;
     text-transform: uppercase; }
   #carousel section article h2 {
     font-size: 48px;
-    margin: 0; }
+    margin: 5px 0 0 0; }
   #carousel section article h3 {
     font-size: 17px;
     width: 264px;
-    margin: 30px 0 0 0; }
+    margin: 20px 0 0 0; }
+  #carousel section article h4 {
+    font-size: 15px;
+    margin: 0;
+    line-height: 31px;
+    text-align: center;
+    border: solid 3px #fff;
+    width: 124px;
+    padding: 2px 10px;
+    color: #fff; }
+  #carousel section article button {
+    margin: 170px 0 0 0;
+    font-size: 18px;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    padding: 16px 54px 16px 54px; }
+  #carousel section article a {
+    text-decoration: none;
+    font-size: 13px; }
+    #carousel section article a div {
+      margin: -45px 0 0 315px; }
+    #carousel section article a span {
+      font-size: 18px; }
+    #carousel section article a img {
+      margin: 0 0 0 30px;
+      height: 44px;
+      width: 44px; }
 
 #prev, #next {
   background-color: rgba(0, 0, 0, 0.5);
@@ -588,17 +632,17 @@ nav {
   right: -545px; }
 
 #pager {
-  margin-left: -470px;
+  margin-left: 360px;
   position: absolute;
   left: 50%;
-  bottom: 10px; }
+  bottom: 45px; }
 
 #pager a {
   border-radius: 10px;
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 0 14px 0 0;
+  margin: 0 10px 0 0;
   background-color: rgba(255, 255, 255, 0.5); }
 
 #pager a span {
@@ -2549,5 +2593,28 @@ ul.notes-echelle.js input {
 /***** Fin Note *****/
 #Container .mix {
   display: none; }
+
+#test1 {
+  float: right;
+  margin: -131px 40px 0 0; }
+  #test1 li img {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
+
+#test2 {
+  margin: -180px 96px 0 0;
+  z-index: 5;
+  float: right; }
+
+ul#test3 {
+  margin: 0 0 0 -59px;
+  z-index: 0; }
 
 /*# sourceMappingURL=style.css.map */

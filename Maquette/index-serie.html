@@ -361,6 +361,23 @@
                             <a href="#" class="serie-bg" alt="voir la collection">Voir la sélection</a>
                         </div>
                     </div>
+                    <ul id="test2">
+                        <li>
+                            <img src="img/aff2-tabs.png" width="135" height="180" alt="" />
+                        </li>
+                        <li>
+                            <img src="img/aff3-tabs.png" width="135" height="180" alt="" />
+                        </li>
+                        <li>
+                            <img src="img/aff4-tabs.png" width="135" height="180" alt="" />
+                        </li>
+                        <li>
+                            <img src="img/aff5-tabs.png" width="135" height="180" alt="" />
+                        </li>
+                        <li>
+                            <img src="img/aff6-tabs.png" width="135" height="180" alt="" />
+                        </li>
+                    </ul>
                 </section>
             </div>
             <div class="news">
@@ -1527,6 +1544,21 @@
         <script src="js/jquery.js"></script>-->
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+                <script type="text/javascript">
+        $(function() {
+                $("#test2").zAccordion({
+                    speed: 500,
+                    auto: false,
+                    startingSlide: 4,
+                    trigger: "mouseover",
+                    slideWidth: 135,
+                    width: 450,
+                    height: 180
+                });
+
+            });
+        </script>
+        <script type="text/javascript" src="js/jquery.zaccordion.min.js"></script>
         <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
         <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
         <script type="text/javascript" src="js/jquery.adaptive-backgrounds.js"></script>

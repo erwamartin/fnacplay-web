@@ -872,22 +872,71 @@ nav {
     width: 100%;
 }
 #carousel section article{
+    .carousel-left{
+        float:left;
+        width: 547px;
+    }
+    .carousel-right{
+        width: 150px;
+        margin: 0 0 0 243px;
+        height: 200px;
+        float:right;
+        img{
+            @include box-shadow($shadow-image);
+        }
+    }
+    .carousel-right-selection{
+        float:right;
+        margin: 0 0 0 0;
+    }
     position: absolute;
-    padding:75px 0 0 75px;
-    h2, h3{
-        font-familly: $montserrat-bold;
+    padding:75px 0 75px 75px;
+    h2, h3, h4, button, a{
+        font-family: $montserrat-bold;
         color: $white-color;
         padding:0;
         text-transform: uppercase;
     }
     h2{
         font-size: 48px;
-        margin: 0;
+        margin: 5px 0 0 0;
     }
     h3{
         font-size:17px;
         width: 264px;
-        margin: 30px 0 0 0;
+        margin: 20px 0 0 0;
+    }
+    h4{
+        font-size: 15px;
+        margin: 0;
+        line-height: 31px;
+        text-align: center;
+        border: solid 3px $white-color;
+        width: 124px;
+        padding: 2px 10px;
+        color: #fff;
+    }
+    button{
+        margin: 170px 0 0 0;
+        font-size: 18px;
+        border: none;
+        @include border-radius(3px);
+        padding: 16px 54px 16px 54px;
+    }
+    a{
+        text-decoration: none;
+        font-size: 13px;
+        div{
+            margin: -45px 0 0 315px;
+        }
+        span{
+            font-size: 18px;
+        }
+        img{
+            margin: 0 0 0 30px;
+            height: 44px;
+            width: 44px;
+        }
     }
 }
 #prev, #next {
@@ -909,17 +958,17 @@ nav {
     right: -545px;
 }
 #pager {
-    margin-left: 350px;
+    margin-left: 360px;
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 45px;
 }
 #pager a {
     border-radius: 10px;
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin: 0 14px 0 0;
+    margin: 0 10px 0 0;
     background-color: rgba($white-color, 0.5);
 }
 #pager a span {
@@ -3355,4 +3404,28 @@ ul.notes-echelle.js input {
 
 #Container .mix{
     display: none;
+}
+
+#test1{
+    float: right;
+    margin: -131px 40px 0 0;
+    li{
+        img{
+            width: 100%;
+            height: 100%;
+            @include border-radius(0px);
+            @include box-shadow($shadow-image);
+        }
+    }
+}
+
+#test2{
+    margin: -180px 96px 0 0;
+    z-index: 5;
+    float: right;
+}
+
+ul#test3{
+    margin: 0 0 0 -59px;
+    z-index: 0;
 }
