@@ -148,11 +148,15 @@ $font-size-48: 48px;
     background-color: $movie-color !important;
 }
 
+.movie-hover:hover{
+    background-color: $movie-color !important;
+}
+
 .movie-txt{
     color: $movie-color !important;
 }
 
-.darken-movie-bg{
+.darken-movie-bg, .movie-hovert:hover{
     background-color: darken($movie-color, 10) !important;    
 }
 
@@ -164,8 +168,12 @@ $font-size-48: 48px;
     color: $serie-color !important;
 }
 
-.darken-serie-bg{
+.darken-serie-bg, .serie-hovert:hover{
     background-color: darken($serie-color, 10) !important;    
+}
+
+.serie-hover:hover{
+    background-color: $serie-color !important;
 }
 
 .young-bg{
@@ -176,8 +184,12 @@ $font-size-48: 48px;
     color: $young-color !important;
 }
 
-.darken-young-bg{
+.darken-young-bg, .young-hovert:hover{
     background-color: darken($young-color, 10) !important;    
+}
+
+.young-hover:hover{
+    background-color: $young-color !important;
 }
 
 .spectacle-bg{
@@ -188,8 +200,12 @@ $font-size-48: 48px;
     color: $spectacle-color !important;
 }
 
-.darken-spectacle-bg{
+.darken-spectacle-bg, .spectacle-hovert:hover{
     background-color: darken($spectacle-color, 10) !important;    
+}
+
+.spectacle-hover:hover{
+    background-color: $spectacle-color !important;
 }
 
 .adult-bg{
@@ -874,11 +890,14 @@ nav {
 #carousel section article{
     .carousel-left{
         float:left;
-        width: 547px;
+        width: 575px;
+        .link-ba{
+            text-shadow: 0px 1px 3px rgba($black-color, 0.3);
+        }
     }
     .carousel-right{
         width: 150px;
-        margin: 0 0 0 243px;
+        margin: 0 0 0 220px;
         height: 200px;
         float:right;
         img{
@@ -897,14 +916,19 @@ nav {
         padding:0;
         text-transform: uppercase;
     }
+    button{
+        @include box-shadow($shadow-image);
+    }
     h2{
         font-size: 48px;
         margin: 5px 0 0 0;
+        text-shadow: 0px 1px 3px rgba($black-color, 0.5);
     }
     h3{
         font-size:17px;
         width: 264px;
         margin: 20px 0 0 0;
+        text-shadow: 0px 1px 3px rgba($black-color, 0.5);
     }
     h4{
         font-size: 15px;
@@ -915,6 +939,11 @@ nav {
         width: 124px;
         padding: 2px 10px;
         color: #fff;
+        text-shadow: 0px 1px 3px rgba($black-color, 0.5);
+    }
+    .button-selection{
+        position: relative;
+        bottom: 90px;
     }
     button{
         margin: 170px 0 0 0;
@@ -940,8 +969,7 @@ nav {
     }
 }
 #prev, #next {
-    background-color: rgba($black-color, 0.5);
-    display: block;
+    background-color: rgba($black-color, 0.5);   display: block;
     height: 530px;
     width: 50%;
     top: 0px;
@@ -950,6 +978,16 @@ nav {
 #prev:hover, #next:hover {
     background-color: $black-color;
     background-color: rgba($black-color, 0.6);
+}
+.arrow-left, .arrow-right{
+    width: 30px;
+}
+.arrow-left{
+    float:right;
+    margin:235px 38px 0 0;
+}
+.arrow-right{
+    margin:235px 0 0 38px;
 }
 #prev {
     left: -545px;
@@ -1267,7 +1305,46 @@ nav {
             background: url('/img/coup-de-coeur-fnac.png') no-repeat;
             background-size: cover;
             position: absolute;
-        }
+}
+
+.info-bottom{
+    position: absolute;
+    margin-top: -30px;
+    .new-price, .old-price, .note, .price{
+        line-height: 30px;
+        display:block;
+        text-align: center;
+        font-size: 15px;
+    }
+    .new-price, .old-price, .price{
+        float:left;
+        width: 65px;
+    }
+    .new-price{
+        color: $white-color;
+        font-family: $montserrat-bold;
+        background-color: $new-price;
+    }
+    .old-price{
+        background-color: rgba($old-price, 0.8);
+        color: rgba($white-color, 0.7);
+        font-family: $montserrat-light;
+        text-decoration: line-through;
+    }
+    .price{
+        background-color: rgba($old-price, 0.8);
+        color: rgba($white-color, 0.7);
+        font-family: $montserrat-light;
+    }
+    .note{
+        background-color: rgba($old-price, 0.8);
+        color: $primary-color;
+        font-family: $montserrat-light;
+        float:right; 
+        width: 64px;
+        border-left: solid 1px rgba($white-color, 0.5);
+    }
+}
 
 #tabs-1, #tabs-2, .result{
             ul{
@@ -1475,17 +1552,25 @@ nav {
 .carousel{
 
             ul{
+                margin: 23px 0 0 0;
+                padding: 0;
 
                 li{
-                    width: 195px;
-                    height: 260px;
+                    padding: 10px 10px 0 10px;
+                    height: 310px;
                     float: left;
                     list-style-type: none;
-                    @include box-shadow(0 2px 3px rgba(0,0,0,0.6));
+
+                    background-color: rgba($black-color, 0.0);
+                    -webkit-transition: background 0.5s linear;
+                    -moz-transition: background 0.5s linear;
+                    -ms-transition: background 0.5s linear;
+                    -o-transition: background 0.5s linear;
+                    transition: background 0.5s linear;
 
                     img{
                         width: 100%;
-                        height: 100%;
+                        @include box-shadow(0 2px 3px rgba(0,0,0,0.6));
                     }
 
                     h2{
@@ -1595,6 +1680,10 @@ nav {
                         }
                     }
                 }
+                li:hover{
+                    background-color: rgba($black-color, 0.2);
+                    @include border-radius(3px);
+                }
             }
         }
 
@@ -1687,8 +1776,10 @@ nav {
                         font-weight: normal;
                         color: $white-color;
                         text-transform: uppercase;
+                        line-height: 30px;
                         width: 355px;
                         margin: 42px 0 0 59px;
+                        text-shadow: 0px 1px 3px rgba($black-color, 0.4);
                     }
 
                     h3{
@@ -1698,6 +1789,7 @@ nav {
                         width: 285px;
                         font-weight: normal;
                         margin: 10px 0 0 59px;
+                        text-shadow: 0px 1px 3px rgba($black-color, 0.4);
                     }
                 }
 
@@ -2042,7 +2134,7 @@ footer{
     width: 100%;
 
     .container-footer{
-        border-top: solid 1px rgba($link_gray-color, 0.7);
+        border-top: solid 1px #F2F2F2;
         margin: 0 96px 0 96px;
         height: 210px;
 
@@ -2055,7 +2147,7 @@ footer{
             li{
                 list-style-type: none;
                 a{
-                    color: rgba($link_gray-color, 0.9);
+                    color: rgba($selection_black-color, 0.7);
                     font-family: $roboto;
                     font-size: 15px;
                     text-decoration: none;
@@ -2737,6 +2829,10 @@ footer{
                 border: solid 3px $young-color;
             }
 
+            img.serie{
+                border: solid 3px $serie-color;
+            }
+
         h4{
             float: left;
             color: $white-color;
@@ -3407,9 +3503,11 @@ ul.notes-echelle.js input {
 }
 
 #test1{
+    @include box-shadow(0px 2px 10px rgba($black-color, 0.9));
     float: right;
-    margin: -131px 40px 0 0;
+    margin: -115px 40px 0 0;
     li{
+        @include box-shadow(0px 2px 15px rgba($black-color, 0.9));
         img{
             width: 100%;
             height: 100%;
@@ -3420,12 +3518,20 @@ ul.notes-echelle.js input {
 }
 
 #test2{
+    @include box-shadow(0px 2px 10px rgba($black-color, 0.9));
     margin: -180px 96px 0 0;
     z-index: 5;
     float: right;
+    li{
+        @include box-shadow(0px 2px 15px rgba($black-color, 0.9));
+    }
 }
 
 ul#test3{
-    margin: 0 0 0 -59px;
+    @include box-shadow(0px 2px 10px rgba($black-color, 0.9));
+    margin: 170px 0 0 -59px;
     z-index: 0;
+    li{
+        @include box-shadow(0px 2px 15px rgba($black-color, 0.9));
+    }
 }

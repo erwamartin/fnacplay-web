@@ -13,11 +13,11 @@ $(document).ready(function($) {
     });
 
     $('.bxslider').bxSlider({
-        slideWidth: 195,
+        slideWidth: 215,
         minSlides: 5,
         maxSlides: 5,
         pager: false,
-        slideMargin: 28,
+        slideMargin: 8,
         infiniteLoop: false,
         hideControlOnEnd: true
     });

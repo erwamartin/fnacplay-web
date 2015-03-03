@@ -206,5 +206,9 @@
 }
 
 .bx-viewport{
-	height: 330px !important;
+	height: 350px !important;
+}
+
+.saison-slider .carousel .bx-wrapper .bx-viewport{
+	height: 360px !important;
 }
