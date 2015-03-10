@@ -11,12 +11,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.min.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+        <link rel="stylesheet" type="text/css" href="css/dialog.css" />
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,900italic,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900 | Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+        <script src="js/modernizr.custom.js"></script>
         </head>
     <body>
         <!--[if lt IE 7]>
@@ -29,7 +32,7 @@
             </div>
             <nav>
                 <ul>
-                    <li class="movie"><a href="index-film.html"><h2>Films</h2></a>
+                    <li class="movie active"><a href="index-film.html"><h2>Films</h2></a>
                         <div class="border-color"></div>
                         <div class="sub-menu">
                             <div class="genre">
@@ -133,7 +136,7 @@
                             <div class="border-bottom"></div>
                         </div> 
                     </li>
-                    <li class="young active"><a href="index-young.html"><h2><span class="k">K</span><span class="i">I</span><span class="d">D</span><span class="s">S</span></h2></a>
+                    <li class="young"><a href="index-young.html"><h2><span class="k">K</span><span class="i">I</span><span class="d">D</span><span class="s">S</span></h2></a>
                         <div class="border-color"></div>
                         <div class="sub-menu">
                             <div class="genre">
@@ -349,400 +352,396 @@
         </header>
         <div class="clear"></div>
         <div class="content">
-            <div class="affiche-young">
+            <div class="affiche-film">
                 <div class="breadcrumbs">
-                    <div class="container">
-                        <a href="index-young.html">Kids  › </a><a href="#" class="titlebread">The Lego movie</a>
+                    <a href="#">Films  › </a><a href="#" class="titlebread">Interstellar</a>
+                </div>
+                <div class="container-mother">
+                <section class="description-film">
+                    <h1>Interstellar</h1>
+                    <h3><span class="note_4"></span> Science-Fiction - 2014 - 2h49 - USA <img class="white-vost" src="img/white-vost.png" alt="" /> <img class="white-limit" src="img/white-limit.png" alt="" /></h3>
+                    <p>
+                        Alors que l'avenir de la planète Terre est menacé, une équipe d'explorateurs est chargée de la plus importante mission dans l'histoire humaine : quitter la galaxie pour découvrir si l'humanité a un futur parmi les étoiles.
+                    </p>
+                    <a href="#" alt="">Lire la suite <i class="fa fa-angle-down"></i></a>
+                    <div class="bloc-facebook">
+                        <ul>
+                            <li><img src="img/profil-fa1.png" alt="" /></li>
+                            <li><img src="img/profil-fa2.png" alt="" /></li>
+                            <li><img src="img/profil-fa3.png" alt="" /></li>
+                        </ul>
+                        <p><img src="img/profil-icon.png" alt="" />Julie Durand, Émilie Charpentier et Anne aiment ce film</p>
                     </div>
-                </div>
-                <div class="container">
-                    <section class="description-film">
-                        <h1>Interstellar</h1>
-                        <h3><span class="note_4"></span> Science-Fiction - 2014 - 2h49 - USA <img class="white-vost" src="img/white-vost.png" alt="" /> <img class="white-limit" src="img/white-limit.png" alt="" /></h3>
-                        <p>
-                            Alors que l'avenir de la planète Terre est menacé, une équipe d'explorateurs est chargée de la plus importante mission dans l'histoire humaine : quitter la galaxie pour découvrir si l'humanité a un futur parmi les étoiles.
-                        </p>
-                        <a href="#" alt="">Lire la suite <i class="fa fa-angle-down"></i></a>
-                        <div class="bloc-facebook">
-                            <ul>
-                                <li><img src="img/profil-fa1.png" alt="" /></li>
-                                <li><img src="img/profil-fa2.png" alt="" /></li>
-                                <li><img src="img/profil-fa3.png" alt="" /></li>
-                            </ul>
-                            <p><img src="img/profil-icon.png" alt="" />Julie Durand, Émilie Charpentier et Anne aiment ce film</p>
-                        </div>
-                        <div class="clear bloc-video">
-                            <a href="#" alt=""><img src="img/play.png" alt="" /><div class="ba">Voir la<br /><span>Bande-Annonce</span></div></a>
-                            <div class="more-video"><a href="#" alt="">+ 3 vidéos bonus</a></div>
-                        </div>
-                        <div class="clear button-affiche">
-                            <a href="#" alt="" class="location">
-                                Louer en HD<br /><span class="affiche-price">2,99€</span> <span class="affiche-old-price">4,99€</span>
-                            </a>
-                            <a href="#" alt="" class="buy young-bg young-hovert">
-                                Acheter en HD<br /><span class="affiche-price">9,99€</span>
-                            </a>
-                        </div>
-                        <div class="buy-disk clear">
-                            <a href="#" alt=""><img src="img/disk.png" alt="" /> Acheter le DVD/Blu-Ray ›</a>
-                        </div>
-                    </section>
-                    <section class="notation-film cdc">
-                            <img src="img/affiche-film.png" alt="" />
-                        <div class="attr-note">
-                            <h3>Noter le film</h3>
-                            <ul class="notes-echelle js">
-                                <li class="note-off">
-                                    <label for="note01" title="Note : 1 sur 5"><span>1</span></label>
-                                    <input type="radio" name="notesA" id="note01" value="1">
-                                </li>
-                                <li class="note-off">
-                                    <label for="note02" title="Note : 2 sur 5"><span>2</span></label>
-                                    <input type="radio" name="notesA" id="note02" value="2">
-                                </li>
-                                <li class="note-off">
-                                    <label for="note03" title="Note : 3 sur 5"><span>3</span></label>
-                                    <input type="radio" name="notesA" id="note03" value="3">
-                                </li>
-                                <li class="note-off">
-                                    <label for="note04" title="Note : 4 sur 5"><span>4</span></label>
-                                    <input type="radio" name="notesA" id="note04" value="4">
-                                </li>
-                                <li class="note-off">
-                                    <label for="note05" title="Note : 5 sur 5"><span>5</span></label>
-                                    <input type="radio" name="notesA" id="note05" value="5">
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="attr-list">
-                            <a href="#" alt=""><i class="fa fa-heart"></i><h3>Ajouter à ma<br /><span>Liste d'envies</span></h3></a>
-                        </div>
-                    </section>
-                    <section class="clear follow">
-                        <div class="left"><hr></div>
-                        <div class="right">Partager :<a href="#" alt=""><i class="fa fa-twitter"></i></a><a href="#" alt=""><i class="fa fa-facebook-official"></i></a><a href="#" alt=""><i class="fa fa-google-plus"></i></a></div>
-                    </section>
-                </div>
+                    <div class="clear bloc-video">
+                        <a href="#" alt=""><img src="img/play.png" alt="" /><div class="ba">Voir la<br /><span>Bande-Annonce</span></div></a>
+                        <div class="more-video"><a href="#" alt="">+ 3 vidéos bonus</a></div>
+                    </div>
+                    <div class="clear button-affiche">
+                        <a href="#" alt="" class="location">
+                            Louer en HD<br /><span class="affiche-price">2,99€</span> <span class="affiche-old-price">4,99€</span>
+                        </a>
+                        <a href="#" alt="" class="buy">
+                            Acheter en HD<br /><span class="affiche-price">9,99€</span>
+                        </a>
+                    </div>
+                    <div class="buy-disk clear">
+                        <a href="#" alt=""><img src="img/disk.png" alt="" /> Acheter le DVD/Blu-Ray ›</a>
+                    </div>
+                </section>
+                <section class="notation-film cdc">
+                        <img src="img/affiche-film.png" alt="" />
+                    <div class="attr-note">
+                        <h3>Noter le film</h3>
+                        <ul class="notes-echelle js">
+                            <li class="note-off">
+                                <label for="note01" title="Note : 1 sur 5"><span>1</span></label>
+                                <input type="radio" name="notesA" id="note01" value="1">
+                            </li>
+                            <li class="note-off">
+                                <label for="note02" title="Note : 2 sur 5"><span>2</span></label>
+                                <input type="radio" name="notesA" id="note02" value="2">
+                            </li>
+                            <li class="note-off">
+                                <label for="note03" title="Note : 3 sur 5"><span>3</span></label>
+                                <input type="radio" name="notesA" id="note03" value="3">
+                            </li>
+                            <li class="note-off">
+                                <label for="note04" title="Note : 4 sur 5"><span>4</span></label>
+                                <input type="radio" name="notesA" id="note04" value="4">
+                            </li>
+                            <li class="note-off">
+                                <label for="note05" title="Note : 5 sur 5"><span>5</span></label>
+                                <input type="radio" name="notesA" id="note05" value="5">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="attr-list">
+                        <a href="#" alt=""><i class="fa fa-heart"></i><h3>Ajouter à ma<br /><span>Liste d'envies</span></h3></a>
+                    </div>
+                </section>
+                <section class="clear follow">
+                    <div class="left"><hr></div>
+                    <div class="right">Partager :<a href="#" alt=""><i class="fa fa-twitter"></i></a><a href="#" alt=""><i class="fa fa-facebook-official"></i></a><a href="#" alt=""><i class="fa fa-google-plus"></i></a></div>
+                </section>
+            </div>
             </div>
             <div class="clear"></div>
             <div class="information-film">
-                <div class="container">
-                    <div class="casting">
-                        <h2>Casting</h2>
-                        <h3>Réalisé par <span>Christopher Nolan</span></h3>
-                        <h3>Avec <span>Matthew McConaughey, Anne Hathaway, Jessica Chastain</span></h3>
+                <div class="container-mother">
+                <div class="casting">
+                    <h2>Casting</h2>
+                    <h3>Réalisé par <span>Christopher Nolan</span></h3>
+                    <h3>Avec <span>Matthew McConaughey, Anne Hathaway, Jessica Chastain</span></h3>
+                    <ul>
+                        <li><img src="img/actor1.png" alt="" /></li>
+                        <li><a href="#"><img src="img/actor2.png" alt="" /></a></li>
+                        <li><a href="#"><img src="img/actor3.png" alt="" /></a></li>
+                        <li><a href="#"><img src="img/actor4.png" alt="" /></a></li>
+                        <li><img data-dialog="somedialog" class="trigger" src="img/actor5.png" alt="" /></a></li>
+                    </ul>
+                </div>
+                <div class="users-note">
+                    <h2>Note des utilisateurs</h2>
+                    <div class="note-attr">
+                        <h4>4.8</h4>
+                        <h5>13 notes</h5>
+                    </div>
+                    <div class="note-details">
                         <ul>
-                            <li><img src="img/actor1.png" alt="" /></li>
-                            <li><img src="img/actor2.png" alt="" /></li>
-                            <li><img src="img/actor3.png" alt="" /></li>
-                            <li><img src="img/actor4.png" alt="" /></li>
-                            <li><img src="img/actor5.png" alt="" /></li>
+                            <li class="clear">
+                                <ul>
+                                    <li class="n5">
+                                    </li>
+                                    <li class="b5">
+                                    </li>
+                                    <li class="nbr">2</li>
+                                </ul>
+                            </li>
+                            <li class="clear">
+                                <ul class="note-top">
+                                    <li class="n4">
+                                    </li>
+                                    <li class="b4">
+                                    </li>
+                                    <li class="nbr">2</li>
+                                </ul>
+                            </li>
+                            <li class="clear">
+                                <ul class="note-top">
+                                    <li class="n3">
+                                    </li>
+                                    <li class="b3">
+                                    </li>
+                                    <li class="nbr">2</li>
+                                </ul>
+                            </li>
+                            <li class="clear">
+                                <ul class="note-top">
+                                    <li class="n2">
+                                    </li>
+                                    <li class="b2">
+                                    </li>
+                                    <li class="nbr">2</li>
+                                </ul>
+                            </li>
+                            <li class="clear">
+                                <ul class="note-top">
+                                    <li class="n1">
+                                    </li>
+                                    <li class="b1">
+                                    </li>
+                                    <li class="nbr">2</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
-                    <div class="users-note">
-                        <h2>Note des utilisateurs</h2>
-                        <div class="note-attr">
-                            <h4>4.8</h4>
-                            <h5>13 notes</h5>
-                        </div>
-                        <div class="note-details">
-                            <ul>
-                                <li class="clear">
-                                    <ul>
-                                        <li class="n5">
-                                        </li>
-                                        <li class="b5">
-                                        </li>
-                                        <li class="nbr">2</li>
-                                    </ul>
-                                </li>
-                                <li class="clear">
-                                    <ul class="note-top">
-                                        <li class="n4">
-                                        </li>
-                                        <li class="b4">
-                                        </li>
-                                        <li class="nbr">2</li>
-                                    </ul>
-                                </li>
-                                <li class="clear">
-                                    <ul class="note-top">
-                                        <li class="n3">
-                                        </li>
-                                        <li class="b3">
-                                        </li>
-                                        <li class="nbr">2</li>
-                                    </ul>
-                                </li>
-                                <li class="clear">
-                                    <ul class="note-top">
-                                        <li class="n2">
-                                        </li>
-                                        <li class="b2">
-                                        </li>
-                                        <li class="nbr">2</li>
-                                    </ul>
-                                </li>
-                                <li class="clear">
-                                    <ul class="note-top">
-                                        <li class="n1">
-                                        </li>
-                                        <li class="b1">
-                                        </li>
-                                        <li class="nbr">2</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="clear presse">
-                            <h4>« Le nouveau chef-d'oeuvre de Christopher Nolan. »</h4>
-                            <p><span class="note_4"></span> Presse</p>
-                        </div>
-                    </div>
-                    <div class="clear avis-expert">
-                        <img src="img/expert1.png" class="young" alt="" />
-                        <h4>L'avis de l'expert fnac<br /><span class="young-txt">Matthieu (27ans)</span></h4>
-                        <p>Liseuse oubliée ? On vous dit comment lire vos e-books avec l'application Kobo. Vous avez oublié votre liseuse ?</p>
+                    <div class="clear presse">
+                        <h4>« Le nouveau chef-d'oeuvre de Christopher Nolan. »</h4>
+                        <p><span class="note_4"></span> Presse</p>
                     </div>
                 </div>
+                <div class="clear avis-expert">
+                    <img src="img/expert1.png" alt="" />
+                    <h4>L'avis de l'expert fnac<br /><span>Matthieu (27ans)</span></h4>
+                    <p>Liseuse oubliée ? On vous dit comment lire vos e-books avec l'application Kobo. Vous avez oublié votre liseuse ?</p>
+                </div>
+            </div>
             </div>                
             <div class="clear"></div>
             <div class="just-for-you like">
-                <div class="container">
-                    <div class="title-just">
-                        <a href="#">
-                            <h3>Vous aimerez aussi</h3>
-                            <h6>Tout afficher ›</h6>
-                        </a>
-                    </div>
-                    <div class="clear"></div>
-                    <section class="carousel">
-                        <ul class="bxslider">
-                                        <li>
-                                            <a href="affiche-young.html" class="cdc">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <img src="img/aff4-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Les Gardiens de la Galaxie</h2>
-                                        </li>
-                                        <li>
-                                            <a href="#" alt="">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <img src="img/aff2-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Hunger Games : La Révolte 1er partie</h2>
-                                        </li>
-                                        <li>
-                                            <a href="affiche-young.html" class="cdc">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <img src="img/aff3-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Interstellar</h2>
-                                        </li>
-                                        <li>
-                                            <a href="affiche-young.html">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <img src="img/aff4-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Les Gardiens de la Galaxie</h2>
-                                        </li>
-                                        <li>
-                                            <a href="affiche-young.html">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="clear"></div>
-                                                <img src="img/aff5-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Night Call</h2>
-                                        </li>
-                                        <li>
-                                            <a href="affiche-young.html">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <img src="img/aff1-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Gone Girl</h2>
-                                        </li>
-                                        <li>
-                                            <a href="affiche-young.html">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <img src="img/aff2-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Hunger Games : La Révolte 1er partie</h2>
-                                        </li>
-                                        <li>
-                                            <a href="affiche-young.html" class="cdc">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <img src="img/aff3-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Interstellar</h2>
-                                        </li>
-                                        <li>
-                                            <a href="affiche-young.html" class="cdc">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <img src="img/aff4-tabs.png" title="This is a tooltip" />
-                                            </a>
-                                            <h2>Les Gardiens de la Galaxie</h2>
-                                        </li>
-                                        <li>
-                                            <a href="affiche-young.html">
-                                                <div class="overflow-img tooltip">
-                                                    <div class="button-aff">
-                                                        <button class="button-top young-hover">
-                                                            <i class="fa fa-heart"></i>
-                                                            <div class="add-list">
-                                                                Ajouter à ma liste d'envies
-                                                            </div>
-                                                        </button>
-                                                        <button class="button-bottom young-hover">
-                                                            <i class="fa fa-play"></i>
-                                                            <div class="see-ba">
-                                                                Voir la bande-annonce
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="clear"></div>
-                                                <img src="img/aff5-tabs.png" alt="" />
-                                            </a>
-                                            <h2>Night Call</h2>
-                                        </li>
-                                    </ul>
-                    </section>
+                <div class="title-just">
+                    <a href="#" alt="">
+                        <h3>Vous aimerez aussi</h3>
+                        <h6>Tout afficher ›</h6>
+                    </a>
                 </div>
+                <div class="clear"></div>
+                <section class="carousel">
+                    <ul class="bxslider">
+                                    <li>
+                                        <a href="affiche-film.html" class="cdc">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <img src="img/aff4-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Les Gardiens de la Galaxie</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <img src="img/aff2-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Hunger Games : La Révolte 1er partie</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html" class="cdc">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <img src="img/aff3-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Interstellar</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <img src="img/aff4-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Les Gardiens de la Galaxie</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <img src="img/aff5-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Night Call</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <img src="img/aff1-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Gone Girl</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <img src="img/aff2-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Hunger Games : La Révolte 1er partie</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html" class="cdc">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <img src="img/aff3-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Interstellar</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html" class="cdc">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <img src="img/aff4-tabs.png" title="This is a tooltip" />
+                                        </a>
+                                        <h2>Les Gardiens de la Galaxie</h2>
+                                    </li>
+                                    <li>
+                                        <a href="affiche-film.html">
+                                            <div class="overflow-img tooltip">
+                                                <div class="button-aff">
+                                                    <button class="button-top movie-hover">
+                                                        <i class="fa fa-heart"></i>
+                                                        <div class="add-list">
+                                                            Ajouter à ma liste d'envies
+                                                        </div>
+                                                    </button>
+                                                    <button class="button-bottom movie-hover">
+                                                        <i class="fa fa-play"></i>
+                                                        <div class="see-ba">
+                                                            Voir la bande-annonce
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <img src="img/aff5-tabs.png" alt="" />
+                                        </a>
+                                        <h2>Night Call</h2>
+                                    </li>
+                                </ul>
+                </section>
             </div>
             <div class="clear"></div>            
             <div class="newsletter">
@@ -751,15 +750,13 @@
                 </form>
             </div>
             <div class="clear"></div>
-            <div class="container">
-                <div class="application">
-                    <div class="img-device">
-                        <img src="img/devices.png" alt="" />
-                    </div>
-                    <div class="descr-app">
-                        <p>Téléchargez l’application Fnac Play ! Achetez et regardez vos films et séries sur votre tablette ou votre smartphone</p>
-                        <a href="#" at=""><img class="apple" alt="" src="img/button-apple.png" /></a> <a href="#" alt=""><img class="android" alt="" src="img/button-android.png" /></a>
-                    </div>
+            <div class="application">
+                <div class="img-device">
+                    <img src="img/devices.png" alt="" />
+                </div>
+                <div class="descr-app">
+                    <p>Téléchargez l’application Fnac Play ! Achetez et regardez vos films et séries sur votre tablette ou votre smartphone</p>
+                    <a href="#" at=""><img class="apple" alt="" src="img/button-apple.png" /></a> <a href="#" alt=""><img class="android" alt="" src="img/button-android.png" /></a>
                 </div>
             </div>
             <div class="clear"></div>
@@ -796,7 +793,12 @@
                 </div>
             </div>
         </footer>
-
+        <div id="somedialog" class="dialog">
+            <div class="dialog__overlay"></div>
+            <div class="dialog__content">
+                <h2>Fiche acteur</h2><div><button class="action" data-dialog-close>Close</button></div>
+            </div>
+        </div>
         <!--
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
@@ -844,6 +846,19 @@
             });
         </script>      
         <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/classie.js"></script>
+        <script type="text/javascript" src="js/dialogFx.js"></script>
+        <script>
+            (function() {
+
+                var dlgtrigger = document.querySelector( '[data-dialog]' ),
+                    somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+                    dlg = new DialogFx( somedialog );
+
+                dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+            })();
+        </script>
         <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
         <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
         <!--<script src="js/vendor/waypoint.js"></script>-->

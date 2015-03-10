@@ -15,7 +15,7 @@ $(document).ready(function($) {
     $('.bxslider').bxSlider({
         slideWidth: 215,
         minSlides: 5,
-        maxSlides: 5,
+        maxSlides: 6,
         pager: false,
         slideMargin: 8,
         infiniteLoop: false,
@@ -25,6 +25,25 @@ $(document).ready(function($) {
     $('#reduction').tabs({
         show: {effect: "fade", duration: 800}
     });
+
+    $( "#search" ).focus(function() {
+        $('.search-p').text('Appuyez sur « Entrée » pour voir tous les résultats');
+    });
+
+    /*var availableTags = [
+      "American Sniper",
+      "American Nightmare",
+      "Assassination classroom",
+      "Blood diamond",
+      "Chapie",
+      "Edge of tomorrow",
+      "Full metal jacket",
+      "Kingsman",
+      "La chute du faucon noir",
+    ];
+    $( "#search" ).autocomplete({
+      source: availableTags
+    });*/
 
     $('.select-genre').selectbox();
     $('.select-tri').selectbox();

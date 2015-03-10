@@ -7,16 +7,13 @@
 /***** Color tabs *****/
 /***** Color uni*****/
 /***** Mixins *****/
+.container-mother{
+  width: 1088px;
+  margin: 0 auto;
+}
 *:focus {
   outline: none !important; }
 
-.container {
-  width: 1088px;
-  margin: 0 auto; }
-
-@media screen and (min-width: 1440px) {
-  .container {
-    width: 1088px; } }
 .primary-bg {
   background-color: #f5b027 !important; }
 
@@ -773,7 +770,7 @@ nav {
       width: 550px;
       line-height: 57px;
       text-shadow: 0px 1px rgba(0, 0, 0, 0.5);
-      margin: 14px 0 0 0;
+      margin: 14px 0 0 92px;
       padding: 0;
       text-transform: uppercase; }
 
@@ -808,7 +805,7 @@ nav {
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
   border-radius: 1px;
-  margin: 0; }
+  margin: 0px 0 0 95px; }
   .little-title h3 {
     margin: 0;
     padding: 0;
@@ -816,7 +813,7 @@ nav {
 
 .description h4 {
   color: #fff;
-  margin: 118px 0 0 0;
+  margin: 118px 0 0 90px;
   font-family: "Roboto-Bold", sans-serif;
   padding: 0;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
@@ -828,7 +825,7 @@ nav {
   width: 270px;
   height: 56px;
   font-family: "Montserrat-Bold", sans-serif;
-  margin: 23px 0 0 0;
+  margin: 23px 0 0 91px;
   font-size: 18px;
   text-decoration: none;
   -webkit-border-radius: 3px;
@@ -910,10 +907,7 @@ nav {
   background-color: #f8f8f8;
   padding-top: 61px; }
   .news #tabs_container #tabs-3 ul {
-    padding: 0;
-    margin: 0; }
-    .news #tabs_container #tabs-3 ul li:first-child {
-      margin: 0 0 80px 0; }
+    margin-left: 28px; }
     .news #tabs_container #tabs-3 ul li {
       width: 195px;
       height: 260px;
@@ -932,7 +926,7 @@ nav {
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
       border-radius: 3px;
-      margin-right: 39px; }
+      margin-right: 42px; }
       .news #tabs_container #tabs-3 ul li:first-child img {
         width: 340px;
         height: 455px; }
@@ -1112,10 +1106,8 @@ nav {
     height: 13px !important; }
 
 #tabs-1 ul, #tabs-2 ul, .result ul, .information-selection ul {
-  margin: 0 0 0 0;
+  margin: 0 96px 0 68px;
   padding: 0; }
-  #tabs-1 ul li:nth-child(5n+1), #tabs-2 ul li:nth-child(5n+1), .result ul li:nth-child(5n+1), .information-selection ul li:nth-child(5n+1) {
-    margin: 0 0 90px 0; }
   #tabs-1 ul li, #tabs-2 ul li, .result ul li, .information-selection ul li {
     width: 195px;
     height: 260px;
@@ -1231,8 +1223,7 @@ nav {
 
 .content-selection {
   margin: -250px 0 0 0;
-  float: left;
-  width: 100%; }
+  float: left; }
 
 /***** Just for You *****/
 /* Just for you affiche-film */
@@ -1252,7 +1243,8 @@ nav {
   background-color: #f5b027;
   padding-top: 50px; }
   .just-for-you .title-just {
-    float: left; }
+    float: left;
+    margin: 0 0 0 96px; }
     .just-for-you .title-just a {
       text-decoration: none; }
       .just-for-you .title-just a h3 {
@@ -1270,7 +1262,8 @@ nav {
         margin: 0; }
   .just-for-you .discover-just {
     float: right;
-    margin: 2px 0 0 0; }
+    margin-right: 96px;
+    margin-top: 2px; }
     .just-for-you .discover-just a {
       color: #fff;
       display: block;
@@ -1422,16 +1415,16 @@ nav {
       color: #fff;
       font-family: "Roboto-Thin", sans-serif;
       font-size: 32px !important;
-      margin: 0;
+      margin: 0 0 0 96px;
       font-weight: 300; }
     .our-selection .title-selection a h6 {
       color: rgba(255, 255, 255, 0.6);
       font-family: "Roboto-Light", sans-serif;
-      margin: 0;
+      margin: 0 0 0 96px;
       font-size: 13px;
       font-weight: normal; }
   .our-selection .bloc-selection ul {
-    padding: 0;
+    padding: 0 96px 0 96px;
     margin: 0; }
     .our-selection .bloc-selection ul li {
       margin: 0;
@@ -1501,13 +1494,14 @@ nav {
       -ms-border-radius: 3px;
       border-radius: 3px; }
   .our-selection .more-selection {
-    margin: 35px auto; }
+    text-align: left;
+    margin-top: 35px;
+    margin-left: 362px; }
     .our-selection .more-selection a {
       color: rgba(255, 255, 255, 0.7);
       font-size: 18px;
       font-family: "Roboto", sans-serif;
       text-decoration: none; }
-
 /***** Fin Our selection *****/
 /***** Reduction *****/
 .more-reduction, .more-selection {
@@ -1531,21 +1525,19 @@ nav {
   background-color: #f8f8f8; }
   .bloc-reduction #reduction .ul-link-reduction {
     padding: 0;
-    margin: 0; }
-    .bloc-reduction #reduction .ul-link-reduction li:first-child {
-      margin: 0 5% 0 0; }
+    margin: 0 0 0 96px; }
     .bloc-reduction #reduction .ul-link-reduction li {
       list-style-type: none;
       float: left;
       padding: 0;
       text-align: center;
-      margin: 0;
-      width: 47.5%;
+      margin: 0 28px 0 0;
       -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
       box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
       .bloc-reduction #reduction .ul-link-reduction li a {
         display: block;
+        width: 530px;
         height: 140px;
         line-height: 140px;
         text-decoration: none;
@@ -1594,10 +1586,7 @@ nav {
     background-color: #f8f8f8;
     padding-top: 61px; }
     .bloc-reduction #reduction #reduction_container #reduction-1 ul, .bloc-reduction #reduction #reduction_container #reduction-2 ul {
-      margin: 0;
-      padding: 0; }
-      .bloc-reduction #reduction #reduction_container #reduction-1 ul li:first-child, .bloc-reduction #reduction #reduction_container #reduction-2 ul li:first-child {
-        margin: 0 0 90px 0; }
+      margin-left: 28px; }
       .bloc-reduction #reduction #reduction_container #reduction-1 ul li, .bloc-reduction #reduction #reduction_container #reduction-2 ul li {
         width: 195px;
         height: 260px;
@@ -1752,11 +1741,11 @@ nav {
     .application .img-device img {
       width: 473px;
       height: 302px;
-      margin: 44px 0 0 84px; }
+      margin: 44px 0 0 180px; }
   .application .descr-app {
     float: right; }
     .application .descr-app p {
-      margin: 110px 159px 0 0;
+      margin: 110px 255px 0 0;
       width: 320px;
       font-family: "Roboto-Medium", sans-serif;
       font-size: 18px;
@@ -1776,8 +1765,7 @@ footer {
   width: 100%; }
   footer .container-footer {
     border-top: solid 1px #F2F2F2;
-    width: 1088px;
-    margin: 0 auto;
+    margin: 0 96px 0 96px;
     height: 210px; }
     footer .container-footer ul {
       width: 210px;
@@ -1844,6 +1832,8 @@ footer {
       font: "Roboto", sans-serif;
       font-size: 13px;
       margin-left: 0px; }
+    .affiche-film .breadcrumbs a:first-child, .affiche-serie .breadcrumbs a:first-child, .affiche-young .breadcrumbs a:first-child, .affiche-spectacle .breadcrumbs a:first-child, .affiche-selection .breadcrumbs a:first-child {
+      margin-left: 96px; }
     .affiche-film .breadcrumbs a.titlebread, .affiche-serie .breadcrumbs a.titlebread, .affiche-young .breadcrumbs a.titlebread, .affiche-spectacle .breadcrumbs a.titlebread, .affiche-selection .breadcrumbs a.titlebread {
       color: rgba(255, 255, 255, 0.6); }
   .affiche-film .description-selection, .affiche-serie .description-selection, .affiche-young .description-selection, .affiche-spectacle .description-selection, .affiche-selection .description-selection {
@@ -1873,7 +1863,6 @@ footer {
       text-shadow: 0px 2px rgba(0, 0, 0, 0.6); }
   .affiche-film .description-film, .affiche-film .description-serie, .affiche-serie .description-film, .affiche-serie .description-serie, .affiche-young .description-film, .affiche-young .description-serie, .affiche-spectacle .description-film, .affiche-spectacle .description-serie, .affiche-selection .description-film, .affiche-selection .description-serie {
     float: left;
-    padding: 0;
     width: 857px; }
     .affiche-film .description-film h1, .affiche-film .description-serie h1, .affiche-serie .description-film h1, .affiche-serie .description-serie h1, .affiche-young .description-film h1, .affiche-young .description-serie h1, .affiche-spectacle .description-film h1, .affiche-spectacle .description-serie h1, .affiche-selection .description-film h1, .affiche-selection .description-serie h1 {
       color: #fff;
@@ -2050,7 +2039,7 @@ footer {
     background-size: cover;
     position: absolute; }
   .affiche-film .notation-film, .affiche-film .notation-serie, .affiche-serie .notation-film, .affiche-serie .notation-serie, .affiche-young .notation-film, .affiche-young .notation-serie, .affiche-spectacle .notation-film, .affiche-spectacle .notation-serie, .affiche-selection .notation-film, .affiche-selection .notation-serie {
-    float: right; }
+    float: right;}
     .affiche-film .notation-film img, .affiche-film .notation-serie img, .affiche-serie .notation-film img, .affiche-serie .notation-serie img, .affiche-young .notation-film img, .affiche-young .notation-serie img, .affiche-spectacle .notation-film img, .affiche-spectacle .notation-serie img, .affiche-selection .notation-film img, .affiche-selection .notation-serie img {
       margin-top: 68px;
       width: 210px;
@@ -2120,7 +2109,7 @@ footer {
     .affiche-film .notation-film .attr-list:hover, .affiche-film .notation-serie .attr-list:hover, .affiche-serie .notation-film .attr-list:hover, .affiche-serie .notation-serie .attr-list:hover, .affiche-young .notation-film .attr-list:hover, .affiche-young .notation-serie .attr-list:hover, .affiche-spectacle .notation-film .attr-list:hover, .affiche-spectacle .notation-serie .attr-list:hover, .affiche-selection .notation-film .attr-list:hover, .affiche-selection .notation-serie .attr-list:hover {
       background-color: rgba(255, 255, 255, 0.1); }
   .affiche-film .follow, .affiche-serie .follow, .affiche-young .follow, .affiche-spectacle .follow, .affiche-selection .follow {
-    padding-top: 17px; }
+    padding-top: 17px;}
     .affiche-film .follow hr, .affiche-serie .follow hr, .affiche-young .follow hr, .affiche-spectacle .follow hr, .affiche-selection .follow hr {
       width: 857px;
       display: block;
@@ -2153,7 +2142,7 @@ footer {
 .information-serie .casting {
   margin: 50px 0 0 0; }
 .information-serie .users-note {
-  margin: 50px 0 70px 0 !important; }
+  margin: 50px 96px 70px 0 !important; }
 
 .information-film, .information-serie, .information-selection {
   width: 100%;
@@ -2170,7 +2159,7 @@ footer {
       font-weight: normal; }
     .information-film .casting h3, .information-serie .casting h3, .information-selection .casting h3 {
       padding: 0;
-      margin: 0;
+      margin: 0 0 0 0;
       font-weight: normal;
       font-size: 15px;
       font-family: "Roboto", sans-serif;
@@ -2387,7 +2376,7 @@ footer {
   margin: 6px 0 0 0 !important; }
 
 .serie-episode {
-  margin: 0;
+  margin: 0 96px 0 96px;
   padding: 50px 0 50px 0;
   min-width: 1090px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
@@ -2534,7 +2523,7 @@ footer {
     margin: 20px 0 0 0; }
 
 .saison-slider h3 {
-  margin: 52px 0 0 0;
+  margin: 52px 0 0 96px;
   color: #fff;
   font-size: 32px;
   width: 1090px;
@@ -2563,6 +2552,8 @@ footer {
       font: "Roboto", sans-serif;
       font-size: 13px;
       margin-left: 0px; }
+    .filtre .breadcrumbs a:first-child {
+      margin-left: 96px; }
     .filtre .breadcrumbs a.titlebread {
       color: rgba(0, 0, 0, 0.6); }
   .filtre .filtre-genre, .filtre .filtre-tri, .filtre .filtre-langue {
@@ -2924,7 +2915,7 @@ ul.notes-echelle.js input {
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
-  margin: -180px 0 0 0;
+  margin: -180px 96px 0 0;
   z-index: 5;
   float: right; }
   #test2 li {
