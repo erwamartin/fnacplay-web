@@ -1234,6 +1234,9 @@ nav {
   float: left;
   width: 100%; }
 
+.search-overlay ul li h2 {
+  color: rgba(255, 255, 255, 0.8) !important; }
+
 /***** Just for You *****/
 /* Just for you affiche-film */
 .just-for-you.like {

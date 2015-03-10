@@ -25,6 +25,16 @@
 	z-index: 100;
 }
 
+.overlay .nbr-resultats{
+	position:absolute;
+	top: 194px;
+	right: 96px;
+	text-decoration: none;
+	color:rgba(255,255,255,0.8);
+	font-family: "Roboto-Regular", sans-serif;
+    font-size: 15px;
+}
+
 /* Menu style */
 .overlay nav {
 	text-align: center;
