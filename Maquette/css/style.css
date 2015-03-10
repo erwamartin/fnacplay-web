@@ -444,7 +444,7 @@ nav {
     width: 64px;
     display: block;
     line-height: 16px;
-    margin: 19px 0 0 60px;
+    margin: 19px 40px 0 0;
     color: #f5b027;
     font-family: "Montserrat", sans-serif;
     font-size: 13px;
@@ -574,8 +574,8 @@ nav {
   content: '';
   width: 16px;
   height: 16px;
-  top: 40px;
-  right: 172px;
+  margin-top: -20px;
+  margin-left: 38px;
   position: absolute;
   background: url("/img/facebook-profil.png");
   background-size: cover; }
@@ -625,17 +625,17 @@ nav {
   width: 1090px;
   height: 530px;
   position: absolute;
-  /*background-color: rgba($black-color, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   -webkit-transition: background 0.5s linear;
   -moz-transition: background 0.5s linear;
   -ms-transition: background 0.5s linear;
   -o-transition: background 0.5s linear;
   transition: background 0.5s linear;
-  top: 0;*/ }
+  top: 0; }
 
-/*#carousel section:nth-child(2) .overlay-section{
-    background-color: rgba($black-color, 0);
-}*/
+#carousel section:nth-child(even) .overlay-section {
+  background-color: transparent; }
+
 #carousel section article {
   position: absolute;
   padding: 75px 0 75px 75px; }
@@ -713,11 +713,11 @@ nav {
   width: 50%;
   top: 0px;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3); }
-
+    /*background-color: rgba($black-color, 0.3);
+}
 #prev:hover, #next:hover {
-  background-color: #000;
-  background-color: rgba(0, 0, 0, 0.4); }
+    background-color: $black-color;
+    background-color: rgba($black-color, 0.4);*/ }
 
 .arrow-left, .arrow-right {
   width: 30px; }
@@ -891,6 +891,9 @@ nav {
   float: right;
   position: relative;
   margin-right: 35px; }
+.news .drop-tabs.last {
+  float: left;
+  margin-left: 298px; }
 .news .aff-tabs {
   display: none;
   text-decoration: none;
@@ -2946,5 +2949,21 @@ ul#accord3 {
     -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9);
     -moz-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9); }
+
+/*****  Media queries *****/
+@media screen and (min-width: 1440px) {
+  .news #tabs .ul-link-tabs li:first-child .link-tabs h2 {
+    padding-left: 176px; }
+
+  .news #tabs .ul-link-tabs li:first-child .aff-tabs {
+    margin-left: 176px; }
+
+  .news .drop-tabs.last {
+    margin-left: 268px; } }
+@media screen and (min-width: 1600px) {
+  .container-nav {
+    margin: 0 auto;
+    width: 1600px; } }
+/***** Fin Media queries *****/
 
 /*# sourceMappingURL=style.css.map */
