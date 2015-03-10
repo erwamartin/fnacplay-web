@@ -1111,12 +1111,12 @@ nav {
     width: 13px !important;
     height: 13px !important; }
 
-#tabs-1 ul, #tabs-2 ul, .result ul, .information-selection ul {
+#tabs-1 ul, #tabs-2 ul, .result ul, .information-selection ul, .search-overlay ul {
   margin: 0 0 0 0;
   padding: 0; }
-  #tabs-1 ul li:nth-child(5n+1), #tabs-2 ul li:nth-child(5n+1), .result ul li:nth-child(5n+1), .information-selection ul li:nth-child(5n+1) {
+  #tabs-1 ul li:nth-child(5n+1), #tabs-2 ul li:nth-child(5n+1), .result ul li:nth-child(5n+1), .information-selection ul li:nth-child(5n+1), .search-overlay ul li:nth-child(5n+1) {
     margin: 0 0 90px 0; }
-  #tabs-1 ul li, #tabs-2 ul li, .result ul li, .information-selection ul li {
+  #tabs-1 ul li, #tabs-2 ul li, .result ul li, .information-selection ul li, .search-overlay ul li {
     width: 195px;
     height: 260px;
     float: left;
@@ -1125,10 +1125,10 @@ nav {
     -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-    #tabs-1 ul li img, #tabs-2 ul li img, .result ul li img, .information-selection ul li img {
+    #tabs-1 ul li img, #tabs-2 ul li img, .result ul li img, .information-selection ul li img, .search-overlay ul li img {
       width: 100%;
       height: 100%; }
-    #tabs-1 ul li h2, #tabs-2 ul li h2, .result ul li h2, .information-selection ul li h2 {
+    #tabs-1 ul li h2, #tabs-2 ul li h2, .result ul li h2, .information-selection ul li h2, .search-overlay ul li h2 {
       text-align: center;
       text-overflow: ellipsis;
       font-family: "Roboto", sans-serif;
@@ -1139,14 +1139,14 @@ nav {
       white-space: nowrap;
       overflow: hidden;
       margin: 18px 0 0 0; }
-    #tabs-1 ul li .film-note_3, #tabs-2 ul li .film-note_3, .result ul li .film-note_3, .information-selection ul li .film-note_3 {
+    #tabs-1 ul li .film-note_3, #tabs-2 ul li .film-note_3, .result ul li .film-note_3, .information-selection ul li .film-note_3, .search-overlay ul li .film-note_3 {
       background: url("/img/star.png");
       background-size: 100% 100%;
       display: inline-block;
       width: 87px;
       height: 15px;
       margin: 4px 0 0 53px; }
-    #tabs-1 ul li a .overflow-img, #tabs-2 ul li a .overflow-img, .result ul li a .overflow-img, .information-selection ul li a .overflow-img {
+    #tabs-1 ul li a .overflow-img, #tabs-2 ul li a .overflow-img, .result ul li a .overflow-img, .information-selection ul li a .overflow-img, .search-overlay ul li a .overflow-img {
       display: none;
       position: absolute;
       width: 195px;
@@ -1162,7 +1162,7 @@ nav {
       background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
       /* Opera 11.10+ */
       background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.5)); }
-      #tabs-1 ul li a .overflow-img button, #tabs-2 ul li a .overflow-img button, .result ul li a .overflow-img button, .information-selection ul li a .overflow-img button {
+      #tabs-1 ul li a .overflow-img button, #tabs-2 ul li a .overflow-img button, .result ul li a .overflow-img button, .information-selection ul li a .overflow-img button, .search-overlay ul li a .overflow-img button {
         width: 38px;
         height: 30px;
         text-align: center;
@@ -1179,10 +1179,10 @@ nav {
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         margin: 12px 0 0 146px;
         padding: 0; }
-      #tabs-1 ul li a .overflow-img button:hover, #tabs-2 ul li a .overflow-img button:hover, .result ul li a .overflow-img button:hover, .information-selection ul li a .overflow-img button:hover {
+      #tabs-1 ul li a .overflow-img button:hover, #tabs-2 ul li a .overflow-img button:hover, .result ul li a .overflow-img button:hover, .information-selection ul li a .overflow-img button:hover, .search-overlay ul li a .overflow-img button:hover {
         background-color: #f5b027;
         color: #fff; }
-      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .add-list:before {
+      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .add-list:before {
         content: "";
         position: absolute;
         z-index: 9999999999;
@@ -1195,13 +1195,13 @@ nav {
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
-      #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .add-list:before {
+      #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .add-list:before {
         left: 86px;
         top: 25px; }
-      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .see-ba:before {
+      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .see-ba:before {
         left: 86px;
         top: -5px; }
-      #tabs-1 ul li a .overflow-img .see-ba, #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .see-ba, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .add-list {
+      #tabs-1 ul li a .overflow-img .see-ba, #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .see-ba, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .add-list {
         display: none;
         white-space: nowrap;
         text-align: center;
@@ -1219,14 +1219,14 @@ nav {
         -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-      #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .add-list {
+      #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .add-list {
         margin-top: -73px; }
-      #tabs-1 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .see-ba, .result ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .see-ba {
+      #tabs-1 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .see-ba, .result ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .see-ba {
         margin-top: 15px; }
-      #tabs-1 ul li a .overflow-img button:hover .see-ba, #tabs-1 ul li a .overflow-img button:hover .add-list, #tabs-2 ul li a .overflow-img button:hover .see-ba, #tabs-2 ul li a .overflow-img button:hover .add-list, .result ul li a .overflow-img button:hover .see-ba, .result ul li a .overflow-img button:hover .add-list, .information-selection ul li a .overflow-img button:hover .see-ba, .information-selection ul li a .overflow-img button:hover .add-list {
+      #tabs-1 ul li a .overflow-img button:hover .see-ba, #tabs-1 ul li a .overflow-img button:hover .add-list, #tabs-2 ul li a .overflow-img button:hover .see-ba, #tabs-2 ul li a .overflow-img button:hover .add-list, .result ul li a .overflow-img button:hover .see-ba, .result ul li a .overflow-img button:hover .add-list, .information-selection ul li a .overflow-img button:hover .see-ba, .information-selection ul li a .overflow-img button:hover .add-list, .search-overlay ul li a .overflow-img button:hover .see-ba, .search-overlay ul li a .overflow-img button:hover .add-list {
         display: block;
         background-color: #212324; }
-    #tabs-1 ul li a:hover .overflow-img, #tabs-2 ul li a:hover .overflow-img, .result ul li a:hover .overflow-img, .information-selection ul li a:hover .overflow-img {
+    #tabs-1 ul li a:hover .overflow-img, #tabs-2 ul li a:hover .overflow-img, .result ul li a:hover .overflow-img, .information-selection ul li a:hover .overflow-img, .search-overlay ul li a:hover .overflow-img {
       display: block; }
 
 .content-selection {
@@ -2549,6 +2549,7 @@ footer {
   position: relative;
   width: 100%;
   height: 198px;
+  display: none;
   background-color: #fff;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -2732,7 +2733,7 @@ footer {
       border-radius: 29px; }
   .result button.all {
     width: 190px;
-    margin: 30px 21px 0px 96px; }
+    margin: 30px 21px 0px 0; }
   .result button.active {
     color: #232323; }
     .result button.active .circle {
@@ -2742,7 +2743,7 @@ footer {
       background-color: #f5b027;
       color: #fff; }
   .result p {
-    margin: 25px 0px 25px 96px;
+    margin: 25px 0px 25px 0;
     font-size: 15px;
     font-family: "Roboto-Bold", sans-serif;
     color: rgba(24, 25, 26, 0.6); }
@@ -2899,17 +2900,17 @@ ul.notes-echelle.js input {
 #Container .mix {
   display: none; }
 
-#test1 {
+#accord1 {
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   float: right;
   margin: -115px 40px 0 0; }
-  #test1 li {
+  #accord1 li {
     -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9);
     -moz-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9); }
-    #test1 li img {
+    #accord1 li img {
       width: 100%;
       height: 100%;
       -webkit-border-radius: 0px;
@@ -2920,25 +2921,25 @@ ul.notes-echelle.js input {
       -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
       box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
 
-#test2 {
+#accord2 {
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   margin: -180px 0 0 0;
   z-index: 5;
   float: right; }
-  #test2 li {
+  #accord2 li {
     -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9);
     -moz-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9); }
 
-ul#test3 {
+ul#accord3 {
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
   margin: 170px 0 0 -59px;
   z-index: 0; }
-  ul#test3 li {
+  ul#accord3 li {
     -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9);
     -moz-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.9); }

@@ -1536,7 +1536,7 @@ nav {
     }
 }
 
-#tabs-1, #tabs-2, .result, .information-selection{
+#tabs-1, #tabs-2, .result, .information-selection, .search-overlay{
             ul{
                 margin:0 0 0 0;
                 padding: 0;
@@ -3334,6 +3334,7 @@ footer{
     position: relative;
     width: 100%;
     height: 198px;
+    display:none;
     background-color: $white-color;
     @include box-shadow(0px 2px 4px rgba($black-color, 0.15));
 
@@ -3554,7 +3555,7 @@ footer{
 
     button.all{
         width: 190px;
-        margin: 30px 21px 0px 96px;
+        margin: 30px 21px 0px 0;
     }
 
     button.active{
@@ -3570,7 +3571,7 @@ footer{
     }
 
     p{
-        margin: 25px 0px 25px 96px;
+        margin: 25px 0px 25px 0;
         font-size: 15px;
         font-family: $roboto-bold;
         color: rgba($black-search, 0.6);
@@ -3766,7 +3767,7 @@ ul.notes-echelle.js input {
     display: none;
 }
 
-#test1{
+#accord1{
     @include box-shadow(0px 2px 10px rgba($black-color, 0.9));
     float: right;
     margin: -115px 40px 0 0;
@@ -3781,7 +3782,7 @@ ul.notes-echelle.js input {
     }
 }
 
-#test2{
+#accord2{
     @include box-shadow(0px 2px 10px rgba($black-color, 0.9));
     margin: -180px 0 0 0;
     z-index: 5;
@@ -3791,7 +3792,7 @@ ul.notes-echelle.js input {
     }
 }
 
-ul#test3{
+ul#accord3{
     @include box-shadow(0px 2px 10px rgba($black-color, 0.9));
     margin: 170px 0 0 -59px;
     z-index: 0;

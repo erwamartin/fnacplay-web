@@ -442,7 +442,7 @@
                             <button class="movie-bg movie-hovert button-selection">Voir la selection</button>
                             </div>
                             <div class="carousel-right-selection">
-                                <ul id="test3">
+                                <ul id="accord3">
                                     <li>
                                         <img src="img/aff2-tabs.png" width="135" height="180" alt="" />
                                     </li>
@@ -1421,7 +1421,7 @@
                                         <div class="text-selection">
                                             <h2>Les coups de coeurs FNAC</h2>
                                             <h3>Sex Tape, Qu’est-ce qu’on a fait au Bon Dieu, Baby Sitting…</h3>
-                                            <ul id="test1">
+                                            <ul id="accord1">
                                                 <li>
                                                     <img src="img/aff2-tabs.png" width="82" height="109" alt="" />
                                                 </li>
@@ -1791,10 +1791,124 @@
                 </div>
             </div>
         </footer>
-        <div class="overlay overlay-scale">
-            <button type="button" class="overlay-close">Close</button>
-            <label for="search"><img src="/img/loupe-search.png" alt=""></label><input type="text" placeholder="Tapez votre recherche" id="search">
-            <p class="search-p">Tapez votre recherche</p>
+        <div class="overlay overlay-scale search-overlay">
+            <div class="container">
+                <button type="button" class="overlay-close">Close</button>
+                <label for="search"><img src="/img/loupe-search.png" alt=""></label><input type="text" placeholder="Tapez votre recherche" id="search">
+                <p class="search-p">Tapez votre recherche</p>
+                    <ul>
+                            <li>
+                                <a href="index-film.html">
+                                    <div class="overflow-img tooltip" title="bmf">
+                                        <div class="button-aff">
+                                            <button class="button-top">
+                                                <i class="fa fa-heart"></i>
+                                                <div class="add-list">
+                                                    Ajouter à ma liste d'envies
+                                                </div>
+                                            </button>
+                                            <button class="button-bottom">
+                                                <i class="fa fa-play"></i>
+                                                <div class="see-ba">
+                                                    Voir la bande-annonce
+                                                </div>
+                                            </button>   
+                                        </div>
+                                    </div>
+                                    <img src="img/aff4-tabs.png" alt="" />
+                                </a>
+                                <h2>Les Gardiens de la Galaxie</h2>
+                            </li>
+                            <li>
+                                <a href="index-film.html">
+                                    <div class="overflow-img tooltip">
+                                        <div class="button-aff">
+                                            <button class="button-top">
+                                                <i class="fa fa-heart"></i>
+                                                <div class="add-list">
+                                                    Ajouter à ma liste d'envies
+                                                </div>
+                                            </button>
+                                            <button class="button-bottom">
+                                                <i class="fa fa-play"></i>
+                                                <div class="see-ba">
+                                                    Voir la bande-annonce
+                                                </div>
+                                            </button>   
+                                        </div>
+                                    </div>
+                                    <img src="img/aff2-tabs.png" alt="" />
+                                </a>
+                                <h2>Hunger Games La Révolte 1er partie</h2>
+                            </li>
+                            <li>
+                                <a href="index-film.html" class="cdc">
+                                    <div class="overflow-img tooltip">
+                                        <div class="button-aff">
+                                            <button class="button-top">
+                                                <i class="fa fa-heart"></i>
+                                                <div class="add-list">
+                                                    Ajouter à ma liste d'envies
+                                                </div>
+                                            </button>
+                                            <button class="button-bottom">
+                                                <i class="fa fa-play"></i>
+                                                <div class="see-ba">
+                                                    Voir la bande-annonce
+                                                </div>
+                                            </button>   
+                                        </div>
+                                    </div>
+                                    <img src="img/aff3-tabs.png" alt="" />
+                                </a>
+                                <h2>Interstellar</h2>
+                            </li>
+                            <li>
+                                <a href="index-film.html" class="cdc">
+                                    <div class="overflow-img tooltip">
+                                        <div class="button-aff">
+                                            <button class="button-top">
+                                                <i class="fa fa-heart"></i>
+                                                <div class="add-list">
+                                                    Ajouter à ma liste d'envies
+                                                </div>
+                                            </button>
+                                            <button class="button-bottom">
+                                                <i class="fa fa-play"></i>
+                                                <div class="see-ba">
+                                                    Voir la bande-annonce
+                                                </div>
+                                            </button>   
+                                        </div>
+                                    </div>
+                                    <img src="img/aff4-tabs.png" alt="" />
+                                </a>
+                                <h2>Les Gardiens de la Galaxie</h2>
+                            </li>
+                            <li>
+                                <a href="index-film.html">
+                                    <div class="overflow-img tooltip">
+                                        <div class="button-aff">
+                                            <button class="button-top">
+                                                <i class="fa fa-heart"></i>
+                                                <div class="add-list">
+                                                    Ajouter à ma liste d'envies
+                                                </div>
+                                            </button>
+                                            <button class="button-bottom">
+                                                <i class="fa fa-play"></i>
+                                                <div class="see-ba">
+                                                    Voir la bande-annonce
+                                                </div>
+                                            </button>   
+                                        </div>
+                                    </div>
+                                    <img src="img/aff5-tabs.png" alt="" />
+                                </a>
+                                <h2>Night Call</h2>
+                            </li>
+                        </ul>
+                </div>
         </div>
 
         <!--
@@ -1824,7 +1938,7 @@
                         deviation: 1
                     }
                 });
-                $("#test1").zAccordion({
+                $("#accord1").zAccordion({
                     speed: 250,
                     auto: false,
                     startingSlide: 4,
@@ -1833,7 +1947,7 @@
                     width: 273,
                     height: 109
                 });
-                $("#test3").zAccordion({
+                $("#accord3").zAccordion({
                     speed: 250,
                     auto: false,
                     startingSlide: 4,
