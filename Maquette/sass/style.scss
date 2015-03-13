@@ -623,6 +623,12 @@ nav {
     }
 }
 
+.young:hover, .young.active{
+    .k, .i, .d,.s{
+        color: $white-color;
+    }
+}
+
 .movie:hover, .serie:hover, .young:hover, .spectacle:hover, .adult:hover{
     a{
         color: $white-color;
@@ -960,7 +966,7 @@ nav {
 #carousel section img{
     width: 100%;
 }
-#carousel sectionnth-child(odd) .overlay-section{
+#carousel section .overlay-section{
     width: 1090px;
     height: 530px;
     position: absolute;
@@ -973,7 +979,7 @@ nav {
     top: 0;
 }
 
-#carousel section:nth-child(even) .overlay-section{
+#carousel section:nth-child(2) .overlay-section{
     background-color: rgba($black-color, 0);
 }
 #carousel section article{
@@ -1541,7 +1547,7 @@ nav {
     }
 }
 
-#tabs-1, #tabs-2, .result, .information-selection, .search-overlay{
+#tabs-1, #tabs-2, .result, .information-selection, .search-overlay, .remodal .container-pop{
             ul{
                 margin:0 0 0 0;
                 padding: 0;
@@ -2804,7 +2810,6 @@ footer{
             border-top: 1px solid rgba($white-color, 0.1);
             padding: 0;
         }
-
         .right{
             font-size: 13px;
             color: $white-color;
@@ -2817,15 +2822,12 @@ footer{
                 margin: 0 10px 0 10px;
                 font-size: 24px;
             }
-
             .fa-twitter:hover{
                 color:#30D8F0;
             }
-
             .fa-facebook-official:hover{
                 color: #3b5999;
             }
-
             .fa-google-plus:hover{
                 color:#D34836;
             }
@@ -3529,11 +3531,31 @@ footer{
 }
 
 .result{
+    /*padding-top: 25px;*/
     min-height: 390px;
     width: 100%;
     background-color: $gray-tabs;
 
+    .breadcrumbs{
+        width: 100%;
+        margin-bottom: 20px;
+        line-height: 27px;
+        background-color: rgba(0, 0, 0, 0.015);
+
+        a{
+            text-decoration: none;
+            color: $black-color;
+            font: $roboto;
+            font-size: 13px;
+            margin-left: 0px;
+        }
+        a.titlebread{
+            color: rgba($black-color, 0.6);
+        }
+    }
+
     .button-filter{
+        display: none;
         .circle{
             width: 9px;
             height: 9px;
@@ -3585,8 +3607,17 @@ footer{
         }
     }
 
+    .search-input{
+        margin: 0;
+        padding: 0;
+        color: rgba($black-color, 0.7);
+        font-size: 28px;
+        font-family: $montserrat-bold;
+        text-transform: uppercase;
+    }
+
     p{
-        margin: 25px 0px 25px 0;
+        margin: 20px 0px 25px 0;
         font-size: 15px;
         font-family: $roboto-bold;
         color: rgba($black-search, 0.6);

@@ -30,6 +30,10 @@ $(document).ready(function($) {
         $('.search-p').text('Appuyez sur « Entrée » pour voir tous les résultats');
     });
 
+    $( "#search" ).blur(function() {
+        $('.search-p').text('Tapez votre recherche');
+    });
+
     /*var availableTags = [
       "American Sniper",
       "American Nightmare",
