@@ -1117,12 +1117,12 @@ nav {
     width: 13px !important;
     height: 13px !important; }
 
-#tabs-1 ul, #tabs-2 ul, .result ul, .information-selection ul, .search-overlay ul, .remodal .container-pop ul {
+#tabs-1 ul, #tabs-2 ul, .result ul, .information-selection ul, .search-overlay ul, .remodal .container-pop ul, .videotheque-list ul, .title-just.wishlist-list ul, .my-note-list ul {
   margin: 0 0 0 0;
   padding: 0; }
-  #tabs-1 ul li:nth-child(5n+1), #tabs-2 ul li:nth-child(5n+1), .result ul li:nth-child(5n+1), .information-selection ul li:nth-child(5n+1), .search-overlay ul li:nth-child(5n+1), .remodal .container-pop ul li:nth-child(5n+1) {
+  #tabs-1 ul li:nth-child(5n+1), #tabs-2 ul li:nth-child(5n+1), .result ul li:nth-child(5n+1), .information-selection ul li:nth-child(5n+1), .search-overlay ul li:nth-child(5n+1), .remodal .container-pop ul li:nth-child(5n+1), .videotheque-list ul li:nth-child(5n+1), .title-just.wishlist-list ul li:nth-child(5n+1), .my-note-list ul li:nth-child(5n+1) {
     margin: 0 0 90px 0; }
-  #tabs-1 ul li, #tabs-2 ul li, .result ul li, .information-selection ul li, .search-overlay ul li, .remodal .container-pop ul li {
+  #tabs-1 ul li, #tabs-2 ul li, .result ul li, .information-selection ul li, .search-overlay ul li, .remodal .container-pop ul li, .videotheque-list ul li, .title-just.wishlist-list ul li, .my-note-list ul li {
     width: 195px;
     height: 260px;
     float: left;
@@ -1131,10 +1131,10 @@ nav {
     -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-    #tabs-1 ul li img, #tabs-2 ul li img, .result ul li img, .information-selection ul li img, .search-overlay ul li img, .remodal .container-pop ul li img {
+    #tabs-1 ul li img, #tabs-2 ul li img, .result ul li img, .information-selection ul li img, .search-overlay ul li img, .remodal .container-pop ul li img, .videotheque-list ul li img, .title-just.wishlist-list ul li img, .my-note-list ul li img {
       width: 100%;
       height: 100%; }
-    #tabs-1 ul li h2, #tabs-2 ul li h2, .result ul li h2, .information-selection ul li h2, .search-overlay ul li h2, .remodal .container-pop ul li h2 {
+    #tabs-1 ul li h2, #tabs-2 ul li h2, .result ul li h2, .information-selection ul li h2, .search-overlay ul li h2, .remodal .container-pop ul li h2, .videotheque-list ul li h2, .title-just.wishlist-list ul li h2, .my-note-list ul li h2 {
       text-align: center;
       text-overflow: ellipsis;
       font-family: "Roboto", sans-serif;
@@ -1145,14 +1145,14 @@ nav {
       white-space: nowrap;
       overflow: hidden;
       margin: 18px 0 0 0; }
-    #tabs-1 ul li .film-note_3, #tabs-2 ul li .film-note_3, .result ul li .film-note_3, .information-selection ul li .film-note_3, .search-overlay ul li .film-note_3, .remodal .container-pop ul li .film-note_3 {
+    #tabs-1 ul li .film-note_3, #tabs-2 ul li .film-note_3, .result ul li .film-note_3, .information-selection ul li .film-note_3, .search-overlay ul li .film-note_3, .remodal .container-pop ul li .film-note_3, .videotheque-list ul li .film-note_3, .title-just.wishlist-list ul li .film-note_3, .my-note-list ul li .film-note_3 {
       background: url("/img/star.png");
       background-size: 100% 100%;
       display: inline-block;
       width: 87px;
       height: 15px;
       margin: 4px 0 0 53px; }
-    #tabs-1 ul li a .overflow-img, #tabs-2 ul li a .overflow-img, .result ul li a .overflow-img, .information-selection ul li a .overflow-img, .search-overlay ul li a .overflow-img, .remodal .container-pop ul li a .overflow-img {
+    #tabs-1 ul li a .overflow-img, #tabs-2 ul li a .overflow-img, .result ul li a .overflow-img, .information-selection ul li a .overflow-img, .search-overlay ul li a .overflow-img, .remodal .container-pop ul li a .overflow-img, .videotheque-list ul li a .overflow-img, .title-just.wishlist-list ul li a .overflow-img, .my-note-list ul li a .overflow-img {
       display: none;
       position: absolute;
       width: 195px;
@@ -1168,7 +1168,7 @@ nav {
       background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
       /* Opera 11.10+ */
       background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.5)); }
-      #tabs-1 ul li a .overflow-img button, #tabs-2 ul li a .overflow-img button, .result ul li a .overflow-img button, .information-selection ul li a .overflow-img button, .search-overlay ul li a .overflow-img button, .remodal .container-pop ul li a .overflow-img button {
+      #tabs-1 ul li a .overflow-img button, #tabs-2 ul li a .overflow-img button, .result ul li a .overflow-img button, .information-selection ul li a .overflow-img button, .search-overlay ul li a .overflow-img button, .remodal .container-pop ul li a .overflow-img button, .videotheque-list ul li a .overflow-img button, .title-just.wishlist-list ul li a .overflow-img button, .my-note-list ul li a .overflow-img button {
         width: 38px;
         height: 30px;
         text-align: center;
@@ -1185,10 +1185,10 @@ nav {
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         margin: 12px 0 0 146px;
         padding: 0; }
-      #tabs-1 ul li a .overflow-img button:hover, #tabs-2 ul li a .overflow-img button:hover, .result ul li a .overflow-img button:hover, .information-selection ul li a .overflow-img button:hover, .search-overlay ul li a .overflow-img button:hover, .remodal .container-pop ul li a .overflow-img button:hover {
+      #tabs-1 ul li a .overflow-img button:hover, #tabs-2 ul li a .overflow-img button:hover, .result ul li a .overflow-img button:hover, .information-selection ul li a .overflow-img button:hover, .search-overlay ul li a .overflow-img button:hover, .remodal .container-pop ul li a .overflow-img button:hover, .videotheque-list ul li a .overflow-img button:hover, .title-just.wishlist-list ul li a .overflow-img button:hover, .my-note-list ul li a .overflow-img button:hover {
         background-color: #f5b027;
         color: #fff; }
-      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .add-list:before, .remodal .container-pop ul li a .overflow-img .see-ba:before, .remodal .container-pop ul li a .overflow-img .add-list:before {
+      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .add-list:before, .remodal .container-pop ul li a .overflow-img .see-ba:before, .remodal .container-pop ul li a .overflow-img .add-list:before, .videotheque-list ul li a .overflow-img .see-ba:before, .videotheque-list ul li a .overflow-img .add-list:before, .title-just.wishlist-list ul li a .overflow-img .see-ba:before, .title-just.wishlist-list ul li a .overflow-img .add-list:before, .my-note-list ul li a .overflow-img .see-ba:before, .my-note-list ul li a .overflow-img .add-list:before {
         content: "";
         position: absolute;
         z-index: 9999999999;
@@ -1201,13 +1201,13 @@ nav {
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
-      #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .add-list:before, .remodal .container-pop ul li a .overflow-img .add-list:before {
+      #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .add-list:before, .remodal .container-pop ul li a .overflow-img .add-list:before, .videotheque-list ul li a .overflow-img .add-list:before, .title-just.wishlist-list ul li a .overflow-img .add-list:before, .my-note-list ul li a .overflow-img .add-list:before {
         left: 86px;
         top: 25px; }
-      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .see-ba:before, .remodal .container-pop ul li a .overflow-img .see-ba:before {
+      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .see-ba:before, .remodal .container-pop ul li a .overflow-img .see-ba:before, .videotheque-list ul li a .overflow-img .see-ba:before, .title-just.wishlist-list ul li a .overflow-img .see-ba:before, .my-note-list ul li a .overflow-img .see-ba:before {
         left: 86px;
         top: -5px; }
-      #tabs-1 ul li a .overflow-img .see-ba, #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .see-ba, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .add-list, .remodal .container-pop ul li a .overflow-img .see-ba, .remodal .container-pop ul li a .overflow-img .add-list {
+      #tabs-1 ul li a .overflow-img .see-ba, #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .see-ba, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .add-list, .remodal .container-pop ul li a .overflow-img .see-ba, .remodal .container-pop ul li a .overflow-img .add-list, .videotheque-list ul li a .overflow-img .see-ba, .videotheque-list ul li a .overflow-img .add-list, .title-just.wishlist-list ul li a .overflow-img .see-ba, .title-just.wishlist-list ul li a .overflow-img .add-list, .my-note-list ul li a .overflow-img .see-ba, .my-note-list ul li a .overflow-img .add-list {
         display: none;
         white-space: nowrap;
         text-align: center;
@@ -1225,20 +1225,27 @@ nav {
         -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-      #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .add-list, .remodal .container-pop ul li a .overflow-img .add-list {
+      #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .add-list, .remodal .container-pop ul li a .overflow-img .add-list, .videotheque-list ul li a .overflow-img .add-list, .title-just.wishlist-list ul li a .overflow-img .add-list, .my-note-list ul li a .overflow-img .add-list {
         margin-top: -73px; }
-      #tabs-1 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .see-ba, .result ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .see-ba, .remodal .container-pop ul li a .overflow-img .see-ba {
+      #tabs-1 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .see-ba, .result ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .see-ba, .remodal .container-pop ul li a .overflow-img .see-ba, .videotheque-list ul li a .overflow-img .see-ba, .title-just.wishlist-list ul li a .overflow-img .see-ba, .my-note-list ul li a .overflow-img .see-ba {
         margin-top: 15px; }
-      #tabs-1 ul li a .overflow-img button:hover .see-ba, #tabs-1 ul li a .overflow-img button:hover .add-list, #tabs-2 ul li a .overflow-img button:hover .see-ba, #tabs-2 ul li a .overflow-img button:hover .add-list, .result ul li a .overflow-img button:hover .see-ba, .result ul li a .overflow-img button:hover .add-list, .information-selection ul li a .overflow-img button:hover .see-ba, .information-selection ul li a .overflow-img button:hover .add-list, .search-overlay ul li a .overflow-img button:hover .see-ba, .search-overlay ul li a .overflow-img button:hover .add-list, .remodal .container-pop ul li a .overflow-img button:hover .see-ba, .remodal .container-pop ul li a .overflow-img button:hover .add-list {
+      #tabs-1 ul li a .overflow-img button:hover .see-ba, #tabs-1 ul li a .overflow-img button:hover .add-list, #tabs-2 ul li a .overflow-img button:hover .see-ba, #tabs-2 ul li a .overflow-img button:hover .add-list, .result ul li a .overflow-img button:hover .see-ba, .result ul li a .overflow-img button:hover .add-list, .information-selection ul li a .overflow-img button:hover .see-ba, .information-selection ul li a .overflow-img button:hover .add-list, .search-overlay ul li a .overflow-img button:hover .see-ba, .search-overlay ul li a .overflow-img button:hover .add-list, .remodal .container-pop ul li a .overflow-img button:hover .see-ba, .remodal .container-pop ul li a .overflow-img button:hover .add-list, .videotheque-list ul li a .overflow-img button:hover .see-ba, .videotheque-list ul li a .overflow-img button:hover .add-list, .title-just.wishlist-list ul li a .overflow-img button:hover .see-ba, .title-just.wishlist-list ul li a .overflow-img button:hover .add-list, .my-note-list ul li a .overflow-img button:hover .see-ba, .my-note-list ul li a .overflow-img button:hover .add-list {
         display: block;
         background-color: #212324; }
-    #tabs-1 ul li a:hover .overflow-img, #tabs-2 ul li a:hover .overflow-img, .result ul li a:hover .overflow-img, .information-selection ul li a:hover .overflow-img, .search-overlay ul li a:hover .overflow-img, .remodal .container-pop ul li a:hover .overflow-img {
+    #tabs-1 ul li a:hover .overflow-img, #tabs-2 ul li a:hover .overflow-img, .result ul li a:hover .overflow-img, .information-selection ul li a:hover .overflow-img, .search-overlay ul li a:hover .overflow-img, .remodal .container-pop ul li a:hover .overflow-img, .videotheque-list ul li a:hover .overflow-img, .title-just.wishlist-list ul li a:hover .overflow-img, .my-note-list ul li a:hover .overflow-img {
       display: block; }
 
 .content-selection {
   margin: -250px 0 0 0;
   float: left;
   width: 100%; }
+
+.container-pop ul li:nth-child(4n+1) {
+  margin: 0 0 90px 0 !important; }
+.container-pop ul li:nth-child(5n+1) {
+  margin: 0 0 90px 28px !important; }
+.container-pop ul li:first-child {
+  margin: 0 0 90px 0 !important; }
 
 .search-overlay ul li h2 {
   color: rgba(255, 255, 255, 0.8) !important; }
@@ -2553,6 +2560,161 @@ footer {
   font-weight: normal; }
 
 /***** Fin Affiche Serie *****/
+/***** My fnac play *****/
+.affiche-myfnacplay {
+  background: linear-gradient(to bottom, rgba(24, 25, 26, 0.5), #18191a), url("/img/selection-aff.jpg"); }
+
+.affiche-myfnacplay {
+  width: 100%;
+  height: 328px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .affiche-myfnacplay .container {
+    padding-top: 72px; }
+    .affiche-myfnacplay .container img {
+      width: 120px;
+      float: left;
+      height: 120px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      border-radius: 6px;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5); }
+    .affiche-myfnacplay .container .name-fnacplay {
+      padding: 20px 0 0 30px;
+      float: left; }
+      .affiche-myfnacplay .container .name-fnacplay h2 {
+        color: #fff;
+        margin: 0 0 10px 0;
+        font-family: "Montserrat-Bold", sans-serif;
+        text-transform: uppercase;
+        font-size: 30px;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+      .affiche-myfnacplay .container .name-fnacplay a {
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        width: 180px;
+        text-decoration: none;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        padding: 9px 20px 9px 20px; }
+
+#videotheque {
+  background-color: #f8f8f8; }
+
+#tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs {
+  padding: 0;
+  margin: -61px 0 0 0; }
+  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li:first-child {
+    width: 272px !important;
+    border-left: none !important; }
+  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    width: 271px;
+    border-left: solid 1px rgba(255, 255, 255, 0.2); }
+    #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a {
+      display: block;
+      padding: 20px 0 20px 0;
+      background-color: #18191a;
+      text-decoration: none; }
+      #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a i {
+        font-size: 11px; }
+      #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a h2 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: normal;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7); }
+  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs .ui-state-active a {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #f8f8f8; }
+    #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs .ui-state-active a h2 {
+      color: #18191a; }
+
+.title-just.wishlist, .title-just.my-note {
+  padding: 50px; }
+
+.title-just.videotheque, .title-just.wishlist, .title-just.my-note {
+  margin: 0; }
+  .title-just.videotheque h3, .title-just.wishlist h3, .title-just.my-note h3 {
+    float: left;
+    color: #fff;
+    font-family: "Roboto-Thin", sans-serif;
+    font-size: 32px !important;
+    font-weight: 300;
+    margin: 0;
+    color: #171717; }
+  .title-just.videotheque .link-filter, .title-just.wishlist .link-filter, .title-just.my-note .link-filter {
+    float: right;
+    padding: 0;
+    margin: 14px 0 0 0; }
+    .title-just.videotheque .link-filter li, .title-just.wishlist .link-filter li, .title-just.my-note .link-filter li {
+      float: left;
+      list-style-type: none;
+      margin: 0 0 0 30px; }
+      .title-just.videotheque .link-filter li a, .title-just.wishlist .link-filter li a, .title-just.my-note .link-filter li a {
+        text-decoration: none;
+        color: rgba(33, 35, 36, 0.7);
+        font-size: 18px;
+        font-family: "Roboto", sans-serif; }
+        .title-just.videotheque .link-filter li a span, .title-just.wishlist .link-filter li a span, .title-just.my-note .link-filter li a span {
+          display: inline-table;
+          line-height: 22px;
+          font-size: 13px;
+          width: 22px;
+          color: #fff;
+          margin: 0 3px 0 0;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+          background-color: rgba(33, 35, 36, 0.5); }
+      .title-just.videotheque .link-filter li a.active, .title-just.wishlist .link-filter li a.active, .title-just.my-note .link-filter li a.active {
+        color: #212324;
+        font-family: "Roboto-Medium", sans-serif; }
+  .title-just.videotheque .videotheque-list, .title-just.videotheque .wishlist-list, .title-just.videotheque .my-note-list, .title-just.wishlist .videotheque-list, .title-just.wishlist .wishlist-list, .title-just.wishlist .my-note-list, .title-just.my-note .videotheque-list, .title-just.my-note .wishlist-list, .title-just.my-note .my-note-list {
+    padding: 30px 0 0 0; }
+
+.my-actor-list .bloc-actor {
+  width: 350px;
+  height: 120px;
+  float: left;
+  margin: 20px 19px 0 0;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15); }
+  .my-actor-list .bloc-actor .img-actor {
+    width: 90px;
+    float: left;
+    margin: 0 20px 0 0; }
+  .my-actor-list .bloc-actor h2 {
+    font-family: "Roboto-Bold", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(33, 35, 36, 0.8);
+    margin: 15px 0 0 0; }
+  .my-actor-list .bloc-actor h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(33, 35, 36, 0.6);
+    margin: 0; }
+.my-actor-list .bloc-actor:nth-child(3n) {
+  margin: 20px 0 0 0; }
+
+/***** Fin My fnac play *****/
 /***** Recherche *****/
 .filtre {
   position: relative;

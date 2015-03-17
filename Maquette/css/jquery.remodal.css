@@ -39,6 +39,8 @@ html.remodal-is-locked {
     right: 0;
     bottom: 0;
     left: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     display: none;
     overflow: auto;
@@ -88,6 +90,8 @@ html.remodal-is-locked {
     background-color: #fff;
     border-bottom: solid 1px #E5E5E5;
     box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .remodal .header-pop img.actor{

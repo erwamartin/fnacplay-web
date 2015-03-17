@@ -1,6 +1,6 @@
 $(document).ready(function($) {
     $('#tabs').tabs({
-    	show: {effect: "fade", duration: 800}
+    	show: {effect: "fade", duration: 500}
     });
 
     $('.tooltip').tooltipster({
@@ -23,7 +23,11 @@ $(document).ready(function($) {
     });
 
     $('#reduction').tabs({
-        show: {effect: "fade", duration: 800}
+        show: {effect: "fade", duration: 500}
+    });
+
+    $('#tabs-fnacplay').tabs({
+        show: {effect: "drop", duration: 500}
     });
 
     $( "#search" ).focus(function() {
