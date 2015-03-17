@@ -1547,7 +1547,7 @@ nav {
     }
 }
 
-#tabs-1, #tabs-2, .result, .information-selection, .search-overlay, .remodal .container-pop, .videotheque-list, .title-just.wishlist-list, .my-note-list{
+#tabs-1, #tabs-2, .result, .information-selection, .search-overlay, .remodal .container-pop, .videotheque-list, .wishlist-list, .my-note-list{
             ul{
                 margin:0 0 0 0;
                 padding: 0;
@@ -3410,7 +3410,7 @@ footer{
 #videotheque{
     background-color: $gray-tabs;   
 }
-#tabs-fnacplay{
+#tabs-fnacplay, .account-tabs{
     .container{
         .tabs-fnacplay{
             .ul-link-tabs{
@@ -3509,13 +3509,20 @@ footer{
     }
 }
 
+#my-actor, #my-note, #wishlist{
+    background-color: $gray-tabs;
+    padding: 20px 0 0 0;
+}
+
 .my-actor-list{
     .bloc-actor{
         width: 350px;
         height: 120px;
         float: left;
+        position:relative;
         margin:20px 19px 0 0;
         background-color: $white-color;
+        @include border-radius(3px);
         box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
         .img-actor{
             width: 90px;
@@ -3536,13 +3543,119 @@ footer{
             color: rgba($selection_black-color, 0.6);
             margin: 0;    
         }
+        button{
+            line-height: 27px;
+            width: 92px;
+            background-color: $white-color;
+            border-radius: 3px;
+            font-family: $montserrat;
+            margin: 20px 0 0 0;
+            font-size: 12px;
+            border: solid 1px #e0e0e0;
+            img{
+                width: 12px;
+            }
+        }
     }
     .bloc-actor:nth-child(3n){
         margin: 20px 0 0 0;
     }
 }
 
+.close-actor{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    width: 16px;
+    height: 16px;
+    text-decoration: none;
+}
+
+.close-actor:after{
+    font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+    font-size: 28px;
+    line-height: 20px;
+    display: block;
+    content: "×";
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(0,0,0,0.4);
+}
+
+.margin-bottom{
+    margin-bottom: 40px;
+}
+
 /***** Fin My fnac play *****/
+
+/***** My account *****/
+
+.nav-account{
+    width: 202px;
+    padding: 63px 0 0 0;
+    float: left;
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            margin: 20px 0 20px 0;
+            list-style-type:none;
+            a{
+                font-family: $roboto-medium;
+                text-decoration: none;
+                color: rgba($selection_black-color ,0.7);
+            }
+        }
+    }
+}
+
+.info-account{
+    padding: 63px 195px 0 0;
+    float: right;
+    .modification-account, .modification-localisation, .modification-facture, .modification-card, .modification-newsletter, .modification-parental, .modification-appareils{
+        background-color: $white-color;
+        margin: 0;
+        width: 690px;
+        box-shadow: 0px 1px 3px rgba($black-color, 0.15);
+        margin: 30px 0 0 0;
+        h3{
+            font-family: $roboto-light;
+            font-size: 32px;
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            color: $tabs_black-color;
+        }
+    }
+    .modification-account{
+        height: 350px;
+    }
+    .modification-localisation{
+        height: 570px;
+    }
+    .modification-facture{
+        height: 360px;
+    }
+    .modification-card{
+        height: 360px;
+    }
+    .modification-newsletter{
+        height: 360px;
+    }
+    .modification-parental{
+        height: 290px;
+    }
+    .modification-appareils{
+        height: 240px;
+    }
+}
+
+.my-account{
+    background-color: $gray-tabs;
+}
+
+/***** Fin my account *****/
 
 /***** Recherche *****/
 

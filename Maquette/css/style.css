@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***** Variables *****/
 /***** Univers color *****/
 /***** Color Spec Aff film *****/
@@ -1117,12 +1118,12 @@ nav {
     width: 13px !important;
     height: 13px !important; }
 
-#tabs-1 ul, #tabs-2 ul, .result ul, .information-selection ul, .search-overlay ul, .remodal .container-pop ul, .videotheque-list ul, .title-just.wishlist-list ul, .my-note-list ul {
+#tabs-1 ul, #tabs-2 ul, .result ul, .information-selection ul, .search-overlay ul, .remodal .container-pop ul, .videotheque-list ul, .wishlist-list ul, .my-note-list ul {
   margin: 0 0 0 0;
   padding: 0; }
-  #tabs-1 ul li:nth-child(5n+1), #tabs-2 ul li:nth-child(5n+1), .result ul li:nth-child(5n+1), .information-selection ul li:nth-child(5n+1), .search-overlay ul li:nth-child(5n+1), .remodal .container-pop ul li:nth-child(5n+1), .videotheque-list ul li:nth-child(5n+1), .title-just.wishlist-list ul li:nth-child(5n+1), .my-note-list ul li:nth-child(5n+1) {
+  #tabs-1 ul li:nth-child(5n+1), #tabs-2 ul li:nth-child(5n+1), .result ul li:nth-child(5n+1), .information-selection ul li:nth-child(5n+1), .search-overlay ul li:nth-child(5n+1), .remodal .container-pop ul li:nth-child(5n+1), .videotheque-list ul li:nth-child(5n+1), .wishlist-list ul li:nth-child(5n+1), .my-note-list ul li:nth-child(5n+1) {
     margin: 0 0 90px 0; }
-  #tabs-1 ul li, #tabs-2 ul li, .result ul li, .information-selection ul li, .search-overlay ul li, .remodal .container-pop ul li, .videotheque-list ul li, .title-just.wishlist-list ul li, .my-note-list ul li {
+  #tabs-1 ul li, #tabs-2 ul li, .result ul li, .information-selection ul li, .search-overlay ul li, .remodal .container-pop ul li, .videotheque-list ul li, .wishlist-list ul li, .my-note-list ul li {
     width: 195px;
     height: 260px;
     float: left;
@@ -1131,10 +1132,10 @@ nav {
     -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-    #tabs-1 ul li img, #tabs-2 ul li img, .result ul li img, .information-selection ul li img, .search-overlay ul li img, .remodal .container-pop ul li img, .videotheque-list ul li img, .title-just.wishlist-list ul li img, .my-note-list ul li img {
+    #tabs-1 ul li img, #tabs-2 ul li img, .result ul li img, .information-selection ul li img, .search-overlay ul li img, .remodal .container-pop ul li img, .videotheque-list ul li img, .wishlist-list ul li img, .my-note-list ul li img {
       width: 100%;
       height: 100%; }
-    #tabs-1 ul li h2, #tabs-2 ul li h2, .result ul li h2, .information-selection ul li h2, .search-overlay ul li h2, .remodal .container-pop ul li h2, .videotheque-list ul li h2, .title-just.wishlist-list ul li h2, .my-note-list ul li h2 {
+    #tabs-1 ul li h2, #tabs-2 ul li h2, .result ul li h2, .information-selection ul li h2, .search-overlay ul li h2, .remodal .container-pop ul li h2, .videotheque-list ul li h2, .wishlist-list ul li h2, .my-note-list ul li h2 {
       text-align: center;
       text-overflow: ellipsis;
       font-family: "Roboto", sans-serif;
@@ -1145,14 +1146,14 @@ nav {
       white-space: nowrap;
       overflow: hidden;
       margin: 18px 0 0 0; }
-    #tabs-1 ul li .film-note_3, #tabs-2 ul li .film-note_3, .result ul li .film-note_3, .information-selection ul li .film-note_3, .search-overlay ul li .film-note_3, .remodal .container-pop ul li .film-note_3, .videotheque-list ul li .film-note_3, .title-just.wishlist-list ul li .film-note_3, .my-note-list ul li .film-note_3 {
+    #tabs-1 ul li .film-note_3, #tabs-2 ul li .film-note_3, .result ul li .film-note_3, .information-selection ul li .film-note_3, .search-overlay ul li .film-note_3, .remodal .container-pop ul li .film-note_3, .videotheque-list ul li .film-note_3, .wishlist-list ul li .film-note_3, .my-note-list ul li .film-note_3 {
       background: url("/img/star.png");
       background-size: 100% 100%;
       display: inline-block;
       width: 87px;
       height: 15px;
       margin: 4px 0 0 53px; }
-    #tabs-1 ul li a .overflow-img, #tabs-2 ul li a .overflow-img, .result ul li a .overflow-img, .information-selection ul li a .overflow-img, .search-overlay ul li a .overflow-img, .remodal .container-pop ul li a .overflow-img, .videotheque-list ul li a .overflow-img, .title-just.wishlist-list ul li a .overflow-img, .my-note-list ul li a .overflow-img {
+    #tabs-1 ul li a .overflow-img, #tabs-2 ul li a .overflow-img, .result ul li a .overflow-img, .information-selection ul li a .overflow-img, .search-overlay ul li a .overflow-img, .remodal .container-pop ul li a .overflow-img, .videotheque-list ul li a .overflow-img, .wishlist-list ul li a .overflow-img, .my-note-list ul li a .overflow-img {
       display: none;
       position: absolute;
       width: 195px;
@@ -1168,7 +1169,7 @@ nav {
       background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
       /* Opera 11.10+ */
       background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.5)); }
-      #tabs-1 ul li a .overflow-img button, #tabs-2 ul li a .overflow-img button, .result ul li a .overflow-img button, .information-selection ul li a .overflow-img button, .search-overlay ul li a .overflow-img button, .remodal .container-pop ul li a .overflow-img button, .videotheque-list ul li a .overflow-img button, .title-just.wishlist-list ul li a .overflow-img button, .my-note-list ul li a .overflow-img button {
+      #tabs-1 ul li a .overflow-img button, #tabs-2 ul li a .overflow-img button, .result ul li a .overflow-img button, .information-selection ul li a .overflow-img button, .search-overlay ul li a .overflow-img button, .remodal .container-pop ul li a .overflow-img button, .videotheque-list ul li a .overflow-img button, .wishlist-list ul li a .overflow-img button, .my-note-list ul li a .overflow-img button {
         width: 38px;
         height: 30px;
         text-align: center;
@@ -1185,10 +1186,10 @@ nav {
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         margin: 12px 0 0 146px;
         padding: 0; }
-      #tabs-1 ul li a .overflow-img button:hover, #tabs-2 ul li a .overflow-img button:hover, .result ul li a .overflow-img button:hover, .information-selection ul li a .overflow-img button:hover, .search-overlay ul li a .overflow-img button:hover, .remodal .container-pop ul li a .overflow-img button:hover, .videotheque-list ul li a .overflow-img button:hover, .title-just.wishlist-list ul li a .overflow-img button:hover, .my-note-list ul li a .overflow-img button:hover {
+      #tabs-1 ul li a .overflow-img button:hover, #tabs-2 ul li a .overflow-img button:hover, .result ul li a .overflow-img button:hover, .information-selection ul li a .overflow-img button:hover, .search-overlay ul li a .overflow-img button:hover, .remodal .container-pop ul li a .overflow-img button:hover, .videotheque-list ul li a .overflow-img button:hover, .wishlist-list ul li a .overflow-img button:hover, .my-note-list ul li a .overflow-img button:hover {
         background-color: #f5b027;
         color: #fff; }
-      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .add-list:before, .remodal .container-pop ul li a .overflow-img .see-ba:before, .remodal .container-pop ul li a .overflow-img .add-list:before, .videotheque-list ul li a .overflow-img .see-ba:before, .videotheque-list ul li a .overflow-img .add-list:before, .title-just.wishlist-list ul li a .overflow-img .see-ba:before, .title-just.wishlist-list ul li a .overflow-img .add-list:before, .my-note-list ul li a .overflow-img .see-ba:before, .my-note-list ul li a .overflow-img .add-list:before {
+      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .add-list:before, .remodal .container-pop ul li a .overflow-img .see-ba:before, .remodal .container-pop ul li a .overflow-img .add-list:before, .videotheque-list ul li a .overflow-img .see-ba:before, .videotheque-list ul li a .overflow-img .add-list:before, .wishlist-list ul li a .overflow-img .see-ba:before, .wishlist-list ul li a .overflow-img .add-list:before, .my-note-list ul li a .overflow-img .see-ba:before, .my-note-list ul li a .overflow-img .add-list:before {
         content: "";
         position: absolute;
         z-index: 9999999999;
@@ -1201,13 +1202,13 @@ nav {
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg); }
-      #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .add-list:before, .remodal .container-pop ul li a .overflow-img .add-list:before, .videotheque-list ul li a .overflow-img .add-list:before, .title-just.wishlist-list ul li a .overflow-img .add-list:before, .my-note-list ul li a .overflow-img .add-list:before {
+      #tabs-1 ul li a .overflow-img .add-list:before, #tabs-2 ul li a .overflow-img .add-list:before, .result ul li a .overflow-img .add-list:before, .information-selection ul li a .overflow-img .add-list:before, .search-overlay ul li a .overflow-img .add-list:before, .remodal .container-pop ul li a .overflow-img .add-list:before, .videotheque-list ul li a .overflow-img .add-list:before, .wishlist-list ul li a .overflow-img .add-list:before, .my-note-list ul li a .overflow-img .add-list:before {
         left: 86px;
         top: 25px; }
-      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .see-ba:before, .remodal .container-pop ul li a .overflow-img .see-ba:before, .videotheque-list ul li a .overflow-img .see-ba:before, .title-just.wishlist-list ul li a .overflow-img .see-ba:before, .my-note-list ul li a .overflow-img .see-ba:before {
+      #tabs-1 ul li a .overflow-img .see-ba:before, #tabs-2 ul li a .overflow-img .see-ba:before, .result ul li a .overflow-img .see-ba:before, .information-selection ul li a .overflow-img .see-ba:before, .search-overlay ul li a .overflow-img .see-ba:before, .remodal .container-pop ul li a .overflow-img .see-ba:before, .videotheque-list ul li a .overflow-img .see-ba:before, .wishlist-list ul li a .overflow-img .see-ba:before, .my-note-list ul li a .overflow-img .see-ba:before {
         left: 86px;
         top: -5px; }
-      #tabs-1 ul li a .overflow-img .see-ba, #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .see-ba, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .add-list, .remodal .container-pop ul li a .overflow-img .see-ba, .remodal .container-pop ul li a .overflow-img .add-list, .videotheque-list ul li a .overflow-img .see-ba, .videotheque-list ul li a .overflow-img .add-list, .title-just.wishlist-list ul li a .overflow-img .see-ba, .title-just.wishlist-list ul li a .overflow-img .add-list, .my-note-list ul li a .overflow-img .see-ba, .my-note-list ul li a .overflow-img .add-list {
+      #tabs-1 ul li a .overflow-img .see-ba, #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .see-ba, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .add-list, .remodal .container-pop ul li a .overflow-img .see-ba, .remodal .container-pop ul li a .overflow-img .add-list, .videotheque-list ul li a .overflow-img .see-ba, .videotheque-list ul li a .overflow-img .add-list, .wishlist-list ul li a .overflow-img .see-ba, .wishlist-list ul li a .overflow-img .add-list, .my-note-list ul li a .overflow-img .see-ba, .my-note-list ul li a .overflow-img .add-list {
         display: none;
         white-space: nowrap;
         text-align: center;
@@ -1225,14 +1226,14 @@ nav {
         -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
-      #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .add-list, .remodal .container-pop ul li a .overflow-img .add-list, .videotheque-list ul li a .overflow-img .add-list, .title-just.wishlist-list ul li a .overflow-img .add-list, .my-note-list ul li a .overflow-img .add-list {
+      #tabs-1 ul li a .overflow-img .add-list, #tabs-2 ul li a .overflow-img .add-list, .result ul li a .overflow-img .add-list, .information-selection ul li a .overflow-img .add-list, .search-overlay ul li a .overflow-img .add-list, .remodal .container-pop ul li a .overflow-img .add-list, .videotheque-list ul li a .overflow-img .add-list, .wishlist-list ul li a .overflow-img .add-list, .my-note-list ul li a .overflow-img .add-list {
         margin-top: -73px; }
-      #tabs-1 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .see-ba, .result ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .see-ba, .remodal .container-pop ul li a .overflow-img .see-ba, .videotheque-list ul li a .overflow-img .see-ba, .title-just.wishlist-list ul li a .overflow-img .see-ba, .my-note-list ul li a .overflow-img .see-ba {
+      #tabs-1 ul li a .overflow-img .see-ba, #tabs-2 ul li a .overflow-img .see-ba, .result ul li a .overflow-img .see-ba, .information-selection ul li a .overflow-img .see-ba, .search-overlay ul li a .overflow-img .see-ba, .remodal .container-pop ul li a .overflow-img .see-ba, .videotheque-list ul li a .overflow-img .see-ba, .wishlist-list ul li a .overflow-img .see-ba, .my-note-list ul li a .overflow-img .see-ba {
         margin-top: 15px; }
-      #tabs-1 ul li a .overflow-img button:hover .see-ba, #tabs-1 ul li a .overflow-img button:hover .add-list, #tabs-2 ul li a .overflow-img button:hover .see-ba, #tabs-2 ul li a .overflow-img button:hover .add-list, .result ul li a .overflow-img button:hover .see-ba, .result ul li a .overflow-img button:hover .add-list, .information-selection ul li a .overflow-img button:hover .see-ba, .information-selection ul li a .overflow-img button:hover .add-list, .search-overlay ul li a .overflow-img button:hover .see-ba, .search-overlay ul li a .overflow-img button:hover .add-list, .remodal .container-pop ul li a .overflow-img button:hover .see-ba, .remodal .container-pop ul li a .overflow-img button:hover .add-list, .videotheque-list ul li a .overflow-img button:hover .see-ba, .videotheque-list ul li a .overflow-img button:hover .add-list, .title-just.wishlist-list ul li a .overflow-img button:hover .see-ba, .title-just.wishlist-list ul li a .overflow-img button:hover .add-list, .my-note-list ul li a .overflow-img button:hover .see-ba, .my-note-list ul li a .overflow-img button:hover .add-list {
+      #tabs-1 ul li a .overflow-img button:hover .see-ba, #tabs-1 ul li a .overflow-img button:hover .add-list, #tabs-2 ul li a .overflow-img button:hover .see-ba, #tabs-2 ul li a .overflow-img button:hover .add-list, .result ul li a .overflow-img button:hover .see-ba, .result ul li a .overflow-img button:hover .add-list, .information-selection ul li a .overflow-img button:hover .see-ba, .information-selection ul li a .overflow-img button:hover .add-list, .search-overlay ul li a .overflow-img button:hover .see-ba, .search-overlay ul li a .overflow-img button:hover .add-list, .remodal .container-pop ul li a .overflow-img button:hover .see-ba, .remodal .container-pop ul li a .overflow-img button:hover .add-list, .videotheque-list ul li a .overflow-img button:hover .see-ba, .videotheque-list ul li a .overflow-img button:hover .add-list, .wishlist-list ul li a .overflow-img button:hover .see-ba, .wishlist-list ul li a .overflow-img button:hover .add-list, .my-note-list ul li a .overflow-img button:hover .see-ba, .my-note-list ul li a .overflow-img button:hover .add-list {
         display: block;
         background-color: #212324; }
-    #tabs-1 ul li a:hover .overflow-img, #tabs-2 ul li a:hover .overflow-img, .result ul li a:hover .overflow-img, .information-selection ul li a:hover .overflow-img, .search-overlay ul li a:hover .overflow-img, .remodal .container-pop ul li a:hover .overflow-img, .videotheque-list ul li a:hover .overflow-img, .title-just.wishlist-list ul li a:hover .overflow-img, .my-note-list ul li a:hover .overflow-img {
+    #tabs-1 ul li a:hover .overflow-img, #tabs-2 ul li a:hover .overflow-img, .result ul li a:hover .overflow-img, .information-selection ul li a:hover .overflow-img, .search-overlay ul li a:hover .overflow-img, .remodal .container-pop ul li a:hover .overflow-img, .videotheque-list ul li a:hover .overflow-img, .wishlist-list ul li a:hover .overflow-img, .my-note-list ul li a:hover .overflow-img {
       display: block; }
 
 .content-selection {
@@ -2611,37 +2612,37 @@ footer {
 #videotheque {
   background-color: #f8f8f8; }
 
-#tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs {
+#tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs, .account-tabs .container .tabs-fnacplay .ul-link-tabs {
   padding: 0;
   margin: -61px 0 0 0; }
-  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li:first-child {
+  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li:first-child, .account-tabs .container .tabs-fnacplay .ul-link-tabs li:first-child {
     width: 272px !important;
     border-left: none !important; }
-  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li {
+  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li, .account-tabs .container .tabs-fnacplay .ul-link-tabs li {
     float: left;
     text-align: center;
     list-style-type: none;
     width: 271px;
     border-left: solid 1px rgba(255, 255, 255, 0.2); }
-    #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a {
+    #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a, .account-tabs .container .tabs-fnacplay .ul-link-tabs li a {
       display: block;
       padding: 20px 0 20px 0;
       background-color: #18191a;
       text-decoration: none; }
-      #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a i {
+      #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a i, .account-tabs .container .tabs-fnacplay .ul-link-tabs li a i {
         font-size: 11px; }
-      #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a h2 {
+      #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs li a h2, .account-tabs .container .tabs-fnacplay .ul-link-tabs li a h2 {
         margin: 0;
         font-size: 15px;
         font-weight: normal;
         font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.7); }
-  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs .ui-state-active a {
+  #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs .ui-state-active a, .account-tabs .container .tabs-fnacplay .ul-link-tabs .ui-state-active a {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background-color: #f8f8f8; }
-    #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs .ui-state-active a h2 {
+    #tabs-fnacplay .container .tabs-fnacplay .ul-link-tabs .ui-state-active a h2, .account-tabs .container .tabs-fnacplay .ul-link-tabs .ui-state-active a h2 {
       color: #18191a; }
 
 .title-just.wishlist, .title-just.my-note {
@@ -2688,12 +2689,21 @@ footer {
   .title-just.videotheque .videotheque-list, .title-just.videotheque .wishlist-list, .title-just.videotheque .my-note-list, .title-just.wishlist .videotheque-list, .title-just.wishlist .wishlist-list, .title-just.wishlist .my-note-list, .title-just.my-note .videotheque-list, .title-just.my-note .wishlist-list, .title-just.my-note .my-note-list {
     padding: 30px 0 0 0; }
 
+#my-actor, #my-note, #wishlist {
+  background-color: #f8f8f8;
+  padding: 20px 0 0 0; }
+
 .my-actor-list .bloc-actor {
   width: 350px;
   height: 120px;
   float: left;
+  position: relative;
   margin: 20px 19px 0 0;
   background-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15); }
   .my-actor-list .bloc-actor .img-actor {
     width: 90px;
@@ -2711,10 +2721,94 @@ footer {
     font-size: 13px;
     color: rgba(33, 35, 36, 0.6);
     margin: 0; }
+  .my-actor-list .bloc-actor button {
+    line-height: 27px;
+    width: 92px;
+    background-color: #fff;
+    border-radius: 3px;
+    font-family: "Montserrat", sans-serif;
+    margin: 20px 0 0 0;
+    font-size: 12px;
+    border: solid 1px #e0e0e0; }
+    .my-actor-list .bloc-actor button img {
+      width: 12px; }
 .my-actor-list .bloc-actor:nth-child(3n) {
   margin: 20px 0 0 0; }
 
+.close-actor {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  width: 16px;
+  height: 16px;
+  text-decoration: none; }
+
+.close-actor:after {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+  font-size: 28px;
+  line-height: 20px;
+  display: block;
+  content: "×";
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4); }
+
+.margin-bottom {
+  margin-bottom: 40px; }
+
 /***** Fin My fnac play *****/
+/***** My account *****/
+.nav-account {
+  width: 202px;
+  padding: 63px 0 0 0;
+  float: left; }
+  .nav-account ul {
+    padding: 0;
+    margin: 0; }
+    .nav-account ul li {
+      margin: 20px 0 20px 0;
+      list-style-type: none; }
+      .nav-account ul li a {
+        font-family: "Roboto-Medium", sans-serif;
+        text-decoration: none;
+        color: rgba(33, 35, 36, 0.7); }
+
+.info-account {
+  padding: 63px 195px 0 0;
+  float: right; }
+  .info-account .modification-account, .info-account .modification-localisation, .info-account .modification-facture, .info-account .modification-card, .info-account .modification-newsletter, .info-account .modification-parental, .info-account .modification-appareils {
+    background-color: #fff;
+    margin: 0;
+    width: 690px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 30px 0 0 0; }
+    .info-account .modification-account h3, .info-account .modification-localisation h3, .info-account .modification-facture h3, .info-account .modification-card h3, .info-account .modification-newsletter h3, .info-account .modification-parental h3, .info-account .modification-appareils h3 {
+      font-family: "Roboto-Light", sans-serif;
+      font-size: 32px;
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+      color: #18191a; }
+  .info-account .modification-account {
+    height: 350px; }
+  .info-account .modification-localisation {
+    height: 570px; }
+  .info-account .modification-facture {
+    height: 360px; }
+  .info-account .modification-card {
+    height: 360px; }
+  .info-account .modification-newsletter {
+    height: 360px; }
+  .info-account .modification-parental {
+    height: 290px; }
+  .info-account .modification-appareils {
+    height: 240px; }
+
+.my-account {
+  background-color: #f8f8f8; }
+
+/***** Fin my account *****/
 /***** Recherche *****/
 .filtre {
   position: relative;
