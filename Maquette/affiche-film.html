@@ -21,8 +21,14 @@
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <script src="js/modernizr.custom.js"></script>
         </head>
-    <body>
-        <!--[if lt IE 7]>
+    <body><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>        <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
@@ -347,7 +353,7 @@
                             <img src="img/profil.png" alt="" />
                             <div class="name">
                                 <p>Marie Dupont</p>
-                                <a href="#">Mon fnac play</a>
+                                <a href="my-fnacplay.html">Mon fnac play</a>
                             </div>
                         </div>
                     </div>
@@ -366,18 +372,12 @@
                     <section class="description-film">
                         <h1>Interstellar</h1>
                         <h3><span class="note_4"></span> Science-Fiction - 2014 - 2h49 - USA <img class="white-vost" src="img/white-vost.png" alt="" /> <img class="white-limit" src="img/white-limit.png" alt="" /></h3>
+                       
+                            <h4>« Le nouveau chef-d'oeuvre de Christopher Nolan. »</h4>
                         <p>
                             Alors que l'avenir de la planète Terre est menacé, une équipe d'explorateurs est chargée de la plus importante mission dans l'histoire humaine : quitter la galaxie pour découvrir si l'humanité a un futur parmi les étoiles.
                         </p>
                         <a href="#" alt="">Lire la suite <i class="fa fa-angle-down"></i></a>
-                        <div class="bloc-facebook">
-                            <ul>
-                                <li><img src="img/profil-fa1.png" alt="" /></li>
-                                <li><img src="img/profil-fa2.png" alt="" /></li>
-                                <li><img src="img/profil-fa3.png" alt="" /></li>
-                            </ul>
-                            <p><img src="img/profil-icon.png" alt="" />Julie Durand, Émilie Charpentier et Anne aiment ce film</p>
-                        </div>
                         <div class="clear bloc-video">
                             <a href="#" alt=""><img src="img/play.png" alt="" /><div class="ba">Voir la<br /><span>Bande-Annonce</span></div></a>
                             <div class="more-video"><a href="#" alt="">+ 3 vidéos bonus</a></div>
@@ -501,10 +501,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="clear presse">
-                            <h4>« Le nouveau chef-d'oeuvre de Christopher Nolan. »</h4>
-                            <p><span class="note_4"></span> Presse</p>
-                        </div>
+                        <div class="fb-facepile" data-href="https://www.facebook.com/FacebookDevelopers" data-width="353px" data-max-rows="1" data-colorscheme="dark" data-size="medium" data-show-count="true"></div>
                     </div>
                     <div class="clear avis-expert">
                         <img src="img/expert1.png" alt="" />

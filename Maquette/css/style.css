@@ -1899,6 +1899,13 @@ footer {
       margin: 64px 0 6px 0;
       text-transform: uppercase;
       text-shadow: 0px 2px rgba(0, 0, 0, 0.6); }
+    .affiche-film .description-film h4, .affiche-film .description-serie h4, .affiche-serie .description-film h4, .affiche-serie .description-serie h4, .affiche-young .description-film h4, .affiche-young .description-serie h4, .affiche-spectacle .description-film h4, .affiche-spectacle .description-serie h4, .affiche-selection .description-film h4, .affiche-selection .description-serie h4 {
+      margin: 30px 0 0 0;
+      color: #fff;
+      font-family: "Roboto-BoldItalic", sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
     .affiche-film .description-film h3, .affiche-film .description-serie h3, .affiche-serie .description-film h3, .affiche-serie .description-serie h3, .affiche-young .description-film h3, .affiche-young .description-serie h3, .affiche-spectacle .description-film h3, .affiche-spectacle .description-serie h3, .affiche-selection .description-film h3, .affiche-selection .description-serie h3 {
       padding: 0;
       margin: 0;
@@ -1925,9 +1932,9 @@ footer {
       text-overflow: ellipsis;
       font-family: "Roboto", sans-serif;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      margin: 30px 0 6px 0; }
+      margin: 0 0 6px 0; }
     .affiche-film .description-film a, .affiche-film .description-serie a, .affiche-serie .description-film a, .affiche-serie .description-serie a, .affiche-young .description-film a, .affiche-young .description-serie a, .affiche-spectacle .description-film a, .affiche-spectacle .description-serie a, .affiche-selection .description-film a, .affiche-selection .description-serie a {
       color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
@@ -1972,7 +1979,7 @@ footer {
         -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); }
     .affiche-film .description-film .bloc-video, .affiche-film .description-serie .bloc-video, .affiche-serie .description-film .bloc-video, .affiche-serie .description-serie .bloc-video, .affiche-young .description-film .bloc-video, .affiche-young .description-serie .bloc-video, .affiche-spectacle .description-film .bloc-video, .affiche-spectacle .description-serie .bloc-video, .affiche-selection .description-film .bloc-video, .affiche-selection .description-serie .bloc-video {
-      margin: 36px 0 0 0; }
+      margin: 106px 0 0 0; }
       .affiche-film .description-film .bloc-video a, .affiche-film .description-serie .bloc-video a, .affiche-serie .description-film .bloc-video a, .affiche-serie .description-serie .bloc-video a, .affiche-young .description-film .bloc-video a, .affiche-young .description-serie .bloc-video a, .affiche-spectacle .description-film .bloc-video a, .affiche-spectacle .description-serie .bloc-video a, .affiche-selection .description-film .bloc-video a, .affiche-selection .description-serie .bloc-video a {
         display: block;
         font-family: "Montserrat-Bold", sans-serif;
@@ -2168,7 +2175,7 @@ footer {
 /*** Fin description film ***/
 /*** Information Film ***/
 .information-serie .casting {
-  margin: 50px 0 0 0; }
+  margin: 50px 0 70px 0; }
 .information-serie .users-note {
   margin: 50px 0 70px 0 !important; }
 
@@ -2178,6 +2185,7 @@ footer {
   margin: 0;
   background-color: #18191a; }
   .information-film .casting, .information-serie .casting, .information-selection .casting {
+    margin-bottom: 70px;
     float: left; }
     .information-film .casting h2, .information-serie .casting h2, .information-selection .casting h2 {
       margin: 0 0 23px 0;
@@ -2234,7 +2242,7 @@ footer {
         color: rgba(255, 255, 255, 0.5); }
     .information-film .users-note .note-details, .information-serie .users-note .note-details, .information-selection .users-note .note-details {
       float: left;
-      margin: 17px 0 0 28px; }
+      margin: 17px 0 35px 28px; }
       .information-film .users-note .note-details .note-top, .information-serie .users-note .note-details .note-top, .information-selection .users-note .note-details .note-top {
         padding: 2px 0 0 0 !important; }
       .information-film .users-note .note-details ul, .information-serie .users-note .note-details ul, .information-selection .users-note .note-details ul {
@@ -2775,35 +2783,177 @@ footer {
         color: rgba(33, 35, 36, 0.7); }
 
 .info-account {
-  padding: 63px 195px 0 0;
+  padding: 63px 195px 80px 0;
   float: right; }
-  .info-account .modification-account, .info-account .modification-localisation, .info-account .modification-facture, .info-account .modification-card, .info-account .modification-newsletter, .info-account .modification-parental, .info-account .modification-appareils {
+  .info-account #modification-account, .info-account #modification-localisation, .info-account #modification-facture, .info-account #modification-card, .info-account #modification-newsletter, .info-account #modification-parental, .info-account #modification-appareils {
     background-color: #fff;
     margin: 0;
-    width: 690px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-    margin: 30px 0 0 0; }
-    .info-account .modification-account h3, .info-account .modification-localisation h3, .info-account .modification-facture h3, .info-account .modification-card h3, .info-account .modification-newsletter h3, .info-account .modification-parental h3, .info-account .modification-appareils h3 {
+    width: 560px;
+    padding: 50px 70px 0 60px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15); }
+    .info-account #modification-account h3, .info-account #modification-localisation h3, .info-account #modification-facture h3, .info-account #modification-card h3, .info-account #modification-newsletter h3, .info-account #modification-parental h3, .info-account #modification-appareils h3 {
       font-family: "Roboto-Light", sans-serif;
       font-size: 32px;
       margin: 0;
       padding: 0;
       font-weight: normal;
       color: #18191a; }
-  .info-account .modification-account {
-    height: 350px; }
-  .info-account .modification-localisation {
-    height: 570px; }
-  .info-account .modification-facture {
-    height: 360px; }
-  .info-account .modification-card {
-    height: 360px; }
-  .info-account .modification-newsletter {
-    height: 360px; }
-  .info-account .modification-parental {
-    height: 290px; }
-  .info-account .modification-appareils {
-    height: 240px; }
+    .info-account #modification-account p, .info-account #modification-localisation p, .info-account #modification-facture p, .info-account #modification-card p, .info-account #modification-newsletter p, .info-account #modification-parental p, .info-account #modification-appareils p {
+      width: 500px;
+      color: #888888;
+      font-size: 13px;
+      font-family: "Roboto", sans-serif;
+      line-height: 20px; }
+      .info-account #modification-account p a, .info-account #modification-localisation p a, .info-account #modification-facture p a, .info-account #modification-card p a, .info-account #modification-newsletter p a, .info-account #modification-parental p a, .info-account #modification-appareils p a {
+        color: #888888;
+        text-decoration: none; }
+  .info-account #modification-account {
+    height: 300px; }
+    .info-account #modification-account .left {
+      margin-top: 40px; }
+    .info-account #modification-account .modification-champs {
+      width: 380px;
+      border-bottom: solid 1px #ebeaea;
+      padding: 0 0 20px 0; }
+    .info-account #modification-account .modification-champs:last-child {
+      border-bottom: none;
+      padding: 20px 0 0 0; }
+    .info-account #modification-account img {
+      width: 140px;
+      height: 140px;
+      border-radius: 6px;
+      margin-right: 40px; }
+    .info-account #modification-account label {
+      display: block;
+      color: #888888;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: normal;
+      font-family: "Montserrat", sans-serif; }
+    .info-account #modification-account input {
+      height: 33px;
+      border: none;
+      font-size: 20px;
+      font-weight: normal;
+      font-family: "Roboto", sans-serif; }
+    .info-account #modification-account .left input::-webkit-input-placeholder {
+      color: #000; }
+    .info-account #modification-account .left input:-moz-placeholder {
+      color: #000; }
+    .info-account #modification-account .left input::-moz-placeholder {
+      color: #000; }
+    .info-account #modification-account .left input:-ms-input-placeholder {
+      color: #000; }
+    .info-account #modification-account button {
+      width: 90px;
+      height: 33px;
+      color: #232323;
+      font-size: 12px;
+      text-transform: uppercase;
+      border: none;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      font-family: "Montserrat", sans-serif;
+      float: right; }
+  .info-account #modification-localisation {
+    height: 520px;
+    margin: 30px 0 0 0; }
+  .info-account #modification-facture {
+    height: 310px;
+    margin: 30px 0 0 0; }
+    .info-account #modification-facture table {
+      width: 560px; }
+    .info-account #modification-facture th {
+      text-align: left;
+      font-size: 13px;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #888888;
+      font-family: "Montserrat", sans-serif; }
+    .info-account #modification-facture tr {
+      border-bottom: solid 1px #ebeaea;
+      height: 49px; }
+      .info-account #modification-facture tr td {
+        color: #212324;
+        font-size: 13px;
+        font-family: "Roboto-Medium", sans-serif;
+        font-weight: normal; }
+      .info-account #modification-facture tr td:first-child, .info-account #modification-facture tr td:last-child {
+        font-family: "Roboto", sans-serif; }
+      .info-account #modification-facture tr td:last-child {
+        text-align: right; }
+  .info-account #modification-card {
+    height: 310px; }
+  .info-account #modification-newsletter {
+    height: 310px;
+    margin: 30px 0 0 0; }
+    .info-account #modification-newsletter h3 {
+      margin: 0 0 40px 0; }
+    .info-account #modification-newsletter .last {
+      margin: 20px 0 0 0; }
+    .info-account #modification-newsletter p {
+      padding: 0;
+      margin: 25px 0 0 0; }
+    .info-account #modification-newsletter label {
+      color: #232323;
+      font-weight: normal;
+      font-size: 15px;
+      font-family: "Roboto", sans-serif;
+      margin: 40px 0 20px 35px; }
+    .info-account #modification-newsletter label:last-child {
+      margin: 0 0 20px 35px; }
+    .info-account #modification-newsletter input[type=checkbox] {
+      display: none; }
+    .info-account #modification-newsletter input[type=checkbox]:checked + label:before {
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-size: 12px;
+      text-align: center;
+      color: #fff;
+      line-height: 16px;
+      margin-top: 3px;
+      width: 16px;
+      height: 16px;
+      border: none;
+      border-radius: 2px;
+      background-color: #f5b027; }
+    .info-account #modification-newsletter input[type=checkbox] + label:before {
+      content: "\f00c";
+      font-family: FontAwesome;
+      position: absolute;
+      border: solid 1px #D9D9D9;
+      margin-left: -33px;
+      font-size: 12px;
+      margin-top: 3px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0);
+      line-height: 16px;
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      background-color: #fff; }
+  .info-account #modification-parental {
+    height: 240px;
+    margin: 30px 0 0 0; }
+    .info-account #modification-parental b {
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      color: #D50E0E; }
+    .info-account #modification-parental button {
+      width: 90px;
+      height: 33px;
+      color: #232323;
+      font-size: 12px;
+      text-transform: uppercase;
+      border: none;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      font-family: "Montserrat", sans-serif;
+      float: right; }
+  .info-account #modification-appareils {
+    height: 190px;
+    margin: 30px 0 0 0; }
 
 .my-account {
   background-color: #f8f8f8; }

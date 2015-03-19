@@ -347,7 +347,7 @@
                             <img src="img/profil.png" alt="" />
                             <div class="name">
                                 <p>Marie Dupont</p>
-                                <a href="#">Mon fnac play</a>
+                                <a href="my-fnacplay.html">Mon fnac play</a>
                             </div>
                         </div>
                     </div>
@@ -388,36 +388,76 @@
                     <div class="container">
                         <div class="nav-account">
                             <ul>
-                                <li><a href="#" alt="">Mon compte</a></li>
+                                <li><a href="#modification-account" alt="">Mon compte</a></li>
                                 <li><a href="#" alt="">Coordonnées</a></li>
-                                <li><a href="#" alt="">Factures</a></li>
+                                <li><a href="#modification-facture" alt="">Factures</a></li>
                                 <li><a href="#" alt="">Carte Fnac</a></li>
-                                <li><a href="#" alt="">Newsletters</a></li>
-                                <li><a href="#" alt="">Code Parental</a></li>
+                                <li><a href="#modification-newsletter" alt="">Newsletters</a></li>
+                                <li><a href="#modification-parental" alt="">Code Parental</a></li>
                                 <li><a href="#" alt="">Appareils liés</a></li>
                             </ul>
                         </div>
                         <div class="info-account">
-                            <div class="modification-account">
+                            <div id="modification-account">
                                 <h3>Mon compte</h3>
+                                <div class="left">
+                                    <img src="img/profil-fnacplay.png" alt="" />
+                                </div>
+                                <div class="left">
+                                    <div class="modification-champs">
+                                        <label>E-mail</label>
+                                        <input type="email" placeholder="johndoe@gmail.com" disabled="disabled">
+                                        <button>Modifier</button>
+                                    </div>
+                                    <div class="modification-champs">
+                                        <label>Mot de passe</label>
+                                        <input type="password" placeholder="• • • • • • • •" disabled="disabled">
+                                        <button>Modifier</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modification-localisation">
-                                <h3>Coordonnées</h3>
-                            </div>
-                            <div class="modification-facture">
+                            <div id="modification-facture">
                                 <h3>Facture</h3>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Location/achat</th>
+                                            <th>Montant</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>15/02/2015</td>
+                                            <td>Interstellar</td>
+                                            <td>4,99€</td>
+                                            <td>Télécharger</td>
+                                        </tr>   
+                                        <tr>
+                                            <td>15/02/2015</td>
+                                            <td>Plus belle la vie (5 épisodes)</td>
+                                            <td>4,99€</td>
+                                            <td>Télécharger</td>
+                                        </tr>   
+                                    </tbody>
+                                </table>   
                             </div>
-                            <div class="modification-card">
-                                <h3>Carte FNAC</h3>
-                            </div>
-                            <div class="modification-newsletter">
+                            <div id="modification-newsletter">
                                 <h3>Newsletters</h3>
+                                <div><input type="checkbox" id="bon-plan" value="on"> <label for="bon-plan">Je reçois les bons plans</label></div>
+                                <div class="last"><input type="checkbox" id="info-fnac" value="on" checked> <label for="info-fnac">Je reçois les offres et informations de la Fnac</label></div>
+                                <p>
+                                    La Fnac s'engage à sécuriser vos informations et à les garder strictement confidentielles. Conformément à la loi informatique et libertés du 6 janvier 1978, vous disposez d'un droit d'accès, de rectification et d’opposition. Pour en savoir plus sur notre politique de protection des données <a href="#">cliquez ici</a>. 
+                                </p>
                             </div>
-                            <div class="modification-parental">
+                            <div id="modification-parental">
                                 <h3>Code Parental</h3>
-                            </div>
-                            <div class="modification-appareils">
-                                <h3>Appareils liés</h3>
+                                <p>
+                                    Vous devez créer un Code Parental pour pouvoir accéder à la rubrique Adulte et gérer vos options de contrôle parental : 
+                                </p>
+                                <b>
+                                    Désactivé
+                                </b>
+                                <button class="active">Activer</button>
                             </div>
                         </div>
                     </div>  
@@ -482,13 +522,13 @@
                                 <a href="affiche-film.html" class="cdc">
                                     <div class="overflow-img tooltip">
                                         <div class="button-aff">
-                                            <button class="button-top movie-hover">
+                                            <button class="button-top">
                                                 <i class="fa fa-heart"></i>
                                                 <div class="add-list">
                                                     Ajouter à ma liste d'envies
                                                 </div>
                                             </button>
-                                            <button class="button-bottom movie-hover">
+                                            <button class="button-bottom">
                                                 <i class="fa fa-play"></i>
                                                 <div class="see-ba">
                                                     Voir la bande-annonce
